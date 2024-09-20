@@ -8,10 +8,11 @@ body, h1, h2, h3, h4, p, ul, li {
     font-family: "Roboto", sans-serif;
 }
 
-body {
+body{ 
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    list-style: none;
 }
 
 header {
@@ -19,6 +20,8 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    
+    
 }
 
 nav ul {
@@ -51,6 +54,22 @@ h2 {
 h3 {
     text-align: center;
 }
+.profile{
+    margin: 50px;
+    margin-left: 30%;
+}
+.profile_container{
+    display: flex;
+}
+
+.name{
+    padding: 30px;
+}
+
+.custom-image{
+    width: 400px;
+    height: 500px;
+}
 
 .container {
     width: 80%;
@@ -73,6 +92,7 @@ h3 {
     margin-right: 10px;
     border-radius: 5px;
     word-wrap: break-word;
+    width: 550px;
 }
 
 .column.left {
@@ -81,6 +101,12 @@ h3 {
     border-radius: 5px;
     word-wrap: break-word;
 }
+
+
+
+
+
+
 
 .me img {
     border-radius: 50%;
@@ -94,9 +120,22 @@ h3 {
     flex: 1;
     text-align: justify;
 }
-.course-list {
-    list-style-type: none;
-    padding: 0;
+.custom-button {
+    display: block;
+    background-color: #000000;
+    color: black;
+    padding: 10px 2px;
+    margin: 10px 0; /* Adds space between buttons */
+    border-radius: 100px;
+    font-size: 16px;
+    width: 5%; 
+}
+.button-container{
+    text-decoration: dotted;
+}
+
+.custom-button:hover {
+    background-color: #45a049;
 }
 .course-item {
     padding: 10px;
@@ -114,6 +153,50 @@ h3 {
     color: #721c24;
 }
 
+
+
+
+
+.filter-buttons{
+    text-align: center;
+    color: white;  
+    margin: 5px;
+}
+.filter-button{
+    color: white;
+    background-color: black;
+    height: 30px;
+    width: 60px;
+}
+
+
+.box3{
+    border: 2px solid #000;
+    width: auto;
+    height: 250px;
+    margin-top: 15px;
+}
+
+
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+    padding: 0; 
+    margin: 0; 
+}
+
+.course-item {
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; 
+}
+
+
+
 footer {
     text-align: center;
     padding: 10px 0;
@@ -123,3 +206,71 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+
+
+@media (max-width: 600px) {
+    header{
+        width: 100%;
+    }
+    body {
+        height: 2500px;
+    }
+    /* Stack the grid content vertically */
+    .grid {
+        display: block;
+        width: 100%;
+    }
+    .box2{
+        padding: 50px;
+    }
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    /* Adjust row and column for full-width display */
+    .row, .column.left {
+        width: 100%;
+        padding: 5px;
+        margin: 10px 0;
+        height: 300px;
+    }
+
+    /* Ensure the image adjusts properly for smaller screens */
+    .custom-image {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .profile {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        width: 100%;
+        
+    }
+
+    .profile_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-button {
+        width: 80%;
+        margin: 5px 0;
+    }
+}
+
+
+
+

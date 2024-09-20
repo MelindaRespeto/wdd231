@@ -11,19 +11,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/home.css">
     
+    <script src="scripts/courses.js"defer></script>
 
 </head>
 
 <body>
     <body>
-        <h1>Certificate Courses</h1>
+        
         <ul id="certificate-section" class="course-list"></ul>
-        <script src="scripts/courses.js"defer></script>
+        
        
     </body>
+
+
+
+
     <header>
-        <img src="images/melinds.jpg" alt="Melinda" width="200" height="150">
-        <h1> Melinda P. Competente</h1>
+        <div class="profile">
+
+            <div class="profile_container">
+
+                <img src="images/melinds.jpg" alt="Melinda" width="200" height="150">
+                <h1 class="name"> Melinda P. Competente</h1>
+            </div>
+        </div>
+        
         <nav>
             <ul>
                 <li><a href="https://www.linkedin.com/in/melinda-competente-46763720a/">Home</a></li>
@@ -32,6 +44,7 @@
                 <li><a href="#">LinkedIn</a></li>
             </ul>
         </nav>
+
     </header>
     
     <main>
@@ -39,43 +52,58 @@
             <div class="grid">
                 <div class="row">
                     <h2>Course Work</h2> 
+                    
+                    
                     <div class="card1">
                        
-                        <p>My name is Melinds P. Paghanapon. My friends call me Melinds.
-                        I am currently working as a Junior High School teacher in the Philippines.
-                        My family, friends, and my students are my world. 
-                        I love spending time with them. I love learning new things and helping 
-                        others even in my own little way.
-                        </p>
+                       
                     </div>
                     
                     <section id="flag-info">
-                        <h3>Camarines, Philippines</h3>
                        
                            
-                        <h4>Official Flag of the Philippines</h4>
-                        <p>
-                        The Philippines is an archipelago of over 7,100 islands in southeastern Asia between the South China Sea and the Pacific Ocean.
-                        The two largest islands, Luzon and Mindanao, make up two-thirds of the total land area.
-                        </p>
+                        
+                        
+                        
                     </section>
                 </div>
 
                 <div class="column2"> 
                     <div class="column left" style="background-color:#868181;">
                         <h2>Camarines Sur, Philippines</h2> 
-                        <ul>   
-                            <li><a href="#">Dev.to Community</a></li>
-                            <li><a href="#">Smashing Magazine</a></li>
-                            <li><a href="#">CSS Tricks</a></li>
-                            <li><a href="#">W3Schools</a></li>
-                            <li><a href="#">Udemy</a></li>
-                            <li><a href="#">Lorem Picsum Image Placeholder</a></li>
+
+                        <img src="images/test.png" alt="Description of the image" class="custom-image">
+                        
                         </ul>
                     </div>
                 </div>
+                
             </div>
         </div>
+
+
+
+        <div class="box2">
+            <h2>Web and Computer Programming Certificate</h2>
+        
+        <div class="filter-buttons">
+            <button class="filter-button" onclick="filterCourses('all')">All</button>
+            <button class="filter-button" onclick="filterCourses('CSE')">CSE</button>
+            <button class="filter-button" onclick="filterCourses('WDD')">WDD</button>
+        </div>
+
+        
+        </div>
+
+
+
+        <div class="box3">
+            <ul  id="certificate_section" class="course-list"> </ul>
+                
+            </ul>
+        </div>
+
+
     </main>
 
     <footer>
@@ -88,6 +116,7 @@
     </footer>
 
  
+
 </body>
 </html>
 

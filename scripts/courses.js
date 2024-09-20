@@ -77,3 +77,39 @@ const courses = [
         completed: false
     }
 ]
+// Example course data, this can come from an API or any other source
+const courses = [
+    { name: "JavaScript Basics", completed: true },
+    { name: "HTML & CSS Fundamentals", completed: true },
+    { name: "Advanced CSS Techniques", completed: false },
+    { name: "React for Beginners", completed: false },
+    { name: "Node.js Mastery", completed: true }
+];
+
+// Function to dynamically display the courses in the certificate section
+function displayCourses(courseData) {
+    const certificateSection = document.getElementById('certificate-section');
+    certificateSection.innerHTML = ''; // Clear any existing content
+
+    courseData.forEach(course => {
+        const listItem = document.createElement('li');
+        listItem.classList.add('course-item');
+        listItem.textContent = course.name;
+
+        // Apply different styles based on the completion status
+        if (course.completed) {
+            listItem.classList.add('completed');
+        } else {
+            listItem.classList.add('not-completed');
+        }
+
+        certificateSection.appendChild(listItem);
+    });
+}
+
+// Initial display of the courses
+displayCourses(courses);
+
+// Example: Auto-update when data source changes
+// Let's say we get new data, we can call displayCourses again with the updated data
+// This could happen when new courses are added, completed, etc.

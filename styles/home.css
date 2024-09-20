@@ -94,6 +94,25 @@ h3 {
     flex: 1;
     text-align: justify;
 }
+.course-list {
+    list-style-type: none;
+    padding: 0;
+}
+.course-item {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.completed {
+    background-color: #d4edda; /* Light green */
+    color: #155724;
+    font-weight: bold;
+}
+.not-completed {
+    background-color: #f8d7da; /* Light red */
+    color: #721c24;
+}
 
 footer {
     text-align: center;

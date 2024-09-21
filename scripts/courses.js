@@ -78,6 +78,8 @@ const courses1 = [
         completed: false
     }
 ]
+let all_credit = 0;
+
 function displayCourses(courseData) {
     const certificateSection = document.getElementById('certificate_section');
     certificateSection.innerHTML = '';
@@ -86,10 +88,11 @@ function displayCourses(courseData) {
         const listItem = document.createElement('li');
         listItem.classList.add('course-item');
         listItem.textContent = course.subject+ " " + course.number;
-
+        
         
         if (course.completed) {
             listItem.classList.add('completed');
+            all_credit += course.credits;
         } else {
             listItem.classList.add('not-completed');
         }
@@ -101,4 +104,5 @@ function displayCourses(courseData) {
 
 displayCourses(courses1)
 
+console.log("Total Credits Earned: " + all_credit)
 

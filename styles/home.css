@@ -54,10 +54,30 @@ h2 {
 h3 {
     text-align: center;
 }
+
+
 .profile{
     margin: 50px;
     margin-left: 30%;
 }
+
+
+.hover_me li, .hover_me{
+    display: flex;
+    padding: 5px;
+    
+}
+.hover_me li:hover{
+    background-color: #409044;
+    transition: 1s;
+}
+
+
+.home{
+    background-color: #155724;
+}
+
+
 .profile_container{
     display: flex;
 }
@@ -95,15 +115,27 @@ h3 {
     width: 550px;
 }
 
-.column.left {
-    background-color: #987979;
-    padding: 20px;
-    border-radius: 5px;
-    word-wrap: break-word;
-    background-color:#868181
+
+.card1 {
+    list-style: none;
+    padding-left: 0; 
 }
 
+.card1 li {
+    position: relative; /* Position relative for the pseudo-element */
+    padding-left: 25px; /* Space for the custom bullet */
+    text-decoration: none; /* Ensure no text decoration on the list items */
+}
 
+.card1 li::before {
+    content: '•'; /* Unicode character for bullet */
+    color: rgb(0, 0, 0); /* Change this to your desired bullet color */
+    position: absolute;
+    left: 0; /* Position to the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    font-size: 18px; /* Size of the bullet */
+}
 
 
 
@@ -178,7 +210,14 @@ h3 {
     margin-top: 15px;
 }
 
+.box3 li{
+    display: flex;
+}
 
+.box3 li:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
 
 .course-list {
     display: grid;

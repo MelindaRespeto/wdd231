@@ -217,7 +217,7 @@ footer {
     body {
         height: 2500px;
     }
-    /* Stack the grid content vertically */
+    
     .grid {
         display: block;
         width: 100%;

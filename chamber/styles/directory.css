@@ -15,8 +15,8 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #0073b1; /* Chamber's theme color */
-    color: #fff;
+    background-color: black; /* Chamber's theme color */
+    color: orange;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -160,8 +160,8 @@ nav ul li a:hover {
 
 .box1 h3{
     margin: 0;
-    background-color: #2eb659;
-    padding: 10px;
+    background-color:orange;
+    padding: 10px; 
     text-align: center;
     
     
@@ -170,13 +170,13 @@ nav ul li a:hover {
 
 .box2 h3{
     margin: 0;
-    background-color: #2eb659;
+    background-color: orange;
     padding: 10px;
     text-align: center;
 }
 .box3 h3{
     margin: 0;
-    background-color: #2eb659;
+    background-color: orange;
     padding: 10px;
     text-align: center;
 }

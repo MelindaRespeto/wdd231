@@ -3,8 +3,8 @@ body, h1, p, ul, li, a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #ffcc00;
-    color: #0033cc;
+    background-color: #0c0c0b;
+    color: #dadce0;
 }
 
 /* General Styles */
@@ -17,8 +17,8 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #0033cc; /* Chamber's theme color */
-    color: #ffcc00;
+    background-color: #0c1532; /* Chamber's theme color */
+    color: #141414;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -74,7 +74,7 @@ nav ul li a:hover {
 /* Hero Section Styles */
 .hero {
     
-    height: 60vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -324,19 +324,20 @@ th,td{
  }
 
  .footer {
-    background-color: black; /* Chamber's theme color */
-    color: orange;
+    background-color: #0c1532; /* Chamber's theme color */
+    color: rgb(108, 106, 102);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    text-align: justify;
 }
 
 #lastModified {
     margin-top: 20px;
-    font-style: Verdana;
-    color: black;
+    font-style: normal;
+    color: rgb(112, 100, 100);
 }
 
 

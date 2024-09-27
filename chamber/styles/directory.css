@@ -3,6 +3,8 @@ body, h1, p, ul, li, a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #ffcc00;
+    color: #0033cc;
 }
 
 /* General Styles */
@@ -15,8 +17,8 @@ body {
 
 /* Header Styles */
 header {
-    background-color: black; /* Chamber's theme color */
-    color: orange;
+    background-color: #0033cc; /* Chamber's theme color */
+    color: #ffcc00;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -116,6 +118,7 @@ nav ul li a:hover {
 }
 
 .button{
+    color:  #00cc66;
     
 }
 
@@ -299,15 +302,42 @@ section a {
 
 img {
 	height: 75px;
-	max-width: 100%; /* Images are jerks - Seattle*/
-}
-.footer{
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0;
-    color: #333;
+	max-width: 100%; 
 }
 
+table{
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+}
+
+th,td{
+    text-align: left;
+    padding: 16px;
+    border: none;
+
+
+}
+ tr:nth-child(even)
+ {
+    background-color: #bed;
+ }
+
+ .footer {
+    background-color: black; /* Chamber's theme color */
+    color: orange;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#lastModified {
+    margin-top: 20px;
+    font-style: bold;
+    color: black;
+}
 
 
   

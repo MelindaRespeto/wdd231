@@ -1,8 +1,9 @@
-
 const nav = document.querySelector("nav");
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
-const ham = document.querySelector(".ham"); // Added this line to select the ham element
+const ham = document.querySelector(".ham");
+const cards = document.querySelector(".cards"); // Ensure cards is selected
+const display = cards; // If cards and display are the same
 
 // Responsive ham and nav
 ham.addEventListener("click", () => {
@@ -10,31 +11,26 @@ ham.addEventListener("click", () => {
   nav.classList.toggle("show");
 });
 
-//grid/list toggle
-gridbutton.addEventListener("click" , () => {
-  cards.classList.add("grid");
-  cards.classList.remove("list");
-});
-
-listbutton.addEventListener("click", () => {
-  cards.classList.add("list");
-  cards.classList.remove("grid");
-});
-
-
+// Grid/List toggle
 gridbutton.addEventListener("click", () => {
-	// example using arrow function
-	display.classList.add("grid");
-	display.classList.remove("list");
+  display.classList.add("grid");
+  display.classList.remove("list");
 });
 
-listbutton.addEventListener("click", showList); // example using defined function
+// Use a defined function for list button click
+listbutton.addEventListener("click", showList);
 
 function showList() {
-	display.classList.add("list");
-	display.classList.remove("grid");
+  display.classList.add("list");
+  display.classList.remove("grid");
 }
 
-  
-
-
+// Ensure that the button exists before adding the event listener
+let element = document.getElementById("myButton");
+if (element) {
+    element.addEventListener("click", function() {
+        alert("Button clicked!");
+    });
+} else {
+    console.warn("Element with ID 'myButton' not found."); // Add warning if the button doesn't exist
+}

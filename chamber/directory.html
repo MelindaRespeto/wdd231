@@ -11,13 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/directory.css">
-    <link rel="icon" href="images/mi icon.png" type="image/x-icon">
-    <link rel="scripts" href="scripts/data/directory.js">
-    <link rel="scripts" href="scripts/data/directory.json">
-
+    <script src="scripts/data/directory.js"></script>
+    <script src="directory.js" defer></script>
 </head>
 <body>
- 
+    <button id="myButton">Click Me</button>
     <header>
         <div class="brand_logo">
             <div class="logo_container">
@@ -26,11 +24,10 @@
                 <p>Chamber of Commerce</p>
             </div>
         </div>
-        
         <nav>
             <ul class="hover_me">
                 <li class="home"><a href="https://www.linkedin.com/in/melinda-competente-46763720a/">Home</a></li>
-                <li><a href=" https://byui.instructure.com/">Directory</a></li>
+                <li><a href="https://byui.instructure.com/">Directory</a></li>
                 <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Join</a></li>
                 <li><a href="https://www.linkedin.com/in/melinda-competente">Discover</a></li>
             </ul>
@@ -42,15 +39,12 @@
             <div class="button">
                 <a href="#cta" class="cta-button">Call to Action</a>
             </div>
-            
         </div>
     </div>
 
-
-    <h2 class="text_home"> HOME</h2>
+    <h2 class="text_home">HOME</h2>
 
     <div class="container1">
-
         <div class="box1">
             <h3>Events</h3><br>
             <p>
@@ -59,20 +53,17 @@
                 # Live session on Improving through Learning from Experts point of view in Business
             </p>
         </div>
-
         <div class="box2">
             <h3>Current Weather</h3>
-            <img src="images/weather.png" alt="Melinda" width="120" height="60">
+            <img src="images/weather.png" alt="Weather Icon" width="120" height="60">
             <p>
                 80 F<br>
                 Sunny<br>
                 Humidity 34%<br>
                 Sunset 7:20 p.m <br>
                 Sunrise 6:00 a.m
-            
             </p>
         </div>
-
         <div class="box3">
             <h3>Weather Forecast</h3>
             <p>
@@ -81,94 +72,146 @@
                 Thursday 60 F
             </p>
         </div>
-
     </div>
-	<div class="menu">
-		<button id="grid">⏹️Grid</button>
-		<button id="list">📄List</button>
-	</div>
-	<hr>
-	<article class="grid">
-		
 
-    <div class="container2">
+    <div class="menu">
+        <button id="grid">⏹️ Grid</button>
+        <button id="list">📄 List</button>
+    </div>
+    
+    <hr>
+    
+    <article class="grid">
+        <div class="container2">
+            <div class="business_box">
+                <section>
+                    <img src="images/tru.png" alt="JM's Boutique" />
+                    <h2>JM's Boutique</h2>
+                    <p>St. Aquino St., Kordero, Iraya City</p>
+                    <p>+046 460-450</p>
+                    <p>https://indawebsite.com</p>
+                </section>
+            </div>
 
+            <div class="business_box">
+                <section>
+                    <img src="images/art.png" alt="JOmels Arts and Design" />
+                    <h2>JOmels Arts and Design</h2>
+                    <p>St. Aguinaldo St., Kordero, Naga</p>
+                    <p>(046) 460-451</p>
+                    <p>https://indawebsite.com</p>
+                </section>
+            </div>
 
-        <div class="business_box">
-           
-            <section>
-                <img src="images/tru.png" alt="Boutique" />
-                <h2>JM's Boutique</h2>
-                <p>St. Aquino St., Kordero, Iraya City</p>
-                <p>+046 460-450</p>
-                <p>https//indawebsite.com</p>
-            </section>
+            <div class="business_box">
+                <section>
+                    <img src="images/a.png" alt="Jonas Web Design" />
+                    <h2>Jonas Web Design</h2>
+                    <p>Paghanapon St., Awnu, Naga City</p>
+                    <p>(046) 760-450</p>
+                    <p>https://greatwebsite.com</p>
+                </section>
+            </div>
+
+            <div class="business_box">
+                <section>
+                    <img src="images/meat.png" alt="OTE Quality Meat Producer" />
+                    <h2>OTE Quality Meat Producer</h2>
+                    <p>Nawara St., Dai, Nabua City</p>
+                    <p>(046) 790-452</p>
+                    <p>https://notwebsite.com</p>
+                </section>
+            </div>
+
+            <div class="business_box">
+                <section>
+                    <img src="images/food.png" alt="Edenas Delicacies" />
+                    <h2>Edenas Delicacies</h2>
+                    <p>Raya St., Nakuana, Cutu City</p>
+                    <p>(046) 230-430</p>
+                    <p>https://ertwebsite.id</p>
+                </section>
+            </div>
+
+            <div class="business_box">
+                <section>
+                    <img src="images/pwede.png" alt="JCshop" />
+                    <h2>JCshop</h2>
+                    <p>Gayona St., Nakuana, Nagaraya City</p>
+                    <p>(046) 230-460</p>
+                    <p>https://mrtwebsite.id</p>
+                </section>
+            </div>
         </div>
+    </article>
 
-        <div class="business_box">
-            <section>
-                <img src="images/art.png" alt="Art" />
-                <h2>JOmels Arts and Design</h2>
-                <p>St. Aguinaldo St., Kordero, Naga</p>
-                <p>(046)460-451</p>
-                <p>https//indawebsite.com</p>
-            </section>
-        </div>
+    <div class="Business">
+        <table>
+            <tr>
+                <th>Business Name</th>
+                <th>Address</th> <!-- Added header for address -->
+                <th>Contact</th> <!-- Added header for contact -->
+                <th>Website</th> <!-- Added header for website -->
+            </tr>
+            <tr>
+                <td>JM's Boutique</td>
+                <td>St. Aquino St., Kordero, Iraya City</td>
+                <td>+046 460-450</td>
+                <td>https://indawebsite.com</td>
+            </tr>
+            <tr>
+                <td>JOmels Arts and Design</td>
+                <td>St. Aguinaldo St., Kordero, Naga</td>
+                <td>(046) 460-451</td>
+                <td>https://indawebsite.com</td>
+            </tr>
+            <tr>
+                <td>Jonas Web Design</td>
+                <td>Paghanapon St., Awnu, Naga City</td>
+                <td>(046) 760-450</td>
+                <td>https://greatwebsite.com</td>
+            </tr>
+            <tr>
+                <td>OTE Quality Meat Producer</td>
+                <td>Nawara St., Dai, Nabua City</td>
+                <td>(046) 790-452</td>
+                <td>https://notwebsite.com</td>
+            </tr>
+            <tr>
+                <td>Edenas Delicacies</td>
+                <td>Raya St., Nakuana, Cutu City</td>
+                <td>(046) 230-430</td>
+                <td>https://ertwebsite.id</td>
+            </tr>
+            <tr>
+                <td>JCshop</td>
+                <td>Gayona St., Nakuana, Nagaraya City</td>
+                <td>(046) 230-460</td>
+                <td>https://mrtwebsite.id</td>
+            </tr>
+        </table>
+    </div>
 
-        <div class="business_box">
-            <section>
-                <img src="images/a.png" alt="Art" />
-                <h2>Jonas_Web_Design</h2>
-                <p>Paghanapon St., Awnu, Naga City</p>
-                <p>(046)760-450</p>
-                <p>https//greatwebsite.com</p>
-            </section>
-        </div>
-
-        <div class="business_box">
-            <section>
-                <img src="images/meat.png" alt="Art" />
-                <h2>OTE_Quality Meat Producer </h2>
+    <footer>
+        <div class="footer">
+            <div class="logo_container">
+                <img src="images/mi icon.png" alt="Melinda" width="160" height="100">
+                <h1 class="name">CAMARINES SUR</h1>
+                <p>Chamber of Commerce</p>
                 <p>Nawara St., Dai, Nabua City</p>
-                <p>(046)790-452</p>
-                <p>https//notwebsite.com</p>
-            </section>
-            
+                <p>046-790-452</p>
+                <p>https://beautifulwebsite.com</p> <!-- Corrected URL spelling -->
+            </div>
         </div>
+        <div id="lastModified"></div> <!-- Element to display the last modified date -->
 
-        <div class="business_box">
-            <section>
-                <img src="images/food.png" alt="Art" />
-                <h2>Edenas Delicacies </h2>
-                <p>Raya St., Nakuana, Cutu City</p>
-                <p>(046)230-430</p>
-                <p>https//ertwebsite.id</p>
-            </section>
-        </div>
-
-        <div class="business_box">
-            <section>
-                <img src="images/pwede.png" alt="Art" />
-                <h2>JCshop</h2>
-                <p>Gayona St., Nakuana, Nagaraya City</p>
-                <p>(046)230-460</p>
-                <p>https//mrtwebsite.id</p>
-            </section>
-        </div>
-
-    </div>
-
+        <script>
+            // Get the last modified date
+            const lastModifiedDate = document.lastModified;
     
-    
+            // Display the date in the designated element
+            document.getElementById("lastModified").textContent = `Last Modified: ${lastModifiedDate}`;
+        </script>
+    </footer>
 </body>
-<footer>
-    <div class="footer">
-        <div class="logo_container">
-            <img src="images/mi icon.png" alt="Melinda" width="160" height="100">
-            <h1 class="name">CAMARINES SUR</h1>
-            <p>Chamber of Commerce</p>
-        </div>
-    </div>
-
-</footer>
 </html>

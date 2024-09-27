@@ -1,4 +1,4 @@
-@media (min-width: 740px){
+@media (max-width: 600px){
 
     header{
         display: flex;
@@ -33,6 +33,18 @@
     }
 
     .close-icon {
+        display: block;
+    }
+    .hero-content{
+        width: auto;
+    }
+    .text_home{
+        width: auto;
+    }
+    .container1{
+        width: 100%;
+        margin: 0;
+        padding: 10px;
         display: block;
     }
 }

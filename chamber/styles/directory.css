@@ -93,6 +93,7 @@ nav ul li a:hover {
     height: 400px;
     width: 80%;
     background-image: url("/chamber/images/volcanoe.png");
+    
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

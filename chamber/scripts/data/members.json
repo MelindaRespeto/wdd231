@@ -1,62 +1,69 @@
+[
 {
     "name": "JMs_Boutique",
-    "address": "St. Aquino St., Kordero, Naga",
-    "phone_numbers":"(046)460-450",
-    "icon_file_names": "https//dahomwebsite.com",
-    "membership_level":  "1= member"
+    "address": "St. Aquino St., Kordero, Iraya City",
+    "phone_number":"+046 460-450",
+    "url": "https://as1.ftcdn.net/v2/jpg/03/05/87/30/1000_F_305873047_yKD23iTStnK5RE8HQQPgtCQlr4mPBxBz.jpg",
+    "image":"./images/bou.jpg",
+    "level":  "member"
 
     
-}
+},
 
 {
     "name": "JOmels Arts and Design",
     "address": "St. Aguinaldo St., Kordero, Naga",
-    "phone_numbers":"(046)460-451",
-    "icon_file_names": "https//indawebsite.com",
-    "membership_level": "2 = silver"
+    "phone_number":"(046)460-451",
+    "url": "https//indawebsite.com",
+    "image":.
+    "level": "silver"
            
         
     
-}
+},
 
 {
     "name": "Jonas_Web_Design",
     "address": "Paghanapon St., Awnu, Naga City",
-    "phone_numbers":"(046)760-450",
-    "icon_file_names": "https//greatwebsite.com",
-    "membership_level": "3= gold"
+    "phone_number":"(046)760-450",
+    "url": "https//greatwebsite.com",
+    "level": "gold"
         
     
-}
+},
 
 {
     "name": "OTE_Quality Meat Producer",
-    "address": "Nawara St., Dai, Naga City",
-    "phone_numbers":"(046)790-450",
-    "icon_file_names": "https//notwebsite.com",
-    "membership_level": "3= gold",
+    "address": "Nawara St., Dai, Nabua City",
+    "phone_number":"(046)790-452",
+    "url": "https//notwebsite.com",
+    "level": "gold"
         
     
-}
+},
 
 
 {
-    "name": "Edenas Native Delicacies",
+    "name": "Edenas Delicacies",
     "address": "Raya St., Nakuana, Cutu City",
-    "phone_numbers":"(046)230-430",
-    "icon_file_names": "https//ertwebsite.id",
-    "membership_level": "3= gold"
+    "phone_number":"(046)230-430",
+    "url": "https//ertwebsite.id",
+    "level": "silver"
         
     
-}
+},
 
 {
-    "name": "MINdashop",
+    "name": "JCshop",
     "address": "Gayona St., Nakuana, Nagaraya City",
-    "phone_numbers":"(046)230-460",
-    "icon_file_names": "https//mrtwebsite.id",
-    "membership_level": "3= gold"
+    "phone_number":"(046)230-460",
+    "url": "https//mrtwebsite.id",
+    "level": "gold"
         
     
 }
+]
+
+
+
 

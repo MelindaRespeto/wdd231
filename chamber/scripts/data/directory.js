@@ -10,3 +10,31 @@ ham.addEventListener("click", () => {
   nav.classList.toggle("show");
 });
 
+//grid/list toggle
+gridbutton.addEventListener("click" , () => {
+  cards.classList.add("grid");
+  cards.classList.remove("list");
+});
+
+listbutton.addEventListener("click", () => {
+  cards.classList.add("list");
+  cards.classList.remove("grid");
+});
+
+
+gridbutton.addEventListener("click", () => {
+	// example using arrow function
+	display.classList.add("grid");
+	display.classList.remove("list");
+});
+
+listbutton.addEventListener("click", showList); // example using defined function
+
+function showList() {
+	display.classList.add("list");
+	display.classList.remove("grid");
+}
+
+  
+
+

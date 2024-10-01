@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dynamic Web Fundamentals with Melinda P. Competente in WDD 231.">
+
+    <meta property="og:title" content="MyChamber">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://melindarespeto.github.io/wdd231/chamber/images/volcanoe.png">
+    <meta property="og:url" content="https://melindarespeto.github.io/wdd231/">
+
+    <title> Camarines Sur Chamber of Commerce</title>
+    <link rel="icon" href="images/miicon.png" type="image/x-icon">
+    <meta name="author" content="web development">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+
+    <style>
+        /* Grid layout */
+        .grid .container2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        /* List layout */
+        .list .container2 {
+            display: block;
+        }
+
+        /* Adjust business boxes for list view */
+        .list .business_box {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .list .business_box section {
+            display: flex;
+            align-items: center;
+        }
+
+        .list .business_box section img {
+            margin-right: 20px;
+        }
+
+        .menu {
+            margin-bottom: 20px;
+        }
+
+        .menu button {
+            margin-right: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand_logo">
+            <div class="logo_container">
+                <img src="images/miicon.png" alt="Melinda" width="160" height="100">
+                <h1 class="name">CAMARINES SUR</h1>
+                <p> Chamber of Commerce</p>
+            </div>
+        </div>
+        <nav>
+            <ul class="hover_me">
+                <li class="home"><a href="https://www.linkedin.com/in/melinda-competente-46763720a/">Home</a></li>
+                <li><a href="https://byui.instructure.com/">Directory</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Join</a></li>
+                <li><a href="https://www.linkedin.com/in/melinda-competente">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="menu">
+        <button id="grid">⏹️ Grid</button>
+        <button id="list">📄 List</button>
+    </div>
+
+    <article class="grid" id="displayContainer">
+        <div class="container2">
+            <div class="business_box">
+                <section>
+                    <img src="images/tru.png" alt="JM's Boutique">
+                    <h2>JM's Boutique</h2>
+                    <p>St. Aquino St., Kordero, Iraya City</p>
+                    <p>+046 460-450</p>
+                    <p>https://indawebsite.com</p>
+                </section>
+            </div>
+            <!-- Additional business boxes... -->
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer">
+            <div class="logo_container">
+                <img src="images/miicon.png" alt="Melinda" width="160" height="100">
+                <h1 class="name">CAMARINES SUR</h1>
+                <p>Chamber of Commerce</p>
+                <p>Nawara St., Dai, Nabua City</p>
+                <p>046-790-452</p>
+                <p>https://beautifulwebsite.com</p>
+            </div>
+        </div>
+        <div id="lastModified"></div>
+
+        <script>
+            // Display the last modified date
+            const lastModifiedDate = document.lastModified;
+            document.getElementById("lastModified").textContent = `Last Modified: ${lastModifiedDate}`;
+
+            // Toggle between grid and list views
+            const gridButton = document.getElementById('grid');
+            const listButton = document.getElementById('list');
+            const displayContainer = document.getElementById('displayContainer');
+
+            gridButton.addEventListener('click', () => {
+                displayContainer.classList.add('grid');
+                displayContainer.classList.remove('list');
+            });
+
+            listButton.addEventListener('click', () => {
+                displayContainer.classList.add('list');
+                displayContainer.classList.remove('grid');
+            });
+        </script>
+    </footer>
+</body>
+</html>

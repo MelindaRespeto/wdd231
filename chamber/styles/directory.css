@@ -335,6 +335,30 @@ th,td{
     text-align: justify;
 }
 
+.grid .business_box {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+}
+
+.Business {
+    width: 100%;
+}
+
+.business_box img {
+    width: 100%;
+    height: auto;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list {
+    display: none;
+}
+
 #lastModified {
     margin-top: 20px;
     font-style: normal;

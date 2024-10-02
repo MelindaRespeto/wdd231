@@ -63,6 +63,20 @@ header {
     justify-content: center;
     color: #fff;
 }
+#weather {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+.day {
+    margin-top: 10px;
+}
 
 .cta-button {
     background-color: #007bff;
@@ -176,42 +190,6 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-
-
-
-/* Grid view style */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.list {
-    display: block;
-}
-
-.list .business_box {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-
-
-.menu{
-    text-align: center;
-}
-
-.hero-content{
-    
-    height: 300px;
-}
-.hero{
-    padding: 100px;
-}
-.hover_me a{
-    color: white;
 }
 
 /* Responsive Design */

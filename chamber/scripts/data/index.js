@@ -2,6 +2,8 @@ const apiKey = '02f4f1a3bc4c0aaa11c306e5a1c2a451'; // Replace with your actual A
 const city = 'Naga City, PH'; // Check if this is the correct city name (add "PH" for the country code)
 const units = 'imperial'; // Use 'imperial' for Fahrenheit
 
+let allMembers = []; // Variable to hold all members data
+
 async function getWeather() {
     try {
         // Fetch current weather data
@@ -61,5 +63,69 @@ async function getWeather() {
     }
 }
 
-// Call the function to get the weather when the page loads
+async function getBusinessMembers() {
+    try {
+        const response = await fetch('scripts/data/members.json');
+        if (!response.ok) {
+            throw new Error(`Failed to fetch members data: ${response.status}`);
+        }
+
+        return await response.json(); // Return the members data
+    } catch (error) {
+        console.error('Error fetching business members:', error);
+    }
+}
+
+// Function to display members
+function displayMembers(members) {
+    const businessContainer = document.getElementById('businessContainer');
+    businessContainer.innerHTML = ''; // Clear existing content
+
+    members.forEach(member => {
+        const memberDiv = document.createElement('div');
+        memberDiv.classList.add('business-member');
+        memberDiv.innerHTML = `
+            <img src="${member.image}" alt="${member.name}" width="100" height="100">
+            <h4>${member.name}</h4>
+            <p>Address: ${member.address}</p>
+            <p>Contact: ${member.phone_number}</p>
+            <a href="${member.url}" target="_blank">Visit Website</a>
+        `;
+        businessContainer.appendChild(memberDiv);
+    });
+}
+
+// Function to display all members
+function displayAllMembers(members) {
+    displayMembers(members); // Reuse the displayMembers function
+}
+
+// Fetch all members and store them in the variable
+async function fetchAndStoreMembers() {
+    const members = await getBusinessMembers();
+    if (members) {
+        allMembers = members; // Store all members data
+        displayAllMembers(allMembers); // Display all members initially
+    }
+}
+
+// Event listener for the gold members button
+document.getElementById('goldBtn').addEventListener('click', () => {
+    const goldMembers = allMembers.filter(member => member.level === 'gold');
+    displayMembers(goldMembers);
+});
+
+// Event listener for the silver members button
+document.getElementById('silverBtn').addEventListener('click', () => {
+    const silverMembers = allMembers.filter(member => member.level === 'silver');
+    displayMembers(silverMembers);
+});
+
+// Event listener for the all members button
+document.getElementById('allMembersBtn').addEventListener('click', () => {
+    displayAllMembers(allMembers);
+});
+
+// Call the function to get the weather and fetch members when the page loads
 getWeather();
+fetchAndStoreMembers();

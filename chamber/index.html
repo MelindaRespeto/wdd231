@@ -17,7 +17,7 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://melindarespeto.github.io/wdd231/chamber/images/volcanoe.png">
     <meta property="og:url" content="https://melindarespeto.github.io/wdd231/">
-    <title>Chambe Home Page</title>
+    <title>Chamber Home Page</title>
 
     <link rel="icon" href="images/miicon.png" type="image/x-icon">
     <meta name="author" content="web development">
@@ -29,6 +29,7 @@
 
     <script src="scripts/data/directory.js" defer></script>
     <script src="scripts/data/index.js" defer></script>
+    <script src="scripts/data/members.json" defer></script>
 </head>
 
 <body>
@@ -101,6 +102,19 @@
             </div>
         </article>
 
+
+        <div id="businessContainer"></div>
+
+        <!-- New div for buttons -->
+        <div id="buttonContainer" style="margin-top: 20px;">
+            <button id="allMembersBtn">Show All Members</button>
+            <button id="silverBtn">Show Silver Members</button>
+            <button id="goldBtn">Show Gold Members</button>
+            
+        </div>
+
+
+
         <div class="Business">
             <table>
                 <tr>
@@ -119,6 +133,12 @@
             </table>
         </div>
     </main>
+
+
+
+
+
+
 
     <footer>
         <div class="footer">

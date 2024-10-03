@@ -79,6 +79,8 @@ header {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    align-items: center; /* Center horizontally */
+    text-align: center;
 }
 
 .cta-button:hover {

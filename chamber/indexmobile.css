@@ -1,29 +1,32 @@
-@media (max-width: 600px){
-
-    header{
+@media (max-width: 768px) {
+    header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 500px;
-        
+        height: 100vh;
+        width: 100vw; /* Make the header full width */
+        padding: 20px;
+        box-sizing: border-box; 
     }
-    nav{
+    
+    nav {
         justify-content: flex-end;
         flex-direction: row;
     }
-    nav a{
+
+    nav a {
         flex: 1 1 100%;
-
     }
-    nav ul{ 
-        display:flex;
+
+    nav ul { 
+        display: flex;
         align-items: center;
-
-
     }
+
     nav ul li {
-		flex: 1 1 100%;
-	}
+        flex: 1 1 100%;
+    }
+
     .hamburger-menu {
         display: flex; 
         align-items: center;
@@ -31,58 +34,68 @@
     }
 
     .hamburger-icon {
-        display: none; 
+        display: block; /* Show hamburger icon on mobile */
     }
 
     .close-icon {
-        display: block;
+        display: none; /* Hide close icon unless opened */
     }
-    .hero-content{
-        width: 450px;
+
+    .hero-content {
+        width: 100%; /* Make hero content responsive */
     }
-    .text_home{
+
+    .text_home {
         width: 100%;
     }
-    .container1{
+
+    .container1 {
         width: 100%;
         margin: 0;
         padding: 10px;
         display: block;
     }
-    .container1 div{
+
+    .container1 div {
         width: 100%;
     }
+
     .grid {
         display: block;
         width: 100%;
     }
-    .container2{
-        width: 80%;
+
+    .container2 {
+        width: 100%; /* Make container fit full screen width */
         margin: 0;
         padding: 10px;
         display: block;
     }
-    tbody{
+
+    tbody {
         width: 100%;
-        height: 300PX;
+        height: auto; /* Auto height for better responsiveness */
     }
-    .business_box{
-        width: 500px;
+
+    .business_box {
+        width: 100%; /* Make business box responsive */
     }
-    .menu{
-        width: 450px;
+
+    .menu {
+        width: 100%; /* Make menu fit mobile screen */
     }
-    .footer{
-        width: 450px;
+
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100vw;
+        padding: 1rem;
+        flex-direction: column; /* Stack elements vertically */
+        height: auto; /* Allow height to adjust based on content */
     }
-    .logo_container{
-        width: 450px;
+
+    .logo_container {
+        width: 100%; /* Make logo responsive */
     }
-    
 }
-
-
-
-
-
-    

@@ -29,6 +29,9 @@ header {
 
 .logo_container img {
     margin-right: 10px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    }
 }
 
 .nav ul {
@@ -54,15 +57,21 @@ header {
 }
 
 /* Hero Section */
-.hero {
-    background-image: url('images/volcanoe.png');
-    background-size: cover;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+.hero-content {
+    background-image: url('images/volcano.png'); /* Corrected the image name */
+    color: #564545;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    background-size: cover; /* Scale the image to cover the container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    display: flex; /* To align text content */
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
 }
+
 
 .cta-button {
     background-color: #007bff;
@@ -81,6 +90,7 @@ header {
     display: flex;
     justify-content: space-around;
     margin: 20px;
+    
 }
 
 .container1 div {

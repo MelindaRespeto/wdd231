@@ -21,6 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles/directory.css">
     <link rel="stylesheet" href="styles/indexmobile.css">
 
@@ -94,7 +95,7 @@
             <button id="listBtn" aria-label="Display as list">📄 List</button>
         </div>
 
-        <article class="grid" id="displayContainer">
+        <article class="list" id="displayContainer">
             <div class="container2" id="businessContainer">
                 <!-- Business boxes will be inserted here by JavaScript -->
             </div>
@@ -104,10 +105,13 @@
         <div id="businessContainer"></div>
 
         <!-- New div for buttons -->
-        <div id="buttonContainer" style="margin-top: 20px;">
+        <div class="btnbox" id="buttonContainer" style="margin-top: 20px;">
+            
             <button id="allMembersBtn">Show All Members</button>
+            <button id="memberBtn"> Show Members only</button>
             <button id="silverBtn">Show Silver Members</button>
             <button id="goldBtn">Show Gold Members</button>
+            
             
         </div>
 

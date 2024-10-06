@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #8f8e8e;
 }
 
 h1, h2, h3 {
@@ -32,7 +32,7 @@ header {
     overflow-clip-margin: content-box;
     overflow: clip;
     }
-}
+
 
 .nav ul {
     list-style: none;
@@ -57,11 +57,17 @@ header {
 }
 
 /* Hero Section */
+
+.hero{
+    align-content: center;
+    margin: 0px;
+    padding: 10px;
+}
 .hero-content {
     background-image: url('images/volcano.png'); /* Corrected the image name */
     color: #564545;
     height: 100vh; /* Full viewport height */
-    width: 100vw;  /* Full viewport width */
+    width: 100vh;  /* Full viewport width */
     background-size: cover; /* Scale the image to cover the container */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent tiling */
@@ -70,6 +76,8 @@ header {
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
     text-align: center;
+    padding-left: 200px;
+    
 }
 
 
@@ -107,7 +115,7 @@ header {
     text-align: center;
     padding: 20px;
     font-size: 24px;
-    color: #007bff;
+    color: white;
 }
 
 /* Business Grid */
@@ -123,6 +131,7 @@ header {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    
 }
 
 .business_box img {
@@ -134,6 +143,9 @@ header {
 .Business {
     margin: 20px;
     overflow-x: auto;
+}
+.business-member a{
+    color: white;
 }
 
 .Business table {
@@ -161,7 +173,7 @@ header {
 }
 
 .Business a {
-    color: #007bff;
+    color: white;
     text-decoration: none;
 }
 
@@ -194,15 +206,19 @@ footer a:hover {
 
 
 /* Grid view style */
+.list {
+    display: block;
+    color: white;
+    
+}
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+    color: white;
 }
 
-.list {
-    display: block;
-}
+
 
 .list .business_box {
     width: 100%;
@@ -224,6 +240,12 @@ footer a:hover {
 }
 .hover_me a{
     color: white;
+}
+
+
+
+.btnbox{
+    text-align: center;
 }
 
 /* Responsive Design */

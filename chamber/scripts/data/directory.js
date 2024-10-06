@@ -39,6 +39,11 @@ const gridBtn = document.getElementById("gridBtn");
 const listBtn = document.getElementById("listBtn");
 const displayContainer = document.getElementById("displayContainer");
 
+if(displayContainer){
+    displayContainer.classList.add("list");
+}
+
+
 if (gridBtn && listBtn && displayContainer) {
     gridBtn.addEventListener("click", () => {
         displayContainer.classList.add("grid");

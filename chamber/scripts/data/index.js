@@ -121,6 +121,13 @@ document.getElementById('silverBtn').addEventListener('click', () => {
     displayMembers(silverMembers);
 });
 
+
+// Event listener for the only members button
+document.getElementById('memberBtn').addEventListener('click', () => {
+    const onlyMembers = allMembers.filter(member => member.level === 'member');
+    displayMembers(onlyMembers);
+});
+
 // Event listener for the all members button
 document.getElementById('allMembersBtn').addEventListener('click', () => {
     displayAllMembers(allMembers);

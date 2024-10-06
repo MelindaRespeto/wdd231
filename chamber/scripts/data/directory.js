@@ -56,6 +56,21 @@ if (gridBtn && listBtn && displayContainer) {
     });
 } else {
     console.warn("Grid button, list button, or display container element not found.");
+    
 }
 
+// member button animaition
+const buttons = document.querySelectorAll('.memberBtn');
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        buttons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to the clicked button
+        button.classList.add('active');
+        
+        // Additional logic for filtering members can be added here
+    });
+});
 

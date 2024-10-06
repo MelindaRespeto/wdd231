@@ -33,7 +33,11 @@ header {
     overflow: clip;
     }
 
+.name{
+    color: white;
+    padding: 10px;
 
+}
 .nav ul {
     list-style: none;
     display: flex;
@@ -223,6 +227,34 @@ footer a:hover {
 .list .business_box {
     width: 100%;
     margin-bottom: 20px;
+}
+
+
+
+.memberBtn {
+    background-color: #ededed; /* Default background color */
+    color: rgb(0, 0, 0); /* Text color */
+    border: thin; 
+    padding: 10px 20px; /* Padding */
+    margin: 5px; /* Margin */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+    
+
+    
+
+}
+
+.memberBtn.active {
+    background-color: #0446d3; /* Gold background for active */
+    color: rgb(240, 240, 240); /* Text color when active */
+}
+
+.memberBtn:hover{
+    background-color: green;
+    transform: scale(1.1);
+    transition: 0.9s;
+
 }
 
 

@@ -1,0 +1,152 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8f8e8e;
+}
+h1, h2, h3 {
+    margin: 0;
+    padding: 0.5em 0;
+    color: #333;
+}
+
+/* Header style */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo_container {
+    display: flex;
+    align-items: center;
+}
+.name {
+    color: white;
+    padding: 10px;
+}
+.hover_me a {
+    color: white;
+}
+.join {
+    color: green;
+}
+
+/* Main body style */
+.mainbody {
+    height: 800px;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px;
+    justify-items: center; /* Center items horizontally */
+}
+
+/* Form style */
+.form_container {
+    width: 500px;
+    height: 500px;
+    text-align: left;
+}
+.form_container label {
+    width: 50%;
+}
+.myform {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    gap: 2px;
+}
+.myform input {
+    margin: 5px;
+    width: 200px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.myform textarea {
+    width: 300px;
+}
+.submit_btn {
+    height: 50px;
+    width: 50%;
+    transition: 0.8s;
+    border-radius: 5px;
+}
+.submit_btn:hover {
+    background-color: rgb(56, 56, 56);
+    color: white;
+}
+
+/* Membership style */
+.membership_container {
+    width: 500px;
+    height: 500px;
+    text-align: center;
+}
+.membership_box {
+    background-color: rgb(158, 156, 156);
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 15px;
+    color: white;
+    width: 400px;
+    transform: translateY(100px); /* Start 100px below */
+    opacity: 0; /* Start fully transparent */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Transition for both transform and opacity */
+}
+.membership_box.show {
+    transform: translateY(0); /* Move to original position */
+    opacity: 1; /* Fade in */
+}
+
+/* Modal styles */
+.classmodal_1 {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal1_content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Footer style */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+footer p {
+    margin: 5px 0;
+}
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}

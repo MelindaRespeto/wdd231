@@ -8,6 +8,9 @@
         padding: 20px;
         box-sizing: border-box; 
     }
+    .home{
+        color: green;
+    }
     
     nav {
         justify-content: flex-end;

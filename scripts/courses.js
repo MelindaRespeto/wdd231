@@ -88,7 +88,13 @@ function displayCourses(courseData) {
         const listItem = document.createElement('li');
         listItem.classList.add('course-item');
         listItem.textContent = course.subject+ " " + course.number;
-        
+
+        if (course.subject === 'WDD' && course.number === 130) {
+            listItem.addEventListener('click', () => {
+                openModal(course);
+            });
+        }
+
         
         if (course.completed) {
             listItem.classList.add('completed');
@@ -100,6 +106,34 @@ function displayCourses(courseData) {
         certificateSection.appendChild(listItem);
     });
 }
+
+
+
+
+function openModal(course) {
+    document.getElementById('modal-title').textContent = course.title;
+    document.getElementById('modal-description').textContent = course.description;
+    document.getElementById('modal-credits').textContent = course.credits;
+    document.getElementById('modal-technology').textContent = course.technology.join(', ');
+    document.getElementById('course-modal').style.display = 'block';
+}
+
+// Function to close the modal
+function closeModal() {
+    document.getElementById('course-modal').style.display = 'none';
+}
+
+// Ensure the modal closes when clicking outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById('course-modal');
+    if (event.target == modal) {
+        closeModal();
+    }
+};
+
+
+
+
 
 
 displayCourses(courses1)

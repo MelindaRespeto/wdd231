@@ -6,6 +6,7 @@
     <meta name="description" content="Dynamic Web Fundamentals with Melinda P. Competente in WDD 231.">
     <title>Melinda Competente/wdd231</title>
     <meta name="author" content="web development">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -57,9 +58,9 @@
                     
                     <div >
                         <ul class="card1">
-                            <li class="dot"> </li>
-                            <li class="dot"> </li>
-                            <li class="dot"> </li>
+                            <li class="dot"> Blank</li>
+                            <li class="dot"> Blank</li>
+                            <li class="dot"> Blank</li>
                         </ul>
                        
                        
@@ -100,6 +101,18 @@
                 
             
         </section>
+
+        <!-- Modal Structure -->
+        <div id="course-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <p><strong>Credits:</strong> <span id="modal-credits"></span></p>
+                <p><strong>Technology:</strong> <span id="modal-technology"></span></p>
+            </div>
+        </div>
+
 
 
     </main>

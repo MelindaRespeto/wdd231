@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dynamic Web Fundamentals with Melinda P. Competente in WDD 231.">
+    <meta property="og:title" content="MyChamber">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://melindarespeto.github.io/wdd231/chamber/images/volcanoe.png">
+    <meta property="og:url" content="https://melindarespeto.github.io/wdd231/">
+    <title>Thank you for joining</title>
+    <link rel="stylesheet" href="/chamber/styles/thanku.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand_logo">
+            <div class="logo_container">
+                <img src="images/miicon.png" alt="Melinda's Logo" width="160" height="100">
+                <h1 class="name">CAMARINES SUR</h1>
+                <p>Chamber of Commerce</p>
+            </div>
+        </div>
+        <nav>
+            <ul class="hover_me">
+                <li class="home"><a href="/chamber/index.html">Home</a></li>
+                <li class="directory"><a href="/chamber/directory.html">Directory</a></li>
+                <li class="join"><a href="/chamber/join.html">Join</a></li>
+                <li class="discover"><a href="">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="boxbody">
+        <h2>Thank You For Your Application!</h2>
+        <h3>Your Information</h3>
+
+
+        <div class="info_box" id="user-info"></div> 
+
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="logo_container">
+                <img src="images/miicon.png" alt="Melinda's Logo" width="160" height="100">
+                <h1 class="name">CAMARINES SUR</h1>
+                <p>Chamber of Commerce</p>
+                <p>Nawara St., Dai, Nabua City</p>
+                <p>046-790-452</p>
+                <p>https://beautifulwebsite.com</p>
+            </div>
+        </div>
+
+
+
+
+        <div id="lastModified"></div>
+        <script>
+            
+            const lastModifiedDate = document.lastModified;
+            document.getElementById("lastModified").textContent = `Last Modified: ${lastModifiedDate}`;
+        </script>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        // Create a function to display user info
+        function displayUserInfo() {
+            const userInfoDiv = document.getElementById('user-info'); // Updated ID reference
+            userInfoDiv.innerHTML = `
+                <p><strong>First Name:</strong> ${params.get('first-name')}</p>
+                <p><strong>Last Name:</strong> ${params.get('last-name')}</p>
+                <p><strong>Organization:</strong> ${params.get('org-title')}</p>
+                <p><strong>Email:</strong> ${params.get('Email')}</p>
+                <p><strong>Mobile Number:</strong> ${params.get('mobile')}</p>
+                <p><strong>Business/Organization Name:</strong> ${params.get('business_name')}</p>
+                <p><strong>Description:</strong> ${params.get('description')}</p>
+            `;
+        }
+
+        // Call the function to display the user info
+        displayUserInfo();
+    </script>
+</body>
+</html>

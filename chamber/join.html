@@ -139,6 +139,8 @@
         </div>
         
         <div id="lastModified"></div>
+        <input type="datetime-local" id="id_time" />
+
         <script>
             // Get the last modified date
             const lastModifiedDate = document.lastModified;
@@ -184,6 +186,11 @@
                 }, index * 300); // Stagger the animations
             });
         };
+        document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("id_time").value = new Date().toISOString().slice(0, 16); // Format for datetime-local
+});
+
+        
     </script>
 </body>
 </html>

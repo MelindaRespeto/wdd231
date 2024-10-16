@@ -1,9 +1,12 @@
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #8f8e8e;
 }
+
 h1, h2, h3 {
     margin: 0;
     padding: 0.5em 0;
@@ -18,6 +21,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+.hover_me {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Full width on mobile */
 }
 .logo_container {
     display: flex;
@@ -36,21 +45,22 @@ header {
 
 /* Main body style */
 .mainbody {
-    height: 800px;
-    width: auto;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
-    gap: 20px;
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space between containers */
     margin: 20px;
-    justify-items: center; /* Center items horizontally */
 }
 
-/* Form style */
-.form_container {
-    width: 500px;
-    height: 500px;
-    text-align: left;
+.form_container,
+.membership_container {
+    flex: 1; /* Allow both containers to grow equally */
+    min-width: 300px; /* Minimum width for smaller screens */
+    margin: 10px; /* Add some margin for spacing */
+    padding: 20px; /* Add padding for better appearance */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+    
 }
+/* Form style */
+
 .form_container label {
     width: 50%;
 }
@@ -58,6 +68,18 @@ header {
     display: grid;
     grid-template-columns: repeat(1, minmax(300px, 1fr));
     gap: 2px;
+}
+.form_container {
+    text-align: left;
+}
+.membership_container {
+    text-align: center;
+    display: flex;           /* Enable flexbox */
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;
+    text-align: center;
+    
+    
 }
 .myform input {
     margin: 5px;
@@ -82,9 +104,8 @@ header {
     height: 30px;
 }
 /* Membership style */
-.membership_container {
-    width: 500px;
-    height: 500px;
+.membership_container div {
+    
     text-align: center;
 }
 .membership_box {
@@ -137,19 +158,55 @@ header {
 }
 
 /* Footer style */
+
 footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
 }
+
+.footer {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items */
+}
+
 footer p {
     margin: 5px 0;
+    word-wrap: break-word; /* Break long words to prevent overflow */
 }
+
 footer a {
     color: #007bff;
     text-decoration: none;
 }
+
 footer a:hover {
     text-decoration: underline;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .mainbody {
+        flex-direction: column; /* Stack containers vertically */
+    }
+    .form_container,
+    .membership_container {
+        width: 100%; /* Full width for smaller screens */
+    }
+    footer {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .footer {
+        width: 100%; /* Full width for the footer on mobile */
+    }
+    
+    
 }

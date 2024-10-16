@@ -41,37 +41,36 @@
         <div class="mainbody">
             <div class="form_container">
                 <h2>Membership Application Form</h2>
-                <form class="myform" action="/chamber/thankU.html" method="GET">
+                <form action="/chamber/thankU.html" method="GET">
                     <label for="firstname">First name:</label>
-                    <input type="text" id="firstname" name="first_name" required title="Please enter your first name." autocomplete="given-name">
-                
+                    <input type="text" id="firstname" name="first_name" required>
+                    
                     <label for="lastName">Last Name:</label>
-                    <input type="text" id="lastName" name="last_name" required title="Please enter your last name." autocomplete="family-name">
-                
+                    <input type="text" id="lastName" name="last_name" required>
+                    
                     <label for="org-title">Organization:</label>
-                    <input type="text" id="org-title" name="org_title" required title="Please enter your organization title." autocomplete="organization">
-                
+                    <input type="text" id="org-title" name="org_title" required>
+                    
                     <label for="id_email">Email:</label>
-                    <input type="email" id="id_email" name="email" required title="Please enter your email address." autocomplete="email" placeholder="Chamber@gmail.com">
-                
+                    <input type="email" id="id_email" name="email" required>
+                    
                     <label for="mobile_id">Mobile number:</label>
-                    <input type="tel" id="mobile_id" name="mobile" required title="Please enter your mobile number" placeholder="09488353535" autocomplete="tel">
-                
+                    <input type="tel" id="mobile_id" name="mobile" required>
+                    
                     <label for="business-name">Business/Organization Name:</label>
-                    <input type="text" id="business-name" name="business_name" required title="Please enter your business or organization name." autocomplete="organization">
-                
+                    <input type="text" id="business-name" name="business_name" required>
+                    
                     <label for="id_description">Business/Organization Description:</label>
-                    <textarea name="description" id="id_description" required title="Please add a brief description of your organization or business." rows="10" cols="30" placeholder="Business/organization description"></textarea>
-                
+                    <textarea name="description" id="id_description" required></textarea>
+                    
                     <label class="rbot" for="robot_check">
-                        <input  type="checkbox" id="robot_check" name="robot_check" required>
+                        <input type="checkbox" id="robot_check" name="robot_check" required>
                         I'm not a robot
                     </label>
-                
-                    <input type="hidden" id="id_time" name="time" value="">
+                    
                     <input class="submit_btn" type="submit" value="Submit">
                 </form>
-            
+                
             
             </div>
 

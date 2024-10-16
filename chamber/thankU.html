@@ -26,7 +26,7 @@
                 <li class="home"><a href="/chamber/index.html">Home</a></li>
                 <li class="directory"><a href="/chamber/directory.html">Directory</a></li>
                 <li class="join"><a href="/chamber/join.html">Join</a></li>
-                <li class="discover"><a href="">Discover</a></li>
+                <li class="discover"><a href="#">Discover</a></li>
             </ul>
         </nav>
     </header>
@@ -34,10 +34,7 @@
     <div class="boxbody">
         <h2>Thank You For Your Application!</h2>
         <h3>Your Information</h3>
-
-
-        <div class="info_box" id="user-info"></div> 
-
+        <div class="info_box" id="user-info"></div>
     </div>
 
     <footer>
@@ -48,16 +45,12 @@
                 <p>Chamber of Commerce</p>
                 <p>Nawara St., Dai, Nabua City</p>
                 <p>046-790-452</p>
-                <p>https://beautifulwebsite.com</p>
+                <p><a href="https://beautifulwebsite.com">Visit our website</a></p>
             </div>
         </div>
 
-
-
-
         <div id="lastModified"></div>
         <script>
-            
             const lastModifiedDate = document.lastModified;
             document.getElementById("lastModified").textContent = `Last Modified: ${lastModifiedDate}`;
         </script>
@@ -66,9 +59,8 @@
     <script>
         const params = new URLSearchParams(window.location.search);
 
-        // Create a function to display user info
         function displayUserInfo() {
-            const userInfoDiv = document.getElementById('user-info'); // Updated ID reference
+            const userInfoDiv = document.getElementById('user-info');
             userInfoDiv.innerHTML = `
                 <p><strong>First Name:</strong> ${params.get('first_name')}</p>
                 <p><strong>Last Name:</strong> ${params.get('last_name')}</p>
@@ -76,11 +68,10 @@
                 <p><strong>Email:</strong> ${params.get('email')}</p>
                 <p><strong>Mobile Number:</strong> ${params.get('mobile')}</p>
                 <p><strong>Business/Organization Name:</strong> ${params.get('business_name')}</p>
-                <p class = "dis"><strong>Description:</strong> ${params.get('description')}</p>
+                <p class="dis"><strong>Description:</strong> ${params.get('description')}</p>
             `;
         }
 
-        // Call the function to display the user info
         displayUserInfo();
     </script>
 </body>

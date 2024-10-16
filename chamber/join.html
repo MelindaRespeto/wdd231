@@ -14,11 +14,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-
-    
     <link rel="stylesheet" href="styles/mobile.css">
     <link rel="stylesheet" href="styles/joinlarge.css">
-    <script src="chamber/scripts/data/join.js"></script>
+    <script src="chamber/scripts/data/join.js" defer></script>
 </head>
 
 <body>
@@ -35,7 +33,7 @@
                 <li class="home"><a href="/chamber/index.html">Home</a></li>
                 <li class="directory"><a href="/chamber/directory.html">Directory</a></li>
                 <li class="join"><a href="/chamber/join.html">Join</a></li>
-                <li class="discover"><a href="">Discover</a></li>
+                <li class="discover"><a href="#">Discover</a></li>
             </ul>
         </nav>
     </header>
@@ -43,26 +41,26 @@
     <div class="mainbody">
         <div class="form_container">
             <h2>Membership Application Form</h2>
-            <form class="myform" method="GET" action="/chamber/thankU.html">
-                <label for="firstname">First name: </label>
+            <form class="myform" action="/chamber/thankU.html" method="GET">
+                <label for="firstname">First name:</label>
                 <input type="text" id="firstname" name="first_name" required title="Please enter your first name." autocomplete="given-name">
             
                 <label for="lastName">Last Name:</label>
                 <input type="text" id="lastName" name="last_name" required title="Please enter your last name." autocomplete="family-name">
             
-                <label for="org-title">Organization: </label>
+                <label for="org-title">Organization:</label>
                 <input type="text" id="org-title" name="org_title" required title="Please enter your organization title." autocomplete="organization">
             
-                <label for="id_email">Email: </label>
+                <label for="id_email">Email:</label>
                 <input type="email" id="id_email" name="email" required title="Please enter your email address." autocomplete="email" placeholder="Chamber@gmail.com">
             
-                <label for="mobile_id">Mobile number: </label>
+                <label for="mobile_id">Mobile number:</label>
                 <input type="tel" id="mobile_id" name="mobile" required title="Please enter your mobile number" placeholder="09488353535" autocomplete="tel">
             
-                <label for="business-name">Business/Organization Name: </label>
+                <label for="business-name">Business/Organization Name:</label>
                 <input type="text" id="business-name" name="business_name" required title="Please enter your business or organization name." autocomplete="organization">
             
-                <label for="id_description">Business/organization description: </label>
+                <label for="id_description">Business/Organization Description:</label>
                 <textarea name="description" id="id_description" required title="Please add a brief description of your organization or business." rows="10" cols="30" placeholder="Business/organization description"></textarea>
             
                 <input type="hidden" id="id_time" name="time" value="">
@@ -70,9 +68,6 @@
             </form>
             
         </div>
-
-
-
 
         <div class="membership_container">
             <h2>Membership Levels</h2>
@@ -128,17 +123,15 @@
                 <p>Chamber of Commerce</p>
                 <p>Nawara St., Dai, Nabua City</p>
                 <p>046-790-452</p>
-                <p>https://beautifulwebsite.com</p>
+                <p><a href="https://beautifulwebsite.com">Visit our website</a></p>
             </div>
         </div>
-        
+
         <div id="lastModified"></div>
-        
 
         <script>
             // Get the last modified date
             const lastModifiedDate = document.lastModified;
-            // Display the date in the designated element
             document.getElementById("lastModified").textContent = `Last Modified: ${lastModifiedDate}`;
         </script>
     </footer>
@@ -166,25 +159,24 @@
         }
 
         window.onkeydown = function(event) {
-            const modals = ['modal1', 'modal2', 'modal3', 'modal4'];
             if (event.key === "Escape") {
+                const modals = ['modal1', 'modal2', 'modal3', 'modal4'];
                 modals.forEach(modalId => closeModal(modalId));
             }
         }
 
         window.onload = function() {
-            const levels = document.querySelectorAll('.membership_box'); // Select all membership boxes
+            const levels = document.querySelectorAll('.membership_box');
             levels.forEach((level, index) => {
                 setTimeout(() => {
-                    level.classList.add('show'); // Add 'show' class to trigger animation
-                }, index * 300); // Stagger the animations
+                    level.classList.add('show');
+                }, index * 300);
             });
         };
-        document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("id_time").value = new Date().toISOString().slice(0, 16); // Format for datetime-local
-});
 
-        
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("id_time").value = new Date().toISOString().slice(0, 16);
+        });
     </script>
 </body>
 </html>

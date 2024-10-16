@@ -33,95 +33,95 @@
                 <li class="home"><a href="/chamber/index.html">Home</a></li>
                 <li class="directory"><a href="/chamber/directory.html">Directory</a></li>
                 <li class="join"><a href="/chamber/join.html">Join</a></li>
-                <li class="discover"><a href="#">Discover</a></li>
+                <li class="discover"><a href="">Discover</a></li>
             </ul>
         </nav>
     </header>
+    <main>
+        <div class="mainbody">
+            <div class="form_container">
+                <h2>Membership Application Form</h2>
+                <form class="myform" action="/chamber/thankU.html" method="GET">
+                    <label for="firstname">First name:</label>
+                    <input type="text" id="firstname" name="first_name" required title="Please enter your first name." autocomplete="given-name">
+                
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="last_name" required title="Please enter your last name." autocomplete="family-name">
+                
+                    <label for="org-title">Organization:</label>
+                    <input type="text" id="org-title" name="org_title" required title="Please enter your organization title." autocomplete="organization">
+                
+                    <label for="id_email">Email:</label>
+                    <input type="email" id="id_email" name="email" required title="Please enter your email address." autocomplete="email" placeholder="Chamber@gmail.com">
+                
+                    <label for="mobile_id">Mobile number:</label>
+                    <input type="tel" id="mobile_id" name="mobile" required title="Please enter your mobile number" placeholder="09488353535" autocomplete="tel">
+                
+                    <label for="business-name">Business/Organization Name:</label>
+                    <input type="text" id="business-name" name="business_name" required title="Please enter your business or organization name." autocomplete="organization">
+                
+                    <label for="id_description">Business/Organization Description:</label>
+                    <textarea name="description" id="id_description" required title="Please add a brief description of your organization or business." rows="10" cols="30" placeholder="Business/organization description"></textarea>
+                
+                    <label class="rbot" for="robot_check">
+                        <input  type="checkbox" id="robot_check" name="robot_check" required>
+                        I'm not a robot
+                    </label>
+                
+                    <input type="hidden" id="id_time" name="time" value="">
+                    <input class="submit_btn" type="submit" value="Submit">
+                </form>
+            
+            
+            </div>
 
-    <div class="mainbody">
-        <div class="form_container">
-            <h2>Membership Application Form</h2>
-            <form class="myform" action="/chamber/thankU.html" method="GET">
-                <label for="firstname">First name:</label>
-                <input type="text" id="firstname" name="first_name" required title="Please enter your first name." autocomplete="given-name">
-            
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="last_name" required title="Please enter your last name." autocomplete="family-name">
-            
-                <label for="org-title">Organization:</label>
-                <input type="text" id="org-title" name="org_title" required title="Please enter your organization title." autocomplete="organization">
-            
-                <label for="id_email">Email:</label>
-                <input type="email" id="id_email" name="email" required title="Please enter your email address." autocomplete="email" placeholder="Chamber@gmail.com">
-            
-                <label for="mobile_id">Mobile number:</label>
-                <input type="tel" id="mobile_id" name="mobile" required title="Please enter your mobile number" placeholder="09488353535" autocomplete="tel">
-            
-                <label for="business-name">Business/Organization Name:</label>
-                <input type="text" id="business-name" name="business_name" required title="Please enter your business or organization name." autocomplete="organization">
-            
-                <label for="id_description">Business/Organization Description:</label>
-                <textarea name="description" id="id_description" required title="Please add a brief description of your organization or business." rows="10" cols="30" placeholder="Business/organization description"></textarea>
-            
-                <label class="rbot" for="robot_check">
-                    <input  type="checkbox" id="robot_check" name="robot_check" required>
-                    I'm not a robot
-                </label>
-            
-                <input type="hidden" id="id_time" name="time" value="">
-                <input class="submit_btn" type="submit" value="Submit">
-            </form>
-            
-            
-        </div>
-
-        <div class="membership_container">
-            <h2>Membership Levels</h2>
-            <div class="membership_box" id="membership1">
-                <h3>Non Profit Membership Level</h3>
-                <a href="#" onclick="openModal('modal1'); return false;">Learn more</a>
-            </div>
-            <div class="membership_box" id="membership2">
-                <h3>Bronze Membership Level</h3>
-                <a href="#" onclick="openModal('modal2'); return false;">Learn more</a>
-            </div>
-            <div class="membership_box" id="membership3">
-                <h3>Silver Membership Level</h3>
-                <a href="#" onclick="openModal('modal3'); return false;">Learn more</a>
-            </div>
-            <div class="membership_box" id="membership4">
-                <h3>Gold Membership Level</h3>
-                <a href="#" onclick="openModal('modal4'); return false;">Learn more</a>
+            <div class="membership_container">
+                <h2>Membership Levels</h2>
+                <div class="membership_box" id="membership1">
+                    <h3>Non Profit Membership Level</h3>
+                    <a href="#" onclick="openModal('modal1'); return false;">Learn more</a>
+                </div>
+                <div class="membership_box" id="membership2">
+                    <h3>Bronze Membership Level</h3>
+                    <a href="#" onclick="openModal('modal2'); return false;">Learn more</a>
+                </div>
+                <div class="membership_box" id="membership3">
+                    <h3>Silver Membership Level</h3>
+                    <a href="#" onclick="openModal('modal3'); return false;">Learn more</a>
+                </div>
+                <div class="membership_box" id="membership4">
+                    <h3>Gold Membership Level</h3>
+                    <a href="#" onclick="openModal('modal4'); return false;">Learn more</a>
+                </div>
             </div>
         </div>
-    </div>
 
     <!-- Modals for Membership Levels -->
-    <div id="modal1" class="classmodal_1">
-        <div class="modal1_content">
-            <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <h2>Non Profit Membership</h2>
+        <div id="modal1" class="classmodal_1">
+            <div class="modal1_content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <h2>Non Profit Membership</h2>
+            </div>
         </div>
-    </div>
-    <div id="modal2" class="classmodal_1">
-        <div class="modal1_content">
-            <span class="close" onclick="closeModal('modal2')">&times;</span>
-            <h2>Bronze Membership</h2>
+        <div id="modal2" class="classmodal_1">
+            <div class="modal1_content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <h2>Bronze Membership</h2>
+            </div>
         </div>
-    </div>
-    <div id="modal3" class="classmodal_1">
-        <div class="modal1_content">
-            <span class="close" onclick="closeModal('modal3')">&times;</span>
-            <h2>Silver Membership</h2>
+        <div id="modal3" class="classmodal_1">
+            <div class="modal1_content">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <h2>Silver Membership</h2>
+            </div>
         </div>
-    </div>
-    <div id="modal4" class="classmodal_1">
-        <div class="modal1_content">
-            <span class="close" onclick="closeModal('modal4')">&times;</span>
-            <h2>Gold Membership</h2>
+        <div id="modal4" class="classmodal_1">
+            <div class="modal1_content">
+                <span class="close" onclick="closeModal('modal4')">&times;</span>
+                <h2>Gold Membership</h2>
+            </div>
         </div>
-    </div>
-
+    </main>
     <footer>
         <div class="footer">
             <div class="logo_container">
@@ -180,4 +180,5 @@
         };
     </script>
 </body>
+
 </html>

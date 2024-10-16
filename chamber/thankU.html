@@ -70,13 +70,13 @@
         function displayUserInfo() {
             const userInfoDiv = document.getElementById('user-info'); // Updated ID reference
             userInfoDiv.innerHTML = `
-                <p><strong>First Name:</strong> ${params.get('first-name')}</p>
-                <p><strong>Last Name:</strong> ${params.get('last-name')}</p>
+                <p><strong>First Name:</strong> ${params.get('first_name')}</p>
+                <p><strong>Last Name:</strong> ${params.get('last_name')}</p>
                 <p><strong>Organization:</strong> ${params.get('org-title')}</p>
-                <p><strong>Email:</strong> ${params.get('Email')}</p>
+                <p><strong>Email:</strong> ${params.get('email')}</p>
                 <p><strong>Mobile Number:</strong> ${params.get('mobile')}</p>
                 <p><strong>Business/Organization Name:</strong> ${params.get('business_name')}</p>
-                <p><strong>Description:</strong> ${params.get('description')}</p>
+                <p class = "dis"><strong>Description:</strong> ${params.get('description')}</p>
             `;
         }
 

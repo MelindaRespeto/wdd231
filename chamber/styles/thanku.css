@@ -37,11 +37,17 @@ header {
 
 .info_box{
     margin: 20px;
+    background-color: #656565;
+    padding: 10px;
 }
 .boxbody h3{
     margin: 20px;
 }
 
+.dis{
+    width: 700px;
+    height: 300px;
+}
 
 
 footer {

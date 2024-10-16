@@ -77,7 +77,10 @@ header {
     background-color: rgb(56, 56, 56);
     color: white;
 }
-
+.rbot input{
+    width: 50px;
+    height: 30px;
+}
 /* Membership style */
 .membership_container {
     width: 500px;

@@ -17,6 +17,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 .logo_container {
     display: flex;
@@ -108,4 +109,12 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+
+
+@media (max-width: 768px) {
+    
+    
+    
 }

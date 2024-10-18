@@ -1,0 +1,61 @@
+/* Color scheme */
+body {
+    font-family: 'Poppins', sans-serif; /* Default body text font */
+    background-color: #D6C5A1; /* Warm Sand */
+    color: #2E2A1F; /* Dark text for readability */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007B7F; /* Deep Ocean Blue */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+h1{
+    color: white;
+}
+h2 {
+    color: #007B7F; /* Deep Ocean Blue for headings */
+}
+
+
+section {
+    margin: 20px;
+    padding: 20px;
+}
+
+p, ul {
+    color: #2E2A1F; /* Dark text for readability */
+    line-height: 1.6;
+}
+
+strong {
+    color: #007B7F; /* Deep Ocean Blue for emphasized text */
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #007B7F; /* Deep Ocean Blue for footer */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    color: #007B7F; /* Deep Ocean Blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

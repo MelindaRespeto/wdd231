@@ -51,7 +51,8 @@ header {
 }
 
 .form_container,
-.membership_container {
+.membership_container{
+
     flex: 1; 
     min-width: 300px; 
     margin: 10px; 
@@ -59,6 +60,7 @@ header {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); 
     
 }
+
 /* Form style */
 
 .form_container label {

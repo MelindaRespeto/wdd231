@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dynamic Web Fundamentals with Melinda P. Competente in WDD 231.">
+    <meta property="og:title" content="MyChamber">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://melindarespeto.github.io/wdd231/chamber/images/volcanoe.png">
+    <meta property="og:url" content="https://melindarespeto.github.io/wdd231/">
+    <title>Join the Chamber of Commerce</title>
+    <link rel="icon" href="images/miicon.png" type="image/x-icon">
+    <meta name="author" content="web development">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/thanku.css">
+    <script src="/chamber/scripts/discover.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="brand_logo">
+            <div class="logo_container">
+                <img src="images/miicon.png" alt="Melinda's Logo" width="160" height="100">
+                <h1 class="name">CAMARINES SUR</h1>
+                <p>Chamber of Commerce</p>
+            </div>
+        </div>
+        <nav>
+            <ul class="hover_me">
+                <li class="home"><a href="/chamber/index.html">Home</a></li>
+                <li class="directory"><a href="/chamber/directory.html">Directory</a></li>
+                <li class="join"><a href="/chamber/join.html">Join</a></li>
+                <li class="discover"><a href="/chamber/discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Discover</h2>
+        <div class="mainbody">
+            
+            <div class="box1">
+                <div class="box1_1">
+                    <h2>Demographics</h2>
+                    <p>Population (2020) : 2,068,244</p>
+                    <p>Cities: 2</p>
+                    <p>Municipalities : 35</p>
+                    <p>Barangays: 1,063</p>
+                    <p>Coastal/Landlocked: coastal</p>
+                </div>
+                <div class="box1_2">
+                    <h2>Events</h2>
+                    <ul>
+                        <li>Annual Fair - July</li>
+                        <li>Business Expo - September</li>
+                        <li>Community Clean-up - April</li>
+                    </ul>
+                </div>
+                <div class="calendar">
+                    <aside class="sidebar">
+                        <h2>Calendar</h2>
+                        <div class="calendar">
+                            <div class="calendar-header">
+                                <button id="prev">Previous</button>
+                                <h3 id="monthYear">October 2024</h3>
+                                <button id="next">Next</button>
+                            </div>
+                            <div class="calendar-grid" id="calendarGrid"></div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <div class="box2">
+                <h2>Local Photos of Interest</h2>
+                <div class="image-gallery">
+                    <figure>
+                        <img src="/chamber/images/ocean.jpg" alt="Description of photo 1" loading="lazy">
+                        <figcaption>Ocean</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/chamber/images/volcanoe.png" alt="Description of photo 2" loading="lazy">
+                        <figcaption>Volcanoe</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/chamber/images/isarog.png" alt="Description of photo 3" loading="lazy">
+                        <figcaption>Isarog</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/chamber/images/islet-8110071_640.jpg" alt="Description of photo 4" loading="lazy">
+                        <figcaption>Isle</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/chamber/images/sabang.png" alt="Description of photo 5" loading="lazy">
+                        <figcaption>Boulevard</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/chamber/images/cara.png" alt="Description of photo 6" loading="lazy">
+                        <figcaption>Caramoan</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="textbox" id="visitorMessage"></div>
+        <div class="localstorage">
+            
+        </div> 
+        
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="logo_container">
+                <img src="images/miicon.png" alt="Melinda's Logo" width="160" height="100">
+                <h1 class="name">CAMARINES SUR</h1>
+                <p>Chamber of Commerce</p>
+                <p>Nawara St., Dai, Nabua City</p>
+                <p>046-790-452</p>
+                <p><a href="https://beautifulwebsite.com">Visit our website</a></p>
+            </div>
+        </div>
+
+        <div id="lastModified"></div>
+
+        <script>
+            const lastModifiedDate = document.lastModified;
+            document.getElementById("lastModified").textContent = `Last Modified: ${lastModifiedDate}`;
+        </script>
+    </footer>
+
+    <script src="scripts/main.js" defer></script> <!-- Link to your external JS file -->
+</body>
+</html>

@@ -93,6 +93,7 @@ main h2{
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 10px;
+    font-size: smaller;
 }
 
 .calendar-header {

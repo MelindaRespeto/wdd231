@@ -5,13 +5,6 @@ const nextButton = document.getElementById('next');
 
 let currentDate = new Date();
 
-
-
-
-
-
-
-
 function renderCalendar() {
     calendarGrid.innerHTML = ''; // Clear previous dates
 
@@ -49,7 +42,6 @@ function renderCalendar() {
     }
 }
 
-
 prevButton.addEventListener('click', () => {
     currentDate.setMonth(currentDate.getMonth() - 1);
     renderCalendar();
@@ -59,7 +51,6 @@ nextButton.addEventListener('click', () => {
     currentDate.setMonth(currentDate.getMonth() + 1);
     renderCalendar();
 });
-
 
 document.addEventListener("DOMContentLoaded", () => {
     const images = document.querySelectorAll('img[data-src]');
@@ -80,7 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// diplat on textbox part 
 // Function to display visitor message
 function displayVisitorMessage() {
     const lastVisitKey = 'lastVisit';
@@ -105,19 +95,13 @@ function displayVisitorMessage() {
 
     // Update the last visit date
     localStorage.setItem(lastVisitKey, now.toISOString());
-    
 }
-
 
 window.onload = function() {
     displayVisitorMessage();
-    
+    displayDaysUntilChristmas();
+    renderCalendar(); // Initial render
 };
-
-
-
-
-
 
 // Function to calculate days until Christmas
 function displayDaysUntilChristmas() {
@@ -135,10 +119,3 @@ function displayDaysUntilChristmas() {
         localStorageDiv.textContent = "Christmas has passed for this year!";
     }
 }
-
-
-
-
-displayDaysUntilChristmas();
-// Initial render
-renderCalendar();

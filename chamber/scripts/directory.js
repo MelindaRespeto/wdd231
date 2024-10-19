@@ -1,7 +1,5 @@
-// Assuming this code is inside your existing JS file
-
 // Fetch JSON data
-fetch('scripts/data/members.json')
+fetch('scripts/members.json')
     .then(response => response.json())
     .then(data => {
         const businessContainer = document.getElementById('businessContainer');
@@ -28,21 +26,14 @@ fetch('scripts/data/members.json')
     })
     .catch(error => console.error('Error fetching JSON:', error));
 
-
-
-
-
-
-
-
+// Check if the elements are already defined
 const gridBtn = document.getElementById("gridBtn");
 const listBtn = document.getElementById("listBtn");
 const displayContainer = document.getElementById("displayContainer");
 
-if(displayContainer){
+if (displayContainer) {
     displayContainer.classList.add("list");
 }
-
 
 if (gridBtn && listBtn && displayContainer) {
     gridBtn.addEventListener("click", () => {
@@ -56,10 +47,9 @@ if (gridBtn && listBtn && displayContainer) {
     });
 } else {
     console.warn("Grid button, list button, or display container element not found.");
-    
 }
 
-// member button animaition
+// Member button animation
 const buttons = document.querySelectorAll('.memberBtn');
 
 buttons.forEach(button => {
@@ -73,4 +63,3 @@ buttons.forEach(button => {
         // Additional logic for filtering members can be added here
     });
 });
-

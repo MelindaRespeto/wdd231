@@ -65,7 +65,7 @@ async function getWeather() {
 
 async function getBusinessMembers() {
     try {
-        const response = await fetch('scripts/data/members.json');
+        const response = await fetch('scripts/members.json');
         if (!response.ok) {
             throw new Error(`Failed to fetch members data: ${response.status}`);
         }

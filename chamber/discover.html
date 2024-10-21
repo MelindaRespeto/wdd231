@@ -17,9 +17,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/thanku.css">
-    
-    
-   
 </head>
 
 <body>
@@ -81,27 +78,45 @@
                 <h2>Local Photos of Interest</h2>
                 <div class="image-gallery">
                     <figure>
-                        <img src="images/ocean.jpg" alt="Description of photo 1" loading="lazy">
+                        <picture>
+                            <source srcset="images/ocean.webp" type="image/webp">
+                            <img src="images/ocean.jpg" alt="Ocean" loading="lazy">
+                        </picture>
                         <figcaption>Ocean</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/volcanoe.png" alt="Description of photo 2" loading="lazy">
+                        <picture>
+                            <source srcset="images/volcanoe.webp" type="image/webp">
+                            <img src="images/volcanoe.png" alt="Volcanoe" loading="lazy">
+                        </picture>
                         <figcaption>Volcanoe</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/isarog.png" alt="Description of photo 3" loading="lazy">
+                        <picture>
+                            <source srcset="images/isarog.webp" type="image/webp">
+                            <img src="images/isarog.png" alt="Isarog" loading="lazy">
+                        </picture>
                         <figcaption>Isarog</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/islet-8110071_640.jpg" alt="Description of photo 4" loading="lazy">
+                        <picture>
+                            <source srcset="images/islet-8110071_640.webp" type="image/webp">
+                            <img src="images/islet-8110071_640.jpg" alt="Islet" loading="lazy">
+                        </picture>
                         <figcaption>Isle</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/sabang.png" alt="Description of photo 5" loading="lazy">
+                        <picture>
+                            <source srcset="images/sabang.webp" type="image/webp">
+                            <img src="images/sabang.png" alt="Boulevard" loading="lazy">
+                        </picture>
                         <figcaption>Boulevard</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/cara.png" alt="Description of photo 6" loading="lazy">
+                        <picture>
+                            <source srcset="images/cara.webp" type="image/webp">
+                            <img src="images/cara.png" alt="Caramoan" loading="lazy">
+                        </picture>
                         <figcaption>Caramoan</figcaption>
                     </figure>
                 </div>
@@ -109,11 +124,7 @@
         </div>
 
         <div class="textbox" id="visitorMessage"></div>
-        <div class="localstorage">
-            
-        </div> 
-        
-
+        <div class="localstorage"></div> 
     </main>
 
     <footer>
@@ -138,5 +149,4 @@
 
     <script src="scripts/discover.js" defer></script>
 </body>
-
 </html>

@@ -1,6 +1,6 @@
 @media (max-width: 768px) {
     header {
-        display: flex;
+        display: block;
         align-items: center;
         justify-content: space-between;
         height: 100vh;
@@ -22,7 +22,7 @@
     }
 
     nav ul { 
-        display: flex;
+        display: block;
         align-items: center;
     }
 
@@ -46,6 +46,13 @@
 
     .hero-content {
         width: 100%; /* Make hero content responsive */
+        height: 500px;
+        
+    }
+    .hero {
+        text-align: center;
+        padding: 0;
+        margin: 0;
     }
 
     .text_home {
@@ -100,5 +107,12 @@
 
     .logo_container {
         width: 100%; /* Make logo responsive */
+        display: block;
+    }
+    .hero-content img{
+        width: 500px;
+        height: 500px;
+        padding: 10px;
+        margin: 0;
     }
 }

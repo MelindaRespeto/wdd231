@@ -21,27 +21,20 @@
 
         // Add day labels
         const dayLabels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-        dayLabels.forEach(day => {
-            const dayElement = document.createElement('div');
-            dayElement.className = 'day';
-            dayElement.textContent = day;
-            calendarGrid.appendChild(dayElement);
-        });
+        let calendarHTML = dayLabels.map(day => `<div class="day">${day}</div>`).join('');
 
         // Add empty cells for days before the first day
         for (let i = 0; i < firstDay; i++) {
-            const emptyCell = document.createElement('div');
-            emptyCell.className = 'date'; // Keep the same class for styling
-            calendarGrid.appendChild(emptyCell);
+            calendarHTML += `<div class="date"></div>`;
         }
 
         // Add the dates
         for (let day = 1; day <= totalDays; day++) {
-            const dateElement = document.createElement('div');
-            dateElement.className = 'date';
-            dateElement.textContent = day;
-            calendarGrid.appendChild(dateElement);
+            calendarHTML += `<div class="date">${day}</div>`;
         }
+
+        // Inject the generated HTML into the grid
+        calendarGrid.innerHTML = calendarHTML;
     }
 
     // Event listeners for prev and next buttons
@@ -68,6 +61,8 @@
                     observer.unobserve(img); // Stop observing the image
                 }
             });
+        }, {
+            rootMargin: '200px 0px', // Load images 200px before they come into view
         });
 
         images.forEach(image => {
@@ -102,8 +97,10 @@
             }
         }
 
-        // Update the last visit date
-        localStorage.setItem(lastVisitKey, now.toISOString());
+        // Only update if the visit date changes
+        if (!lastVisit || new Date(lastVisit).getDate() !== now.getDate()) {
+            localStorage.setItem(lastVisitKey, now.toISOString());
+        }
     }
 
     // Function to calculate days until Christmas
@@ -124,7 +121,3 @@
     }
 
 })();
-
-
-
-

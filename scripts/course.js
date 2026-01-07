@@ -1,10 +1,48 @@
 // course.js
 
 const courses = [
-    { code: "WDD 130", subject: "WDD", credits: 2 },
-    { code: "WDD 131", subject: "WDD", credits: 2 },
-    { code: "WDD 231", subject: "WDD", credits: 2 },
-    { code: "CSE 110", subject: "CSE", credits: 2 }
+    {
+        subject: "CSE",
+        number: 110,
+        title: "Introduction to Programming",
+        credits: 2,
+        completed: false
+    },
+    {
+        subject: "WDD",
+        number: 130,
+        title: "Web Fundamentals",
+        credits: 2,
+        completed: false
+    },
+    {
+        subject: "CSE",
+        number: 111,
+        title: "Programming with Functions",
+        credits: 2,
+        completed: false
+    },
+    {
+        subject: "CSE",
+        number: 210,
+        title: "Programming with Classes",
+        credits: 2,
+        completed: false
+    },
+    {
+        subject: "WDD",
+        number: 131,
+        title: "Dynamic Web Fundamentals",
+        credits: 2,
+        completed: false
+    },
+    {
+        subject: "WDD",
+        number: 231,
+        title: "Frontend Web Development I",
+        credits: 2,
+        completed: false
+    }
 ];
 
 const courseContainer = document.querySelector(".course-list");
@@ -16,12 +54,13 @@ function displayCourses(filteredCourses) {
 
     filteredCourses.forEach(course => {
         const card = document.createElement("span");
-        card.textContent = course.code;
+        card.textContent = `${course.subject} ${course.number}`;
         courseContainer.appendChild(card);
     });
 
     const totalCredits = filteredCourses.reduce(
-        (sum, course) => sum + course.credits, 0
+        (sum, course) => sum + course.credits,
+        0
     );
 
     creditDisplay.textContent =
@@ -39,8 +78,8 @@ filterButtons.forEach(button => {
         if (filter === "All") {
             displayCourses(courses);
         } else {
-            const filtered = courses.filter(course =>
-                course.subject === filter
+            const filtered = courses.filter(
+                course => course.subject === filter
             );
             displayCourses(filtered);
         }

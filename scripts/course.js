@@ -46,31 +46,38 @@ const courses = [
 ];
 
 const courseContainer = document.querySelector(".course-list");
-const filterButtons = document.querySelectorAll(".course-filters button");
 const creditDisplay = document.querySelector(".credits");
+const filterButtons = document.querySelectorAll(".course-filters button");
 
-function displayCourses(filteredCourses) {
+function displayCourses(courseArray) {
     courseContainer.innerHTML = "";
 
-    filteredCourses.forEach(course => {
-        const card = document.createElement("span");
-        card.textContent = `${course.subject} ${course.number}`;
+    courseArray.forEach(course => {
+        const card = document.createElement("div");
+        card.classList.add("course-card");
+
+        if (course.completed) {
+            card.classList.add("completed");
+            card.textContent = `✓ ${course.subject} ${course.number}`;
+        } else {
+            card.textContent = `${course.subject} ${course.number}`;
+        }
+
         courseContainer.appendChild(card);
     });
 
-    const totalCredits = filteredCourses.reduce(
-        (sum, course) => sum + course.credits,
-        0
+    const totalCredits = courseArray.reduce(
+        (total, course) => total + course.credits, 0
     );
 
     creditDisplay.textContent =
-        `The total credits for courses listed above is ${totalCredits}`;
+        `The total number of course credits listed below is ${totalCredits}`;
 }
 
 // Initial display
 displayCourses(courses);
 
-// Filter handling
+// Filter buttons
 filterButtons.forEach(button => {
     button.addEventListener("click", () => {
         const filter = button.textContent;

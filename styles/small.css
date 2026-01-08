@@ -159,7 +159,7 @@ h2 {
 }
 
 .course-filters button:hover {
-    background-color: #c4684f;
+    background-color: #5cb1d9;
 }
 
 .credits {
@@ -184,12 +184,13 @@ h2 {
     padding: 15px;
     border-radius: 10px;
     font-weight: bold;
-    background-color: #d97a5c;
+    background-color: #5cb1d9;
 }
 
 .credits {
-    margin-top: 1rem;
+    margin-top: 15px;
     font-size: 0.9rem;
+    font-weight: bold;
 }
 
 .menu-button {

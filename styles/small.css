@@ -141,22 +141,50 @@ h2 {
     display: flex;
     gap: 0.5rem;
     margin: 1rem 0;
+    margin-bottom: 20px;
 }
+
 
 .course-filters button {
     flex: 1;
     padding: 0.5rem;
+    background-color: #d97a5c;
+    border: none;
+    color: #000;
+    padding: 10px 18px;
+    margin: 0 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.course-filters button:hover {
+    background-color: #c4684f;
+}
+
+.credits {
+    margin: 15px 0;
+    font-weight: bold;
 }
 
 .course-list {
     display: grid;
-    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .course-list span {
     background: #ccc;
     padding: 0.5rem;
     text-align: center;
+}
+
+.course-card {
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: #d97a5c;
 }
 
 .credits {

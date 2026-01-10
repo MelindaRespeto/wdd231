@@ -1,0 +1,73 @@
+/* Container for all cards */
+#cards {
+    display: flex;
+    flex-direction: column;
+    /* stack cards vertically */
+    align-items: center;
+    /* center cards horizontally */
+    gap: 20px;
+    /* space between cards */
+    margin: 20px;
+    padding-bottom: 20px;
+}
+
+/* Individual prophet card */
+.prophet-card {
+    background-color: #c0c0e0;
+    /* light purple background */
+    border: 1px solid #888;
+    /* subtle border */
+    border-radius: 10px;
+    /* rounded corners */
+    padding: 15px;
+    width: 90%;
+    /* almost full width on mobile */
+    max-width: 300px;
+    /* limit width */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Name styling */
+.prophet-card h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #4b3b8a;
+    /* dark purple */
+    margin-bottom: 5px;
+}
+
+/* Birth info styling */
+.prophet-card p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #333;
+    margin: 2px 0;
+}
+
+/* Image styling */
+.prophet-card img {
+    display: block;
+    margin: 10px auto 0 auto;
+    /* center the image */
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color: #4b3b8a;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.85rem;
+    margin: 20px 0;
+    color: #555;
+}

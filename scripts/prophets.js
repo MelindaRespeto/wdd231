@@ -7,10 +7,11 @@ const cards = document.querySelector('#cards');
 // Async function to fetch data
 async function getProphetData() {
     try {
+        // Fetch the JSON
         const response = await fetch(url);
         const data = await response.json();
 
-        // Call displayProphets with the array of prophets
+        // Call the displayProphets function with the array
         displayProphets(data.prophets);
 
     } catch (error) {
@@ -18,35 +19,30 @@ async function getProphetData() {
     }
 }
 
-// Function expression using arrow function
+// Function expression using arrow syntax
 const displayProphets = (prophets) => {
     prophets.forEach(prophet => {
-        // Create a card for each prophet
+        // 1️⃣ Create a section element for the card
         const card = document.createElement('section');
         card.classList.add('prophet-card');
 
-        // Name
-        const name = document.createElement('h2');
-        name.textContent = `${prophet.name} ${prophet.lastname}`;
+        // 2️⃣ Create an h2 element for the full name
+        const fullName = document.createElement('h2');
+        fullName.textContent = `${prophet.name} ${prophet.lastname}`;
 
-        // Birthdate
-        const birth = document.createElement('p');
-        birth.textContent = `Date of Birth: ${prophet.birthdate}`;
+        // 3️⃣ Create an img element for the portrait
+        const portrait = document.createElement('img');
+        portrait.setAttribute('src', prophet.imageurl);
+        portrait.setAttribute('alt', `Portrait of ${prophet.name} ${prophet.lastname}`);
+        portrait.setAttribute('loading', 'lazy');
+        portrait.setAttribute('width', '340');  // example width
+        portrait.setAttribute('height', '440'); // example height
 
-        // Birthplace
-        const place = document.createElement('p');
-        place.textContent = `Place of Birth: ${prophet.birthplace}`;
+        // 4️⃣ Append heading and image to the card one at a time
+        card.appendChild(fullName);
+        card.appendChild(portrait);
 
-        // Portrait image
-        const image = document.createElement('img');
-        image.setAttribute('src', prophet.imageurl);
-        image.setAttribute('alt', `Portrait of ${prophet.name} ${prophet.lastname}`);
-        image.setAttribute('loading', 'lazy');
-
-        // Append all elements to the card
-        card.append(name, birth, place, image);
-
-        // Append the card to the container
+        // 5️⃣ Append the card to the container
         cards.appendChild(card);
     });
 };

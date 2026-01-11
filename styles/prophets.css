@@ -1,48 +1,68 @@
-/* Container for all cards */
+/* Body styling */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #4b3b8a;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.85rem;
+    margin: 20px 0;
+    color: #555;
+}
+
+/* Container for all cards - responsive */
 #cards {
-    display: flex;
-    flex-direction: column;
-    /* stack cards vertically */
-    align-items: center;
-    /* center cards horizontally */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    /* space between cards */
     margin: 20px;
     padding-bottom: 20px;
+    justify-items: center;
 }
 
 /* Individual prophet card */
 .prophet-card {
     background-color: #c0c0e0;
-    /* light purple background */
     border: 1px solid #888;
-    /* subtle border */
     border-radius: 10px;
-    /* rounded corners */
     padding: 15px;
-    width: 90%;
-    /* almost full width on mobile */
+    width: 100%;
     max-width: 300px;
-    /* limit width */
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+.prophet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Name styling */
 .prophet-card h2 {
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 1.2rem;
     color: #4b3b8a;
-    /* dark purple */
     margin-bottom: 5px;
 }
 
 /* Birth info styling */
 .prophet-card p {
-    font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: #333;
     margin: 2px 0;
 }
@@ -51,23 +71,46 @@
 .prophet-card img {
     display: block;
     margin: 10px auto 0 auto;
-    /* center the image */
     border-radius: 5px;
     width: 100%;
     height: auto;
 }
 
-header h1 {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    font-size: 1.8rem;
-    margin-top: 20px;
-    color: #4b3b8a;
+/* Grid container for additional sections */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
 }
 
-footer {
+.grid-item {
+    background-color: #4CAF50;
+    color: white;
     text-align: center;
-    font-size: 0.85rem;
-    margin: 20px 0;
-    color: #555;
+    padding: 40px 0;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Grid item hover effect */
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive text adjustments */
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .prophet-card h2 {
+        font-size: 1.1rem;
+    }
+
+    .prophet-card p {
+        font-size: 0.85rem;
+    }
 }

@@ -7,11 +7,10 @@ const cards = document.querySelector('#cards');
 // Async function to fetch data
 async function getProphetData() {
     try {
-        // Fetch the JSON
         const response = await fetch(url);
         const data = await response.json();
 
-        // Call the displayProphets function with the array
+        // Call displayProphets with the array of prophets
         displayProphets(data.prophets);
 
     } catch (error) {
@@ -30,7 +29,14 @@ const displayProphets = (prophets) => {
         const fullName = document.createElement('h2');
         fullName.textContent = `${prophet.name} ${prophet.lastname}`;
 
-        // 3️⃣ Create an img element for the portrait
+        // 3️⃣ Create p elements for birthdate and birthplace
+        const birthDate = document.createElement('p');
+        birthDate.textContent = `Date of Birth: ${prophet.birthdate}`;
+
+        const birthPlace = document.createElement('p');
+        birthPlace.textContent = `Place of Birth: ${prophet.birthplace}`;
+
+        // 4️⃣ Create an img element for the portrait
         const portrait = document.createElement('img');
         portrait.setAttribute('src', prophet.imageurl);
         portrait.setAttribute('alt', `Portrait of ${prophet.name} ${prophet.lastname}`);
@@ -38,11 +44,13 @@ const displayProphets = (prophets) => {
         portrait.setAttribute('width', '340');  // example width
         portrait.setAttribute('height', '440'); // example height
 
-        // 4️⃣ Append heading and image to the card one at a time
+        // 5️⃣ Append elements to the card one at a time
         card.appendChild(fullName);
+        card.appendChild(birthDate);
+        card.appendChild(birthPlace);
         card.appendChild(portrait);
 
-        // 5️⃣ Append the card to the container
+        // 6️⃣ Append the card to the container
         cards.appendChild(card);
     });
 };

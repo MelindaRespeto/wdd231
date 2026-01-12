@@ -271,7 +271,7 @@ footer {
 }
 
 .hero-image {
-    background-image: url("../images/parrot.jpg");
+    background-image: url("../images/myhero.jpg");
     /* Replace with your image URL */
     background-size: cover;
     /* Makes the image cover the whole section */
@@ -290,7 +290,7 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: black;
     /* Text color */
     text-align: center;
 }

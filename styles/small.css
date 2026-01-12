@@ -279,7 +279,7 @@ footer {
     /* Centers the image */
     background-repeat: no-repeat;
     /* Prevents the image from repeating */
-    height: 70vh;
+    height: 80vh;
     /* Height is 70% of the viewport height */
     position: relative;
 }

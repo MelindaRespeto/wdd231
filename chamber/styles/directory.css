@@ -231,11 +231,3 @@ footer span {
         font-size: 0.9rem;
     }
 }
-
-.member-card:nth-child(even) {
-    background-color: #eef2ff;
-}
-
-.member-card:nth-child(odd) {
-    background-color: #ffffff;
-}

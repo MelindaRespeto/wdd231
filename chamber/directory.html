@@ -36,8 +36,20 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/directory.css">
 
-    <!-- JS -->
+    <!-- =====================
+         ZEBRA STRIPING (INSERTED ONLY)
+    ====================== -->
+    <style>
+        .member-card:nth-child(even) {
+            background-color: #eef2ff;
+        }
 
+        .member-card:nth-child(odd) {
+            background-color: #ffffff;
+        }
+    </style>
+
+    <!-- JS -->
     <script src="scripts/directory.js" defer></script>
 </head>
 
@@ -64,18 +76,19 @@
             <p>Great things start in City of Paradise</p>
         </div>
     </section>
+
     <section id="members" class="members-grid"></section>
 
     <main>
         <h2>Chamber of Commerce Members</h2>
-        <section id="members" class="members-grid"></section>
+
+
         <!-- Toggle View Buttons -->
         <div class="view-toggle">
             <button id="grid-view" class="active">Grid View</button>
             <button id="list-view">List View</button>
         </div>
 
-        <section id="members" class="members-grid"></section>
 
     </main>
 

@@ -18,7 +18,6 @@ const dataURL = "data/members.json"; // relative path from directory.html
 // Async function to fetch JSON data
 async function getMembers() {
     try {
-        // <-- fetch goes here
         const response = await fetch(dataURL);
 
         if (!response.ok) {
@@ -43,13 +42,12 @@ function displayMembers(companies) {
         card.classList.add("member-card");
 
         card.innerHTML = `
-      <img src="images/${company.image}" alt="${company.name} logo" loading="lazy">
-      <h2>${company.name}</h2>
-      <p><strong>Address:</strong> ${company.address}</p>
-      <p><strong>Phone:</strong> ${company.phone}</p>
-      <p><strong>Membership:</strong> ${getMembershipLevel(company.membershipLevel)}</p>
-      
-    `;
+            <img src="images/${company.image}" alt="${company.name} logo" loading="lazy">
+            <h2>${company.name}</h2>
+            <p><strong>Address:</strong> ${company.address}</p>
+            <p><strong>Phone:</strong> ${company.phone}</p>
+            <p><strong>Membership:</strong> ${getMembershipLevel(company.membershipLevel)}</p>
+        `;
 
         membersContainer.appendChild(card);
     });

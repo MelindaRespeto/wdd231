@@ -4,7 +4,6 @@
       "name": "Sunrise Bakery",
       "address": "123 Main Street, Cebu City, Philippines",
       "phone": "+63 912 345 6789",
-      "website": "https://www.sunrisebakery.ph",
       "image": "cookies.jpg",
       "membershipLevel": 3
     },
@@ -12,8 +11,7 @@
       "name": "OceanTech Solutions",
       "address": "45 IT Park, Lahug, Cebu City, Philippines",
       "phone": "+63 917 456 1234",
-      "website": "https://www.oceantechsolutions.com",
-      "image": "oceantech-solutions.png",
+      "image": "wifi.jpg",
       "membershipLevel": 2
     },
     {

@@ -48,7 +48,7 @@ function displayMembers(companies) {
       <p><strong>Address:</strong> ${company.address}</p>
       <p><strong>Phone:</strong> ${company.phone}</p>
       <p><strong>Membership:</strong> ${getMembershipLevel(company.membershipLevel)}</p>
-      <a href="${company.website}" target="_blank" rel="noopener">Visit Website</a>
+      
     `;
 
         membersContainer.appendChild(card);

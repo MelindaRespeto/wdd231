@@ -53,6 +53,14 @@
       "website": "https://www.skylinefitness.ph",
       "image": "skyline-fitness.jpg",
       "membershipLevel": 2
+    },
+    {
+      "name": "MeatShop",
+      "address": "33 Wellness Blvd, Cebu City, Philippines",
+      "phone": "+63 944 555 6677",
+      "website": "https://www.skylinefitness.ph",
+      "image": "skyline-fitness.jpg",
+      "membershipLevel": 2
     }
   ]
 }

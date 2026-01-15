@@ -40,7 +40,7 @@
     },
     {
       "name": "FreshMart Grocery",
-      "address": "56 Market Street, Cebu City, Philippines",
+      "address": "56 Market Street, Manila City, Philippines",
       "phone": "+63 933 222 4455",
       "website": "https://www.freshmartgrocery.ph",
       "image": "grocery.png",
@@ -51,15 +51,15 @@
       "address": "33 Wellness Blvd, Cebu City, Philippines",
       "phone": "+63 944 555 6677",
       "website": "https://www.skylinefitness.ph",
-      "image": "skyline-fitness.jpg",
+      "image": "fit.png",
       "membershipLevel": 2
     },
     {
       "name": "MeatShop",
-      "address": "33 Wellness Blvd, Cebu City, Philippines",
-      "phone": "+63 944 555 6677",
+      "address": "27 Liko Blvd,Naga City, Philippines",
+      "phone": "+63 944 555 6687",
       "website": "https://www.skylinefitness.ph",
-      "image": "skyline-fitness.jpg",
+      "image": "meat.png",
       "membershipLevel": 2
     }
   ]

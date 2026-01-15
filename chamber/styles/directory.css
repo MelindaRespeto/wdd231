@@ -203,7 +203,6 @@ main {
 }
 
 .member-card img {
-    height: auto;
     margin-bottom: 0.5rem;
     width: 100%;
     max-width: 300px;

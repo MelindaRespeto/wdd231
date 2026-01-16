@@ -125,6 +125,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
 }
 
 /* Optional: make cards full width in list view */
@@ -230,4 +231,8 @@ footer span {
     .hero-text {
         font-size: 0.9rem;
     }
+}
+
+&:nth-child(even) {
+    background-color: #bbb;
 }

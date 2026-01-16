@@ -76,22 +76,25 @@ nav a:hover {
    HERO SECTION
 ===================== */
 .hero-image {
-    background-image: url("images/myhero.jpg");
+    background-image: url("images/noa.webp");
     background-size: cover;
     background-position: center;
-    min-height: 150px;
+    height: 30vh;
+    min-height: 180px;
+    max-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .hero-text {
-    background-color: rgba(131, 116, 116, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
     padding: 1.5rem;
-    text-align: center;
     border-radius: 8px;
+    text-align: center;
 }
+
 
 /* View Toggle Buttons */
 .view-toggle {

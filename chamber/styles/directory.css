@@ -197,14 +197,14 @@ main {
 }
 
 .member-card:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: #caaeae;
 }
 
 /* =====================
    FOOTER
 ===================== */
 footer {
-    background-color: #003366;
+    s background-color: #003366;
     color: #fff;
     text-align: center;
     padding: 1rem;

@@ -233,6 +233,6 @@ footer span {
     }
 }
 
-&:nth-child(even) {
+.list-view .card:nth-child(even) {
     background-color: #bbb;
 }

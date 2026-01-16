@@ -76,7 +76,7 @@ nav a:hover {
    HERO SECTION
 ===================== */
 .hero-image {
-    background-image: url("../images/myhero.jpg");
+    background-image: url("images/myhero.jpg");
     background-size: cover;
     background-position: center;
     min-height: 150px;

@@ -130,8 +130,7 @@ nav a:hover {
     gap: 1rem;
     align-items: center;
     margin: 0 auto;
-    margin-left: auto;
-    margin-right: auto;
+
 }
 
 
@@ -177,7 +176,7 @@ main {
     max-width: 300px;
     height: 200px;
     object-fit: cover;
-    display: block;
+
 }
 
 .member-card h2 {
@@ -207,11 +206,12 @@ main {
    ZEBRA STRIPING
 ===================== */
 .member-card:nth-child(even) {
-    background-color: #eef2ff;
+    background-color: #f5f7ff;
+    ;
 }
 
 .member-card:nth-child(odd) {
-    background-color: #caaeae;
+    background-color: #ffffff;
 }
 
 /* =====================

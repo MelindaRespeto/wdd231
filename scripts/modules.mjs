@@ -3,3 +3,6 @@ export const byuiCourse = {
   name: "Web Frontend Development",
   credits: 3
 };
+export function setSectionSelection(section) {
+  console.log(`Selected section: ${section}`);
+}

@@ -1,5 +1,13 @@
-import { byuiCourse } from "./modules.mjs";
-console.log(byuiCourse);
+export const byuiCourse = {
+  code: "WDD 231",
+  name: "Web Frontend Development",
+  credits: 3
+};
+ // course.mjs
+const byuiCourse = {
+  code: "WDD 231",
+  name: "Web Frontend Development",
+  credits: 3
+};
+
 export default byuiCourse;
-import { setSectionSelection } from "./modules.mjs";
-setSectionSelection("A");

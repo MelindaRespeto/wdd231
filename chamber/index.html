@@ -17,6 +17,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/weather.css">
 
     <!-- Open Graph for social sharing -->
     <meta property="og:title" content="MELINDS Chamber of Commerce | Home">
@@ -36,6 +37,10 @@
 
     <!-- JS -->
     <script src="scripts/directory.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+
+
+
 </head>
 
 <body>
@@ -85,7 +90,7 @@
                     <div class="event-content">
                         <h3>Business Networking</h3>
                         <p class="event-date">📅 February 10, 2026</p>
-                        <p class="event-location">📍 City Convention Center</p>
+                        <p class="event-location">📍 Beauty Convention Center</p>
                         <p>Meet local entrepreneurs and expand your professional network.</p>
                         <a href="#" class="event-btn">Learn More</a>
                     </div>
@@ -114,6 +119,38 @@
                 </article>
             </div>
         </section>
+        <section id="weather" class="weather">
+            <h2>Local Weather</h2>
+
+            <div class="weather-card">
+                <div class="weather-main">
+                    <img id="weather-icon" src="" alt="" class="weather-icon">
+                    <div>
+                        <p id="current-temp" class="temperature"></p>
+                        <p id="weather-desc" class="condition"></p>
+                    </div>
+                </div>
+
+                <div class="forecast">
+                    <h3>3-Day Forecast</h3>
+                    <div class="forecast-grid">
+                        <div class="forecast-day">
+                            <p id="day1-name"></p>
+                            <p id="day1-temp"></p>
+                        </div>
+                        <div class="forecast-day">
+                            <p id="day2-name"></p>
+                            <p id="day2-temp"></p>
+                        </div>
+                        <div class="forecast-day">
+                            <p id="day3-name"></p>
+                            <p id="day3-temp"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
 
         <!-- Toggle View Buttons -->

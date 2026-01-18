@@ -1,22 +1,16 @@
 .weather {
     padding: 2rem 1rem;
     background-color: #eef5fb;
-}
-
-.weather h2 {
     text-align: center;
-    margin-bottom: 1.5rem;
-    color: #2c3e50;
 }
 
 .weather-card {
     max-width: 420px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    text-align: center;
 }
 
 .weather-main {
@@ -40,23 +34,19 @@
 .condition {
     font-size: 1.1rem;
     margin: 0;
-    color: #666;
     text-transform: capitalize;
-}
-
-.forecast {
-    margin-top: 1.5rem;
+    color: #666;
 }
 
 .forecast-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    margin-top: 1rem;
 }
 
 .forecast-day {
     background-color: #f2f7fc;
     padding: 0.75rem;
     border-radius: 8px;
-    font-size: 0.95rem;
 }

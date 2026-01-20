@@ -1,24 +1,19 @@
 // spotlight.js
-// Async function to fetch chamber members and display spotlight cards
-async function displaySpotlights() {
+window.addEventListener('DOMContentLoaded', async () => {
   try {
-    // Fetch the JSON data
-    const response = await fetch('scripts/members.json');
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
+    const response = await fetch('./scripts/members.json'); // relative to HTML file
+    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
     const members = await response.json();
-
     const container = document.getElementById('spotlights-container');
-    if (!container) return; // Safety check
+    if (!container) return;
 
-    // Filter only gold and silver members for spotlight
+    // Filter only gold and silver members
     const spotlightMembers = members.filter(
       member => member.membership === "gold" || member.membership === "silver"
     );
 
-    // Create HTML for each spotlight member
+    // Create cards dynamically
     spotlightMembers.forEach(member => {
       const card = document.createElement('article');
       card.classList.add('spotlight');
@@ -36,7 +31,4 @@ async function displaySpotlights() {
   } catch (error) {
     console.error('Error loading spotlight members:', error);
   }
-}
-
-// Call the async function after DOM is ready
-window.addEventListener('DOMContentLoaded', displaySpotlights);
+});

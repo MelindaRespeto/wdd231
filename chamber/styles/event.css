@@ -68,3 +68,86 @@
 .event-card a:hover {
     background-color: #005fa3;
 }
+
+/* spotlight.css */
+
+/* Container for all spotlight cards */
+#spotlights-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+    padding: 0;
+}
+
+/* Individual spotlight card */
+.spotlight {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.spotlight:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Card heading */
+.spotlight h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+/* Company logo/image */
+.spotlight img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+/* Text paragraphs */
+.spotlight p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+/* Website links */
+.spotlight a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 12px;
+    text-decoration: none;
+    background-color: #0077cc;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.spotlight a:hover {
+    background-color: #005fa3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .spotlight img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .spotlight h3 {
+        font-size: 1.2rem;
+    }
+}

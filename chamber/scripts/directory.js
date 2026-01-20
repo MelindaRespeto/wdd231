@@ -74,4 +74,4 @@ function displayMembers(companies) {
 
     // Call the function to load members when page loads
     getMembers();
-
+}

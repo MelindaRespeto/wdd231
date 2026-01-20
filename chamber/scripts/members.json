@@ -1,0 +1,66 @@
+{
+  "companies": [
+    {
+      "name": "Sunrise Bakery",
+      "address": "123 Main Street, Cebu City, Philippines",
+      "phone": "+63 912 345 6789",
+      "image": "cookies.jpg",
+      "membershipLevel": 3
+    },
+    {
+      "name": "OceanTech Solutions",
+      "address": "45 IT Park, Lahug, Cebu City, Philippines",
+      "phone": "+63 917 456 1234",
+      "image": "wifi.jpg",
+      "membershipLevel": 2
+    },
+    {
+      "name": "GreenLeaf Pharmacy",
+      "address": "78 Health Avenue, Mandaue City, Philippines",
+      "phone": "+63 998 234 5678",
+      "website": "https://www.greenleafpharmacy.ph",
+      "image": "bottle.png",
+      "membershipLevel": 1
+    },
+    {
+      "name": "BlueWave Travel Agency",
+      "address": "12 Harbor Road, Lapu-Lapu City, Philippines",
+      "phone": "+63 905 678 9123",
+      "website": "https://www.bluewavetravel.ph",
+      "image": "travel.png",
+      "membershipLevel": 2
+    },
+    {
+      "name": "PrimeBuild Construction",
+      "address": "90 Industrial Lane, Talisay City, Philippines",
+      "phone": "+63 922 111 3344",
+      "website": "https://www.primebuild.com.ph",
+      "image": "construction.png",
+      "membershipLevel": 3
+    },
+    {
+      "name": "FreshMart Grocery",
+      "address": "56 Market Street, Manila City, Philippines",
+      "phone": "+63 933 222 4455",
+      "website": "https://www.freshmartgrocery.ph",
+      "image": "grocery.png",
+      "membershipLevel": 1
+    },
+    {
+      "name": "Skyline Fitness Center",
+      "address": "33 Wellness Blvd, Cebu City, Philippines",
+      "phone": "+63 944 555 6677",
+      "website": "https://www.skylinefitness.ph",
+      "image": "fit.png",
+      "membershipLevel": 2
+    },
+    {
+      "name": "MeatShop",
+      "address": "27 Liko Blvd,Naga City, Philippines",
+      "phone": "+63 944 555 6687",
+      "website": "https://www.skylinefitness.ph",
+      "image": "meat.png",
+      "membershipLevel": 2
+    }
+  ]
+}

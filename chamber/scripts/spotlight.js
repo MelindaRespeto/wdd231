@@ -1,4 +1,6 @@
 // spotlight.js
+console.log('Fetching members.json...');
+
 window.addEventListener('DOMContentLoaded', async () => {
   try {
     const response = await fetch('./scripts/members.json'); // relative to HTML file
@@ -14,6 +16,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     );
 
     // Create cards dynamically
+
     spotlightMembers.forEach(member => {
       const card = document.createElement('article');
       card.classList.add('spotlight');

@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       member => member.membershipLevel === 3 || member.membershipLevel === 2
     );
 
-    // Randomly select 2 or 3 members
+    // Randomly select up to 3 members
     const count = Math.min(3, eligibleMembers.length);
     const selectedMembers = [];
 

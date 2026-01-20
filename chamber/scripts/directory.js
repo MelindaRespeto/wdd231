@@ -51,39 +51,27 @@ function displayMembers(companies) {
 
         membersContainer.appendChild(card);
     });
-}
 
-// ===============================
-// VIEW TOGGLE FUNCTIONALITY
-// ===============================
-const gridBtn = document.getElementById("grid-view");
-const listBtn = document.getElementById("list-view");
 
-gridBtn.addEventListener("click", () => {
-    membersContainer.classList.add("members-grid");
-    membersContainer.classList.remove("members-list");
 
-    gridBtn.classList.add("active");
-    listBtn.classList.remove("active");
-});
 
-listBtn.addEventListener("click", () => {
-    membersContainer.classList.add("members-list");
-    membersContainer.classList.remove("members-grid");
+    listBtn.addEventListener("click", () => {
+        membersContainer.classList.add("members-list");
+        membersContainer.classList.remove("members-grid");
 
-    listBtn.classList.add("active");
-    gridBtn.classList.remove("active");
-});
+        listBtn.classList.add("active");
+        gridBtn.classList.remove("active");
+    });
 
-// Convert membership number to text
-function getMembershipLevel(level) {
-    switch (level) {
-        case 3: return "Gold";
-        case 2: return "Silver";
-        default: return "Member";
+    // Convert membership number to text
+    function getMembershipLevel(level) {
+        switch (level) {
+            case 3: return "Gold";
+            case 2: return "Silver";
+            default: return "Member";
+        }
     }
-}
 
-// Call the function to load members when page loads
-getMembers();
+    // Call the function to load members when page loads
+    getMembers();
 

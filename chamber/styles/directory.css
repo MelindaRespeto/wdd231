@@ -235,12 +235,14 @@ footer span {
     }
 }
 
+
+
 /* =========================
    CURRENT EVENTS SECTION
 ========================= */
 .events {
     padding: 2rem 1rem;
-    background-color: #f9f9f9;
+    background-color: #8e8787;
 }
 
 .events h2 {

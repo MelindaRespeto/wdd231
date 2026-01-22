@@ -13,30 +13,10 @@ h2 {
     text-align: center;
 }
 
-p {
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: #004080;
-}
 
 /* =====================
    HEADER & NAVIGATION
 ===================== */
-header {
-    background-color: #004080;
-    color: #fff;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem;
-}
 
 .header-content img {
     width: 80px;

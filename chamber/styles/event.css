@@ -18,33 +18,10 @@ h2 {
    HEADER & NAVIGATION
 ===================== */
 
-.header-content img {
-    width: 80px;
-    height: auto;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    background-color: #003366;
-}
-
-nav li {
-    margin: 0;
-}
-
 nav a {
     display: block;
     padding: 0.75rem 1.25rem;
     color: #fff;
-}
-
-nav a.active,
-nav a:hover {
-    background-color: #0059b3;
 }
 
 /* =====================

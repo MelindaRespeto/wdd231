@@ -12,9 +12,8 @@ if (dateSpan) {
 // ===============================
 // MEMBERS DIRECTORY
 // ===============================
-
 const membersContainer = document.querySelector("#members");
-const dataURL = "data/members.json"; // relative path from directory.html
+const dataURL = "data/members.json";
 
 const gridBtn = document.getElementById("grid-view");
 const listBtn = document.getElementById("list-view");
@@ -28,18 +27,22 @@ async function getMembers() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        const data = await response.json(); // convert JSON to JS object
-        displayMembers(data.companies);     // display member cards
+        const data = await response.json();
+        displayMembers(data.companies);
 
     } catch (error) {
         console.error("Error loading member data:", error);
-        membersContainer.innerHTML = "<p>Failed to load member data.</p>";
+        if (membersContainer) {
+            membersContainer.innerHTML = "<p>Failed to load member data.</p>";
+        }
     }
 }
 
 // Function to create and display member cards
 function displayMembers(companies) {
-    membersContainer.innerHTML = ""; // clear previous content
+    if (!membersContainer) return;
+
+    membersContainer.innerHTML = "";
 
     companies.forEach(company => {
         const card = document.createElement("div");
@@ -69,22 +72,24 @@ function getMembershipLevel(level) {
     }
 }
 
-// Toggle Views
-gridBtn.addEventListener("click", () => {
-    membersContainer.classList.add("members-grid");
-    membersContainer.classList.remove("members-list");
+// Toggle Views (only if buttons exist)
+if (gridBtn && listBtn && membersContainer) {
+    gridBtn.addEventListener("click", () => {
+        membersContainer.classList.add("members-grid");
+        membersContainer.classList.remove("members-list");
 
-    gridBtn.classList.add("active");
-    listBtn.classList.remove("active");
-});
+        gridBtn.classList.add("active");
+        listBtn.classList.remove("active");
+    });
 
-listBtn.addEventListener("click", () => {
-    membersContainer.classList.add("members-list");
-    membersContainer.classList.remove("members-grid");
+    listBtn.addEventListener("click", () => {
+        membersContainer.classList.add("members-list");
+        membersContainer.classList.remove("members-grid");
 
-    listBtn.classList.add("active");
-    gridBtn.classList.remove("active");
-});
+        listBtn.classList.add("active");
+        gridBtn.classList.remove("active");
+    });
+}
 
-// Call the function to load members when page loads
+// Call the function
 getMembers();

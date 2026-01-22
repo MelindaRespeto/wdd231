@@ -40,7 +40,7 @@
     <script src="scripts/directory.js" defer></script>
     <script src="scripts/weather.js" defer></script>
     <script src="scripts/spotlight.js" type="module"></script>
-    <script src="scripts/members.js" defer></script>
+
 </head>
 
 <body>
@@ -77,6 +77,12 @@
 
     <!-- MAIN CONTENT -->
     <main>
+        <div class="view-toggle">
+            <button id="grid-view">Grid</button>
+            <button id="list-view">List</button>
+        </div>
+
+        <div id="members" class="members-grid"></div>
 
         <section id="current-events" class="events">
             <h2>Current Events</h2>
@@ -149,10 +155,12 @@
             </div>
         </section>
 
-        <section id="spotlights">
-            <h2>Company Spotlights</h2>
+        <section id="spotlight">
+            <h2>Company Spotlight</h2>
             <div id="spotlights-container"></div>
         </section>
+
+
     </main>
 
     <!-- FOOTER -->

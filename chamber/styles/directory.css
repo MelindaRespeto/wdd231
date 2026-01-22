@@ -57,11 +57,7 @@ nav li {
     margin: 0;
 }
 
-nav a {
-    display: block;
-    padding: 0.75rem 1.25rem;
-    color: #fff;
-}
+
 
 nav a.active,
 nav a:hover {
@@ -84,11 +80,8 @@ nav a:hover {
 }
 
 .hero-text {
-    background-color: rgba(230, 39, 39, 0.6);
+    background-color: rgba(200, 30, 30, 0.75);
     color: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
 }
 
 /* =====================
@@ -240,8 +233,11 @@ footer span {
 ========================= */
 .events {
     padding: 2rem 1rem;
-    background-color: #8e8787;
+    background-color: #bdbdbd;
+    color: #222;
 }
+
+
 
 .events h2 {
     text-align: center;
@@ -295,7 +291,7 @@ footer span {
 .event-date,
 .event-location {
     font-size: 0.9rem;
-    color: #777;
+    color: #666;
     margin: 0.25rem 0;
 }
 
@@ -320,4 +316,57 @@ footer span {
 .event-btn:hover,
 .event-btn:focus {
     background-color: #005fa3;
+}
+
+/* =====================
+   COMPANY SPOTLIGHT
+===================== */
+#spotlight {
+    padding: 3rem 1.5rem;
+    background-color: #f4f6f8;
+    text-align: center;
+}
+
+#spotlight h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+/* Spotlight Image - Smaller Size */
+.spotlight-card img {
+    width: 100%;
+    height: 150px;
+
+    /* smaller height */
+    object-fit: cover;
+    display: block;
+}
+
+/* Optional responsive adjustments */
+@media (max-width: 900px) {
+    .spotlight-card img {
+        height: 130px;
+    }
+}
+
+
+/* Make spotlight cards uniform height */
+.spotlight-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px;
+    /* adjust as needed */
+}
+
+/* Optional: description fills available space */
+.spotlight-description {
+    flex-grow: 1;
+    margin-bottom: 0.5rem;
+}
+
+/* Ensure button stays at bottom */
+.spotlight-btn {
+    margin-top: auto;
 }

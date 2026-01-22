@@ -57,7 +57,13 @@ nav li {
     margin: 0;
 }
 
-
+nav a,
+nav a.active,
+nav a:hover {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: #fff;
+}
 
 nav a.active,
 nav a:hover {
@@ -78,7 +84,6 @@ nav a:hover {
     align-items: center;
     justify-content: center;
 }
-
 
 .hero-text {
     padding: 1.5rem;
@@ -125,16 +130,8 @@ nav a:hover {
     margin: 0 auto;
 }
 
-/* Optional: make cards full width in list view */
 .members-list .member-card {
     width: 100%;
-}
-
-/* =====================
-   MAIN CONTENT
-===================== */
-main {
-    padding: 1rem;
 }
 
 /* =====================
@@ -186,9 +183,7 @@ main {
     background-color: #0059b3;
 }
 
-/* =====================
-   ZEBRA STRIPING
-===================== */
+/* Zebra striping */
 .member-card:nth-child(even) {
     background-color: #f5f7ff;
 }
@@ -198,48 +193,20 @@ main {
 }
 
 /* =====================
-   FOOTER
+   MAIN CONTENT
 ===================== */
-footer {
-    background-color: #003366;
-    color: #fff;
-    text-align: center;
+main {
     padding: 1rem;
-    margin-top: 2rem;
-}
-
-footer p,
-footer span {
-    margin: 0.25rem 0;
 }
 
 /* =====================
-   RESPONSIVE NAV & HERO
-===================== */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    .header-content {
-        flex-direction: column;
-    }
-
-    .hero-text {
-        font-size: 0.9rem;
-    }
-}
-
-/* =========================
    CURRENT EVENTS SECTION
-========================= */
+===================== */
 .events {
     padding: 2rem 1rem;
     background-color: #bdbdbd;
     color: #222;
 }
-
-
 
 .events h2 {
     text-align: center;
@@ -335,40 +302,68 @@ footer span {
     color: #2c3e50;
 }
 
-/* Spotlight Image - Smaller Size */
+.spotlight-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px;
+}
+
 .spotlight-card img {
     width: 100%;
     height: 150px;
-
-    /* smaller height */
     object-fit: cover;
     display: block;
 }
 
-/* Optional responsive adjustments */
+.spotlight-description {
+    flex-grow: 1;
+    margin-bottom: 0.5rem;
+}
+
+.spotlight-btn {
+    margin-top: auto;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p,
+footer span {
+    margin: 0.25rem 0;
+}
+
+/* =====================
+   RESPONSIVE NAV, HERO & SPOTLIGHT
+===================== */
 @media (max-width: 900px) {
     .spotlight-card img {
         height: 130px;
     }
 }
 
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
 
-/* Make spotlight cards uniform height */
-.spotlight-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 350px;
-    /* adjust as needed */
-}
+    .header-content {
+        flex-direction: column;
+    }
 
-/* Optional: description fills available space */
-.spotlight-description {
-    flex-grow: 1;
-    margin-bottom: 0.5rem;
-}
+    .hero-text {
+        font-size: 0.9rem;
+    }
 
-/* Ensure button stays at bottom */
-.spotlight-btn {
-    margin-top: auto;
+    .spotlight-card img {
+        height: 110px;
+    }
 }

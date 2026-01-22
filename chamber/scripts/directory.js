@@ -71,3 +71,16 @@ if (gridBtn && listBtn && membersContainer) {
 }
 
 getMembers();
+
+// ===============================
+// FOOTER DATE INFORMATION
+// ===============================
+const dateSpan = document.getElementById("date");
+if (dateSpan) {
+    const lastModified = new Date(document.lastModified);
+
+    // Format as: Month day, Year (e.g., January 22, 2026)
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    dateSpan.textContent = lastModified.toLocaleDateString(undefined, options);
+}
+

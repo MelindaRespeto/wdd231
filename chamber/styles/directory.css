@@ -367,3 +367,12 @@ footer span {
         height: 110px;
     }
 }
+
+/* =====================
+   LAST MODIFIED DATE
+===================== */
+#date {
+    font-weight: bold;
+    color: #ffffff;
+    /* matches footer text */
+}

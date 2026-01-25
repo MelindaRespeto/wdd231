@@ -70,7 +70,6 @@ if (gridBtn && listBtn && membersContainer) {
     });
 }
 
-
 getMembers();
 
 // ===============================
@@ -88,6 +87,8 @@ if (dateSpan) {
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.querySelector("nav ul");
 
-hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("open");
-});
+if (hamburger && navMenu) {
+    hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("open");
+    });
+}

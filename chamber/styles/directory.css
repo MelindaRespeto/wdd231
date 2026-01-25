@@ -355,11 +355,22 @@ footer span {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
     nav ul {
+        display: none;
         flex-direction: column;
     }
 
+    nav ul.open {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
     .header-content {
         flex-direction: column;
     }
@@ -379,27 +390,16 @@ footer span {
 #date {
     font-weight: bold;
     color: #ffffff;
-    /* matches footer text */
 }
 
-.hamburger {
+
+#nav-menu {
     display: none;
-    font-size: 1.8rem;
-    cursor: pointer;
+    flex-direction: column;
+    background-color: #004080;
 }
 
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    #nav-menu {
-        display: none;
-        flex-direction: column;
-        background-color: #004080;
-    }
-
-    #nav-menu.open {
-        display: flex;
-    }
+#nav-menu.open {
+    display: flex;
+}
 }

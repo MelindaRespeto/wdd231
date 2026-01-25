@@ -113,6 +113,11 @@ nav a:hover {
     background-color: #0059b3;
 }
 
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
 /* =====================
    MEMBERS GRID & LIST
 ===================== */

@@ -114,7 +114,6 @@ nav a:hover {
 }
 
 .hamburger {
-    display: block;
     cursor: pointer;
 }
 
@@ -390,16 +389,4 @@ footer span {
 #date {
     font-weight: bold;
     color: #ffffff;
-}
-
-
-#nav-menu {
-    display: none;
-    flex-direction: column;
-    background-color: #004080;
-}
-
-#nav-menu.open {
-    display: flex;
-}
 }

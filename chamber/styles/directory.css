@@ -381,3 +381,25 @@ footer span {
     color: #ffffff;
     /* matches footer text */
 }
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #004080;
+    }
+
+    #nav-menu.open {
+        display: flex;
+    }
+}

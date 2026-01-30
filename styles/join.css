@@ -119,3 +119,9 @@ form {
 .membership-cards .card a:hover {
     background-color: #005fa3;
 }
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

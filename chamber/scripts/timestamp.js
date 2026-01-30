@@ -55,9 +55,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ==========================
+    // 3. TOGGLE "MORE INFO" SECTIONS
+    // ==========================
+    function initMoreInfoToggles() {
+        const buttons = document.querySelectorAll('.more-info-btn');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                const targetId = this.dataset.target;
+                const content = document.getElementById(targetId);
+
+                if (content) {
+                    const isVisible = content.style.display === "block";
+                    content.style.display = isVisible ? "none" : "block";
+                    this.textContent = isVisible ? "More Info" : "Less Info";
+                }
+            });
+        });
+    }
+
+    // ==========================
     // INITIALIZE FUNCTIONS
     // ==========================
     setFormTimestamp();
     initModals();
+    initMoreInfoToggles();
 
 });

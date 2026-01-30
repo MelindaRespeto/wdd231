@@ -40,6 +40,7 @@
     <script src="scripts/directory.js" defer></script>
     <script src="scripts/weather.js" defer></script>
     <script src="scripts/spotlight.js" type="module"></script>
+    <script src="scripts/timestamp.js" defer></script>
 
 </head>
 
@@ -48,7 +49,7 @@
     <header>
         <div class="header-content">
             <img src="images/tuna.jpg" alt="Melinds Chamber Logo">
-            <h1>Discover Members of MELINDS Chamber of Commerce</h1>
+            <h1>Discover members of MELINDS CHAMBER OF COMMERCE</h1>
         </div>
 
         <nav class="navbar">
@@ -78,6 +79,136 @@
             support.</p>
         <a href="join.html" class="cta-button">Become a Member and be part of growing community.</a>
     </section>
+
+    <main>
+        <main id="thankyou-main">
+            <form method="get" action="thankyou.html">
+
+                <label>
+                    First Name:
+                    <input name="firstName" id="firstName" type="text" autocomplete="given-name" required />
+                </label>
+
+                <label>
+                    Last Name:
+                    <input name="lastName" id="lastName" type="text" autocomplete="family-name" required />
+                </label>
+
+                <label>
+                    Email:
+                    <input name="email" id="email" type="email" autocomplete="email" required />
+                </label>
+
+                <label>
+                    Organizational Title:
+                    <input type="text" id="orgTitle" name="orgTitle" autocomplete="organization-title"
+                        pattern="[A-Za-z\- ]{7,}"
+                        title="Only letters, hyphens, and spaces allowed (minimum 7 characters)" required />
+                </label>
+
+                <label>
+                    Mobile Phone Number:
+                    <input type="tel" id="phoneNumber" name="phoneNumber" autocomplete="tel" pattern="[0-9]{10,}"
+                        title="Enter a valid phone number (digits only, minimum 10)" required />
+                </label>
+
+                <label>
+                    Business / Organization Name:
+                    <input type="text" id="orgName" name="orgName" autocomplete="organization"
+                        title="Enter the full name of your business or organization" required />
+                </label>
+
+                <label>
+                    Membership Level:
+                    <select id="membershipLevel" name="membershipLevel" required>
+                        <option value="" disabled selected>Select a membership level</option>
+                        <option value="np">NP Membership (non‑profit — no fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label>
+                    Business / Organization Description:
+                    <textarea id="orgDescription" name="orgDescription"
+                        title="Enter a short description of your business or organization" rows="4" cols="50"
+                        required></textarea>
+                </label>
+
+                <!-- Hidden timestamp field (no label needed since it's hidden) -->
+                <input type="hidden" id="timestamp" name="timestamp" />
+
+                <button type="submit">Submit</button>
+
+            </form>
+            <!-- Membership Cards Section -->
+            <section class="membership-cards">
+
+                <div class="card" data-modal="modal-np">
+                    <h3>NP Membership</h3>
+                    <p>Non‑profit organization (no fee)</p>
+                    <a href="#" class="open-modal">More Info</a>
+                </div>
+
+                <div class="card" data-modal="modal-bronze">
+                    <h3>Bronze Membership</h3>
+                    <p>Entry‑level benefits</p>
+                    <a href="#" class="open-modal">More Info</a>
+                </div>
+
+                <div class="card" data-modal="modal-silver">
+                    <h3>Silver Membership</h3>
+                    <p>Enhanced benefits</p>
+                    <a href="#" class="open-modal">More Info</a>
+                </div>
+
+                <div class="card" data-modal="modal-gold">
+                    <h3>Gold Membership</h3>
+                    <p>Gold members enjoy premium advantages: free event entries, homepage
+                        spotlight placements, exclusive discounts, and priority training.</p>
+                    <a href="#" class="open-modal">More Info</a>
+                </div>
+            </section>
+
+            <!-- Modals -->
+            <div id="modal-np" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>NP Membership Benefits</h2>
+                    <p>Benefits for NP members go here.</p>
+                </div>
+            </div>
+
+            <div id="modal-bronze" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Bronze Membership Benefits</h2>
+                    <p>Benefits for Bronze members go here.</p>
+                </div>
+            </div>
+
+            <div id="modal-silver" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Silver Membership Benefits</h2>
+                    <p>Benefits for Silver members go here.</p>
+                </div>
+            </div>
+
+            <div id="modal-gold" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Gold Membership Benefits</h2>
+                    <p>Gold members enjoy premium benefits including free event entries, premium
+                        homepage spotlight features, priority training access, and exclusive
+                        partner discounts..</p>
+                </div>
+            </div>
+
+        </main>
+
+    </main>
 
     <!-- FOOTER -->
     <footer>

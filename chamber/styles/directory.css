@@ -383,6 +383,28 @@ footer span {
     }
 }
 
+label {
+    display: block;
+    margin-top: 1rem;
+}
+
+button {
+    display: block;
+    margin-top: 10px;
+    /* optional spacing */
+    background-color: blue;
+    /* background color */
+    color: white;
+    /* text color */
+    padding: 10px 20px;
+    /* size */
+    border: none;
+    /* no border */
+    border-radius: 5px;
+    /* rounded corners */
+}
+
+
 /* =====================
    LAST MODIFIED DATE
 ===================== */

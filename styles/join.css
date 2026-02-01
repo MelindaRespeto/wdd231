@@ -12,7 +12,7 @@
     }
 
     /* Form takes full width */
-    form {
+    .form-and-cards-container form {
         width: 100%;
     }
 

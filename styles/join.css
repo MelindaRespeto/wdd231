@@ -75,7 +75,7 @@
 }
 
 /* Form takes ~45% of width */
-form {
+.form-and-cards-container form {
     flex: 0 0 45%;
 }
 
@@ -120,7 +120,8 @@ form {
     background-color: #005fa3;
 }
 
-ul {
+/* Center list items ONLY inside modals (prevents nav issues) */
+.modal ul {
     display: flex;
     flex-direction: column;
     align-items: center;

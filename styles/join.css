@@ -1,223 +1,96 @@
 /* =========================
-   GLOBAL STYLES
+   Mobile / Small Screen
 ========================= */
+@media screen and (max-width: 768px) {
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+    /* Stack form and membership cards vertically */
+    .form-and-cards-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
 
-body {
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    margin: 0;
-    color: #333;
-    background-color: #f5f5f5;
-}
+    /* Form takes full width */
+    .form-section form {
+        width: 100%;
+    }
 
-img {
-    max-width: 100%;
-    display: block;
-}
+    /* Membership cards stacked vertically */
+    .membership-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
 
-h1,
-h2,
-h3 {
-    margin: 0.5rem 0;
-}
+    .cards-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 
-p {
-    line-height: 1.5;
+    .membership-cards .card {
+        flex-basis: 100%;
+        text-align: center;
+        padding: 1rem;
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    }
+
+    /* Buttons full-width for better touch targets */
+    .membership-cards .card a {
+        display: inline-block;
+        width: 100%;
+        margin: 0.5rem 0 0;
+        text-align: center;
+        padding: 0.4rem 1rem;
+        background-color: #0077cc;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease-out;
+    }
+
+    .membership-cards .card a:hover {
+        background-color: #005fa3;
+    }
+
+    /* Inputs and textareas full-width */
+    input,
+    select,
+    textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
 
 /* =========================
-   HEADER
+   Desktop / Large Screen
 ========================= */
-
-header {
-    background-color: #d3d3d3;
-    padding: 1rem;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.header-content img {
-    width: 60px;
-    height: auto;
-}
-
-.navbar {
-    margin-top: 1rem;
-}
-
-.hamburger {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-#nav-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
-
-#nav-menu li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-
-#nav-menu li a.active {
-    color: #0077cc;
-}
-
-/* =========================
-   HERO SECTION
-========================= */
-
-.hero-image {
-    background-color: #bfbaba;
-    padding: 3rem 1rem;
-    text-align: center;
-}
-
-.hero-text h2 {
-    font-size: 2rem;
-}
-
-.hero-text p {
-    font-size: 1.1rem;
-}
-
-/* =========================
-   CTA SECTION
-========================= */
-
-.cta {
-    background-color: #e0e0e0;
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-.cta-button {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.6rem 1.4rem;
-    background-color: #0077cc;
-    color: #fff;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background-color 0.3s ease-out;
-}
-
-.cta-button:hover {
-    background-color: #005fa3;
-}
-
-/* =========================
-   MAIN LAYOUT
-========================= */
-
-#thankyou-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
 .form-and-cards-container {
     display: flex;
+    flex-direction: row;
     gap: 2rem;
     justify-content: center;
     align-items: flex-start;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
     flex-wrap: wrap;
+    /* Prevent overflow on medium screens */
 }
 
-/* =========================
-   FORM SECTION
-========================= */
-
+/* Form takes ~45% of width */
 .form-section {
     flex: 0 0 45%;
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-.form-section h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.form-section form {
+/* Membership cards take ~45% of width, stacked vertically */
+.membership-cards {
+    flex: 0 0 45%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.form-group label {
-    font-weight: 600;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-family: inherit;
-    font-size: 1rem;
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-.form-section button {
-    margin-top: 0.5rem;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    border: none;
-    background-color: #0077cc;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease-out, transform 0.2s ease-out;
-}
-
-.form-section button:hover {
-    background-color: #005fa3;
-    transform: translateY(-1px);
-}
-
-/* =========================
-   MEMBERSHIP CARDS
-========================= */
-
-.membership-cards {
-    flex: 0 0 45%;
-}
-
-.membership-cards h2 {
-    text-align: center;
-    margin-bottom: 1rem;
 }
 
 .cards-grid {
@@ -226,6 +99,7 @@ header {
     gap: 1rem;
 }
 
+/* Individual card styles */
 .membership-cards .card {
     background-color: #d3d3d3;
     padding: 1rem;
@@ -238,9 +112,11 @@ header {
 
 .membership-cards .card:hover {
     transform: translateY(-3px) scale(1.02);
+    /* subtle pop effect */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Buttons inside cards */
 .membership-cards .card a {
     display: inline-block;
     margin-top: 0.5rem;
@@ -256,107 +132,9 @@ header {
     background-color: #005fa3;
 }
 
-/* =========================
-   MODALS
-========================= */
-
-.modal {
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.modal[hidden] {
-    display: none;
-}
-
-.modal-content {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    max-width: 500px;
-    width: 90%;
-    text-align: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    position: relative;
-}
-
-.modal-content h2 {
-    margin-top: 0;
-}
-
+/* Center list items ONLY inside modals (prevents nav issues) */
 .modal ul {
-    list-style: disc;
-    list-style-position: inside;
-    padding: 0;
-    margin: 1rem 0;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
     align-items: center;
-}
-
-.modal .close {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.75rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    background-color: #d3d3d3;
-    padding: 1rem;
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-/* =========================
-   MOBILE / SMALL SCREEN
-========================= */
-
-@media screen and (max-width: 768px) {
-
-    .hamburger {
-        display: block;
-        margin: 0 auto;
-    }
-
-    #nav-menu {
-        display: none;
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 1rem;
-        text-align: center;
-    }
-
-    #nav-menu.show {
-        display: flex;
-    }
-
-    .form-and-cards-container {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    .form-section,
-    .membership-cards {
-        flex: 1 0 100%;
-    }
-
-    .membership-cards .card a,
-    .form-section button {
-        width: 100%;
-        text-align: center;
-    }
 }

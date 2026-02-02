@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MELINDS CHAMBER OF COMMERCE | Business Directory</title>
+    <title>MELINDS Chamber of Commerce | Home</title>
 
     <meta name="description" content="Supporting local businesses and building our community.">
     <meta name="author" content="Melinda Paghanapa">
@@ -17,9 +17,11 @@
     <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/weather.css">
+
 
     <!-- Open Graph for social sharing -->
-    <meta property="og:title" content="MELINDS Chamber of Commerce | Business Directory">
+    <meta property="og:title" content="MELINDS Chamber of Commerce | Home">
     <meta property="og:description" content="Supporting local businesses and building our community.">
     <meta property="og:image" content="https://melindarespeto.github.io/wdd231/images/parrot.jpg">
     <meta property="og:image:width" content="1200">
@@ -28,7 +30,7 @@
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summarylarge image">
     <meta name="twitter:image" content="https://melindarespeto.github.io/wdd231/images/student.jpg">
 
     <!-- Favicon -->
@@ -36,15 +38,41 @@
 
     <!-- JS -->
     <script src="scripts/directory.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" type="module"></script>
+
 </head>
 
-<!-- FOOTER -->
-<footer>
-    <span>WDD231 Class Project</span>
-    <p>Melinda Competente</p>
-    <p>© 2026 | Melinds Chamber of Commerce</p>
-    <p>Last Modified: <span id="date"></span></p>
-</footer>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            <img src="images/tuna.jpg" alt="Melinds Chamber Logo">
+            <h1>MELINDS CHAMBER OF COMMERCE</h1>
+        </div>
+
+        <nav class="navbar">
+
+            <div class="hamburger" id="hamburger">☰</div>
+
+            <ul id="nav-menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="directory.html">Business Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+
+
+    </header>
+
+    <!-- FOOTER -->
+    <footer>
+        <span>WDD231 Class Project</span>
+        <p>Melinda Competente</p>
+        <p>© 2026 | Melinds Chamber of Commerce</p>
+        <p>Last Modified: <span id="date"></span></p>
+    </footer>
 
 </body>
 

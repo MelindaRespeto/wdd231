@@ -20,9 +20,7 @@ img {
     display: block;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     margin: 0.5rem 0;
 }
 
@@ -370,3 +368,5 @@ footer {
         box-sizing: border-box;
     }
 }
+
+

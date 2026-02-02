@@ -50,25 +50,26 @@
         </div>
 
         <nav class="navbar">
-            <div class="hamburger" id="hamburger">☰</div>
+            <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
 
             <ul id="nav-menu">
-                <li><a href="#" class="active">Join</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Business Directory</a></li>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">Join</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero-image">
+    <section class="hero-image" aria-label="Hero section">
         <div class="hero-text">
             <h2>Welcome to Our Chamber</h2>
             <p>Great things start in the City of Paradise</p>
         </div>
     </section>
-    <section class="cta">
+
+    <section class="cta" aria-label="Call to action">
         <h2>Join Our Chamber Today!</h2>
         <p>Become part of a growing business community and enjoy exclusive benefits, networking opportunities, and local
             support.</p>
@@ -76,106 +77,111 @@
     </section>
 
     <main id="thankyou-main">
-        <form method="get" action="thankyou.html">
+        <!-- FORM SECTION -->
+        <section class="form-section" aria-labelledby="join-form-heading">
+            <h2 id="join-form-heading">Membership Application Form</h2>
 
-            <label>
-                First Name:
-                <input name="firstName" id="firstName" type="text" autocomplete="given-name" title="First Name"
-                    required />
-            </label>
+            <form method="get" action="thankyou.html" novalidate>
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input name="firstName" id="firstName" type="text" autocomplete="given-name" title="First Name"
+                        required>
+                </div>
 
-            <label>
-                Last Name:
-                <input name="lastName" id="lastName" type="text" autocomplete="family-name" title="Last Name"
-                    required />
-            </label>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input name="lastName" id="lastName" type="text" autocomplete="family-name" title="Last Name"
+                        required>
+                </div>
 
-            <label>
-                Email:
-                <input name="email" id="email" type="email" autocomplete="email" title="Email Address"
-                    placeholder="name@example.com" required />
-            </label>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input name="email" id="email" type="email" autocomplete="email" title="Email Address"
+                        placeholder="name@example.com" required>
+                </div>
 
-            <label>
-                Organizational Title:
-                <input type="text" id="orgTitle" name="orgTitle" autocomplete="organization-title"
-                    pattern="[A-Za-z\- ]{7,}" title="Only letters, hyphens, and spaces allowed (minimum 7 characters)"
-                    required />
-            </label>
+                <div class="form-group">
+                    <label for="orgTitle">Organizational Title:</label>
+                    <input type="text" id="orgTitle" name="orgTitle" autocomplete="organization-title"
+                        pattern="[A-Za-z\- ]{7,}"
+                        title="Only letters, hyphens, and spaces allowed (minimum 7 characters)" required>
+                </div>
 
-            <label>
-                Mobile Phone Number:
-                <input type="tel" id="phoneNumber" name="phoneNumber" autocomplete="tel" pattern="[0-9]{10,}"
-                    title="Enter a valid phone number (digits only, minimum 10)" required />
-            </label>
+                <div class="form-group">
+                    <label for="phoneNumber">Mobile Phone Number:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" autocomplete="tel" pattern="[0-9]{10,}"
+                        title="Enter a valid phone number (digits only, minimum 10)" required>
+                </div>
 
-            <label>
-                Business / Organization Name:
-                <input type="text" id="orgName" name="orgName" autocomplete="organization"
-                    title="To promote network of business organization" required />
-            </label>
+                <div class="form-group">
+                    <label for="orgName">Business / Organization Name:</label>
+                    <input type="text" id="orgName" name="orgName" autocomplete="organization"
+                        title="To promote network of business organization" required>
+                </div>
 
-            <label>
-                Membership Level:
-                <select id="membershipLevel" name="membershipLevel" required>
-                    <option value="" disabled selected>Select a membership level</option>
-                    <option value="np">NP Membership (non-profit — no fee)</option>
-                    <option value="bronze">Bronze Membership</option>
-                    <option value="silver">Silver Membership</option>
-                    <option value="gold">Gold Membership</option>
-                </select>
-            </label>
+                <div class="form-group">
+                    <label for="membershipLevel">Membership Level:</label>
+                    <select id="membershipLevel" name="membershipLevel" required>
+                        <option value="" disabled selected>Select a membership level</option>
+                        <option value="np">NP Membership (non-profit — no fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </div>
 
-            <label>
-                Business / Organization Description:
-                <textarea id="orgDescription" name="orgDescription"
-                    title=" Network of local businesses working together to promote growth, support the community, and create opportunities through collaboration, advocacy, and shared resources"
-                    rows="4" cols="50" required></textarea>
-            </label>
+                <div class="form-group">
+                    <label for="orgDescription">Business / Organization Description:</label>
+                    <textarea id="orgDescription" name="orgDescription"
+                        title=" Network of local businesses working together to promote growth, support the community, and create opportunities through collaboration, advocacy, and shared resources"
+                        rows="4" cols="50" required></textarea>
+                </div>
 
-            <!-- Hidden timestamp field (no label needed since it's hidden) -->
-            <input type="hidden" id="timestamp" name="timestamp" />
+                <input type="hidden" id="timestamp" name="timestamp">
 
-            <button type="submit">Submit</button>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
 
-        </form>
+        <!-- MEMBERSHIP CARDS SECTION -->
+        <section class="membership-cards" aria-labelledby="membership-levels-heading">
+            <h2 id="membership-levels-heading">Membership Levels</h2>
 
-        <!-- Membership Cards Section -->
-        <section class="membership-cards">
+            <div class="cards-grid">
+                <div class="card" data-modal="modal-np">
+                    <h3>NP Membership</h3>
+                    <p>NP members enjoy benefits such as access to community events, newsletter updates, and networking
+                        opportunities.</p>
+                    <a href="#" class="open-modal" aria-haspopup="dialog">More Info</a>
+                </div>
 
-            <div class="card" data-modal="modal-np">
-                <h3>NP Membership</h3>
-                <p>NP members enjoy benefits such as access to community events, newsletter updates, and networking
-                    opportunities.</p>
-                <a href="#" class="open-modal">More Info</a>
-            </div>
+                <div class="card" data-modal="modal-bronze">
+                    <h3>Bronze Membership</h3>
+                    <p>Bronze members receive basic access to events, membership directory listing, and online
+                        resources.</p>
+                    <a href="#" class="open-modal" aria-haspopup="dialog">More Info</a>
+                </div>
 
-            <div class="card" data-modal="modal-bronze">
-                <h3>Bronze Membership</h3>
-                <p>Bronze members receive basic access to events, membership directory listing, and online resources.
-                </p>
-                <a href="#" class="open-modal">More Info</a>
-            </div>
+                <div class="card" data-modal="modal-silver">
+                    <h3>Silver Membership</h3>
+                    <p>Unlock essential perks, priority access to events, member-only discounts, and early updates.</p>
+                    <a href="#" class="open-modal" aria-haspopup="dialog">More Info</a>
+                </div>
 
-            <div class="card" data-modal="modal-silver">
-                <h3>Silver Membership</h3>
-                <p>Unlock essential perks, priority access to events, member-only discounts, and early updates.</p>
-                <a href="#" class="open-modal">More Info</a>
-            </div>
-
-            <div class="card" data-modal="modal-gold">
-                <h3>Gold Membership</h3>
-                <p>Gold members enjoy premium advantages: free event entries, homepage
-                    spotlight placements, exclusive discounts, and priority training.</p>
-                <a href="#" class="open-modal">More Info</a>
+                <div class="card" data-modal="modal-gold">
+                    <h3>Gold Membership</h3>
+                    <p>Gold members enjoy premium advantages: free event entries, homepage
+                        spotlight placements, exclusive discounts, and priority training.</p>
+                    <a href="#" class="open-modal" aria-haspopup="dialog">More Info</a>
+                </div>
             </div>
         </section>
 
-        <!-- Modals -->
-        <div id="modal-np" class="modal">
+        <!-- MODALS -->
+        <div id="modal-np" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-np-title" hidden>
             <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>NP Membership Benefits</h2>
+                <button class="close" aria-label="Close modal">&times;</button>
+                <h2 id="modal-np-title">NP Membership Benefits</h2>
                 <ul>
                     <li>Access to free content or resources</li>
                     <li>Subscription to newsletters or updates</li>
@@ -185,10 +191,11 @@
             </div>
         </div>
 
-        <div id="modal-bronze" class="modal">
+        <div id="modal-bronze" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-bronze-title"
+            hidden>
             <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Bronze Membership Benefits</h2>
+                <button class="close" aria-label="Close modal">&times;</button>
+                <h2 id="modal-bronze-title">Bronze Membership Benefits</h2>
                 <ul>
                     <li>Access to selected premium content</li>
                     <li>Small discounts on products or services</li>
@@ -198,10 +205,11 @@
             </div>
         </div>
 
-        <div id="modal-silver" class="modal">
+        <div id="modal-silver" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-silver-title"
+            hidden>
             <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Silver Membership Benefits</h2>
+                <button class="close" aria-label="Close modal">&times;</button>
+                <h2 id="modal-silver-title">Silver Membership Benefits</h2>
                 <ul>
                     <li>All Bronze benefits</li>
                     <li>Higher discount rates on products/services</li>
@@ -212,10 +220,10 @@
             </div>
         </div>
 
-        <div id="modal-gold" class="modal">
+        <div id="modal-gold" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-gold-title" hidden>
             <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Gold Membership Benefits</h2>
+                <button class="close" aria-label="Close modal">&times;</button>
+                <h2 id="modal-gold-title">Gold Membership Benefits</h2>
                 <ul>
                     <li>All Silver benefits</li>
                     <li>VIP access to premium events or workshops</li>
@@ -225,7 +233,6 @@
                 </ul>
             </div>
         </div>
-
     </main>
 
     <!-- FOOTER -->
@@ -235,7 +242,6 @@
         <p>© 2026 | Melinds Chamber of Commerce</p>
         <p>Last Modified: <span id="date"></span></p>
     </footer>
-
 </body>
 
 </html>

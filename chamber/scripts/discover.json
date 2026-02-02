@@ -1,0 +1,16 @@
+{
+  "title": "Discover Gotha Beach",
+  "intro": "Gotha Beach is one of our community’s treasured natural attractions...",
+  "highlights": [
+    {
+      "title": "White Sand Shoreline",
+      "description": "Ideal for beachfront resorts and cottages.",
+      "image": "images/white-sand.jpg"
+    },
+    {
+      "title": "Safe Swimming Area",
+      "description": "Perfect for family outings and wellness activities.",
+      "image": "images/swimming.jpg"
+    }
+  ]
+}

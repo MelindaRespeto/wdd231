@@ -57,9 +57,7 @@ nav li {
     margin: 0;
 }
 
-nav a,
-nav a.active,
-nav a:hover {
+nav a {
     display: block;
     padding: 0.75rem 1.25rem;
     color: #fff;
@@ -68,6 +66,10 @@ nav a:hover {
 nav a.active,
 nav a:hover {
     background-color: #0059b3;
+}
+
+.hamburger {
+    cursor: pointer;
 }
 
 /* =====================
@@ -113,14 +115,9 @@ nav a:hover {
     background-color: #0059b3;
 }
 
-.hamburger {
-    cursor: pointer;
-}
-
 /* =========================
    CTA SECTION
 ========================= */
-
 .cta {
     background-color: #e0e0e0;
     padding: 2rem 1rem;
@@ -134,7 +131,6 @@ nav a:hover {
     background-color: #0077cc;
     color: #fff;
     border-radius: 6px;
-    text-decoration: none;
     transition: background-color 0.3s ease-out;
 }
 
@@ -145,7 +141,6 @@ nav a:hover {
 /* =========================
    MAIN LAYOUT
 ========================= */
-
 #thankyou-main {
     max-width: 1200px;
     margin: 2rem auto;
@@ -163,7 +158,6 @@ nav a:hover {
 /* =========================
    FORM SECTION
 ========================= */
-
 .form-section {
     flex: 0 0 45%;
     background-color: #ffffff;
@@ -173,7 +167,6 @@ nav a:hover {
 }
 
 .form-section h2 {
-    text-align: center;
     margin-bottom: 1rem;
 }
 
@@ -228,13 +221,11 @@ nav a:hover {
 /* =========================
    MEMBERSHIP CARDS
 ========================= */
-
 .membership-cards {
     flex: 0 0 45%;
 }
 
 .membership-cards h2 {
-    text-align: center;
     margin-bottom: 1rem;
 }
 
@@ -266,7 +257,6 @@ nav a:hover {
     background-color: #0077cc;
     color: #fff;
     border-radius: 5px;
-    text-decoration: none;
     transition: background-color 0.3s ease-out;
 }
 
@@ -277,7 +267,6 @@ nav a:hover {
 /* =========================
    MODALS
 ========================= */
-
 .modal {
     position: fixed;
     inset: 0;
@@ -345,7 +334,7 @@ footer span {
 }
 
 /* =====================
-   RESPONSIVE NAV, HERO & SPOTLIGHT
+   RESPONSIVE
 ===================== */
 @media (max-width: 900px) {
     .spotlight-card img {

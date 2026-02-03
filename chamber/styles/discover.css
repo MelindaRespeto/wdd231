@@ -11,28 +11,13 @@
     text-align: center;
 }
 
-.discover-gotha .title {
-    grid-area: title;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.discover-gotha .intro {
-    grid-area: intro;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-}
-
 .highlights {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-        "one two three four"
-        "five six seven eight";
     gap: 1rem;
 }
 
-.item {
+.highlights .item {
     background-color: #ffffff;
     padding: 1rem;
     border-radius: 10px;
@@ -41,51 +26,34 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Assign grid areas */
-.one {
-    grid-area: one;
+.highlights .item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
 }
 
-.two {
-    grid-area: two;
+.highlights .item h3 {
+    margin: 0.5rem 0;
 }
 
-.three {
-    grid-area: three;
+.highlights .item p {
+    font-weight: normal;
+    font-size: 0.9rem;
 }
 
-.four {
-    grid-area: four;
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .highlights {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns for tablets */
+    }
 }
 
-.five {
-    grid-area: five;
-}
-
-.six {
-    grid-area: six;
-}
-
-.seven {
-    grid-area: seven;
-}
-
-.eight {
-    grid-area: eight;
-}
-
-/* 📱 Mobile layout */
 @media screen and (max-width: 768px) {
     .highlights {
         grid-template-columns: 1fr;
-        grid-template-areas:
-            "one"
-            "two"
-            "three"
-            "four"
-            "five"
-            "six"
-            "seven"
-            "eight";
+        /* 1 column for mobile */
     }
 }

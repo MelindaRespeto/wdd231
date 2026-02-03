@@ -1,46 +1,42 @@
-/* =========================
+/* =====================
    GLOBAL STYLES
-========================= */
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
+===================== */
 body {
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
     color: #333;
-    background-color: #f5f5f5;
+    background-color: #bfbaba;
+    margin: 0;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
-h1, h2, h3 {
+h1,
+h2 {
     margin: 0.5rem 0;
+    text-align: center;
 }
 
 p {
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
-/* =========================
-   HEADER
-========================= */
+a {
+    text-decoration: none;
+    color: #004080;
+}
 
+/* =====================
+   HEADER & NAVIGATION
+===================== */
 header {
-    background-color: #d3d3d3;
-    padding: 1rem;
+    background-color: #004080;
+    color: #fff;
 }
 
 .header-content {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
+    padding: 1rem;
 }
 
 .header-content img {
@@ -48,54 +44,77 @@ header {
     height: auto;
 }
 
-.navbar {
-    margin-top: 1rem;
-    text-align: center;
-}
-
-.hamburger {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-#nav-menu {
+nav ul {
     list-style: none;
+    display: flex;
+    justify-content: center;
     padding: 0;
     margin: 0;
+    background-color: #003366;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a,
+nav a.active,
+nav a:hover {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: #fff;
+}
+
+nav a.active,
+nav a:hover {
+    background-color: #0059b3;
+}
+
+/* =====================
+   HERO SECTION
+===================== */
+.hero-image {
+    background-image: url("../images/noa.webp");
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+    min-height: 180px;
+    max-height: 300px;
     display: flex;
-    gap: 1rem;
+    align-items: center;
     justify-content: center;
 }
 
-#nav-menu li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-
-#nav-menu li a.active {
-    color: #0077cc;
-}
-
-/* =========================
-   HERO SECTION
-========================= */
-
-.hero-image {
-    background-color: #bfbaba;
-    padding: 3rem 1rem;
+.hero-text {
+    padding: 1.5rem;
+    border-radius: 8px;
     text-align: center;
 }
 
-.hero-text h2 {
-    font-size: 2rem;
+/* =====================
+   VIEW TOGGLE BUTTONS
+===================== */
+.view-toggle {
+    text-align: center;
+    margin: 1rem 0;
 }
 
-.hero-text p {
-    font-size: 1.1rem;
+.view-toggle button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    background-color: #004080;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.view-toggle button.active {
+    background-color: #0059b3;
+}
+
+.hamburger {
+    cursor: pointer;
 }
 
 /* =========================
@@ -309,64 +328,48 @@ header {
     cursor: pointer;
 }
 
-/* =========================
+/* =====================
    FOOTER
-========================= */
-
+===================== */
 footer {
-    background-color: #d3d3d3;
-    padding: 1rem;
+    background-color: #003366;
+    color: #fff;
     text-align: center;
-    font-size: 0.9rem;
+    padding: 1rem;
+    margin-top: 2rem;
 }
 
-/* =========================
-   MOBILE / SMALL SCREEN
-========================= */
+footer p,
+footer span {
+    margin: 0.25rem 0;
+}
 
-@media screen and (max-width: 768px) {
+/* =====================
+   RESPONSIVE NAV, HERO & SPOTLIGHT
+===================== */
+@media (max-width: 900px) {
+    .spotlight-card img {
+        height: 130px;
+    }
+}
 
+@media (max-width: 768px) {
     .hamburger {
         display: block;
-        margin: 0 auto;
     }
 
-    #nav-menu {
+    nav ul {
         display: none;
         flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 1rem;
-        text-align: center;
     }
 
-    #nav-menu.show {
+    nav ul.open {
         display: flex;
-    }
-
-    .form-and-cards-container {
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 1rem;
-    }
-
-    .form-section,
-    .membership-cards {
-        flex: 1 0 100%;
-        width: 100%;
-    }
-
-    .membership-cards .card a,
-    .form-section button {
-        width: 100%;
-        text-align: center;
-    }
-
-    input,
-    select,
-    textarea {
-        width: 100%;
-        box-sizing: border-box;
     }
 }
 
-
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+    }
+}

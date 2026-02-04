@@ -1,5 +1,5 @@
 // scripts/discover.mjs
-import { itemsOfInterest } from '../data/discover.mjs';
+import { itemsOfInterest } from 'discover.mjs';
 
 const grid = document.getElementById("highlightsGrid");
 

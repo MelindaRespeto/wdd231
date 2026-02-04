@@ -1,7 +1,7 @@
 // ===============================
 // MEMBERS DIRECTORY
 // ===============================
-const membersContainer = document.querySelector("#members");
+const membersContainer = document.querySelector("#items");
 const dataURL = "data/members.json";
 
 const gridBtn = document.getElementById("grid-view");

@@ -9,7 +9,10 @@
 .discover-gotha .title,
 .discover-gotha .intro {
     text-align: center;
+    font-size: larger;
+    color: rgb(239, 85, 8);
 }
+
 
 .highlights {
     display: grid;
@@ -18,7 +21,7 @@
 }
 
 .highlights .item {
-    background-color: #ffffff;
+    background-color: #91b84f;
     padding: 1rem;
     border-radius: 10px;
     text-align: center;

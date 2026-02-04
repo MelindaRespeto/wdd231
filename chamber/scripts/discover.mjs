@@ -1,25 +1,38 @@
-import { itemsOfInterest } from 'data/items.mjs';
+// scripts/discover.mjs
 
-document.addEventListener('DOMContentLoaded', () => {
-  const pageTitle = document.getElementById("pageTitle");
-  const pageIntro = document.getElementById("pageIntro");
-  const grid = document.getElementById("highlightsGrid");
+// Import the array of items from its module
+import { itemsOfInterest } from "./itemsOfInterest.mjs";
 
-  // Page title and intro
-  pageTitle.textContent = "Discover Gotha Beach";
-  pageIntro.textContent = "Gotha Beach is one of our community’s treasured natural attractions, offering leisure opportunities and strong potential for business development.";
+// Wait for the DOM to fully load before modifying it
+document.addEventListener("DOMContentLoaded", () => {
+    // Get references to the HTML elements we’ll update
+    const pageTitle = document.getElementById("pageTitle");
+    const pageIntro = document.getElementById("pageIntro");
+    const grid = document.getElementById("highlightsGrid");
+    const dateSpan = document.getElementById("date");
 
-  // Populate highlights grid
-  itemsOfInterest.forEach(item => {
-    const card = document.createElement("div");
-    card.classList.add("item");
+    // Set the page title and introductory text
+    pageTitle.textContent = "Gotha Beach Caramoan Philippines";
+    pageIntro.textContent = "Explore some of the most interesting places around Gotha Beach!";
 
-    card.innerHTML = `
-            <img src="${item.image}" alt="${item.title}">
-            <h3>${item.title}</h3>
-            <p><strong>Address:</strong> ${item.address}</p>
-            <p>${item.description}</p>
-        `;
-    grid.appendChild(card);
-  });
+    // Update the “Last Modified” date in the footer
+    dateSpan.textContent = document.lastModified;
+
+    // Clear any existing content
+    grid.innerHTML = "";
+
+    // Loop through each item and add it to the page
+    itemsOfInterest.forEach(item => {
+        const card = document.createElement("div");
+        card.classList.add("item");
+
+        card.innerHTML = `
+      <img src="${item.image}" alt="${item.title}">
+      <h3>${item.title}</h3>
+      <p><strong>Address:</strong> ${item.address}</p>
+      <p>${item.description}</p>
+    `;
+
+        grid.appendChild(card);
+    });
 });

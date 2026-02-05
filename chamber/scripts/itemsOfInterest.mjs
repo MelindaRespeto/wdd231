@@ -39,10 +39,10 @@ export const itemsOfInterest = [
     description: "Vibrant local community, crafts, and events."
   },
   {
-    title: "Our Lady of the Most Holy Rosary, Mother of Peace Grotto",
+    title: "Tugawe Cove Resort",
     image: "images/snowy.png",
     address: "Eastern part of Caramoan, Philippines Gotha",
-    description: "Vibrant local market with food, crafts, and community events."
+    description: "A highly rated resort where you can relax in style, kayak, hike, or use as another hub for water activities and boat tours around the islands."."
   },
   {
     title: "Gotha Mountain",

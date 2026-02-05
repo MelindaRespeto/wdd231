@@ -4,42 +4,42 @@
 export const itemsOfInterest = [
   {
     title: "Gotha Beach",
-    image: "images/cookies.jpg",
+    image: "../images/gothabeach.jpg",
     address: "Gotha Beach Road",
-    description: "A beautiful sandy beach great for swimming and sunrise views."
+    description: "Iconic white-sand beach and main jump-off point for island-hopping tours; known from TV shows like Survivor for its scenic shores and limestone backdrop."
   },
   {
-    title: "Gotha Lighthouse",
+    title: "Lahus Island",
     image: "images/bottle.png",
     address: "Lighthouse Hill",
-    description: "Historic lighthouse with panoramic views of the coast."
+    description: "Stunning island with long sandy beach and crystal waters, ideal for swimming, snorkeling, and beachcombing.."
   },
   {
-    title: "Gotha Market",
+    title: "Paniman Beach",
     image: "images/construction.png",
     address: "Main Street, Gotha",
-    description: "Vibrant local market with food, crafts, and community events."
+    description: "Seaside area with nearby food stalls and shops; great as a more relaxed alternate beach spot."
   },
   {
-    title: "Gotha Market",
+    title: "Enchanted Lagoon",
     image: "images/construction.png",
     address: "Main Street, Gotha",
-    description: "Vibrant local market with food, crafts, and community events."
+    description: "Serene natural coastal lagoon perfect for quiet swimming and scenic photos during island-hopping tours."
   },
   {
-    title: "Gotha Market",
+    title: "Caramoan Island hopping",
     image: "images/construction.png",
     address: "Main Street, Gotha",
-    description: "Vibrant local market with food, crafts, and community events."
+    description: "The classic multi-stop island adventure where you can visit famous spots like Matukad, Lahos, Cagbalinad, Hunongan and more in one tour."
   },
   {
-    title: "Function Hall",
+    title: "Adventure & Exploration/Umang Cave",
     image: "images/2.jpg",
     address: "Main Street, Gotha",
     description: "Vibrant local community, crafts, and events."
   },
   {
-    title: "Gotha Sunrise",
+    title: "Our Lady of the Most Holy Rosary, Mother of Peace Grotto",
     image: "images/snowy.png",
     address: "Eastern part of Caramoan, Philippines Gotha",
     description: "Vibrant local market with food, crafts, and community events."

@@ -1,4 +1,3 @@
-
 // scripts/itemsOfInterest.mjs
 
 export const itemsOfInterest = [
@@ -50,5 +49,4 @@ export const itemsOfInterest = [
     address: "Caramoan, Gotha",
     description: "Mountain green and gold community reserves."
   }
-  // add as many items as you want
 ];

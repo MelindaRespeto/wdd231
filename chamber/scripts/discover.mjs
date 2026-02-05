@@ -1,9 +1,7 @@
 // scripts/discover.mjs
 
 // Import the array of items from its module
-import { itemsOfInterest } from "./itemsOfInterest.mjs";
-
-// Wait for the DOM to fully load before modifying it
+import { itemsOfInterest } from "../data/itemsOfInterest.mjs";
 document.addEventListener("DOMContentLoaded", () => {
     // Get references to the HTML elements we’ll update
     const pageTitle = document.getElementById("pageTitle");

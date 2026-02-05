@@ -12,7 +12,7 @@ export const itemsOfInterest = [
     title: "Lahus Island",
     image: "images/bottle.png",
     address: "Lighthouse Hill",
-    description: "Stunning island with long sandy beach and crystal waters, ideal for swimming, snorkeling, and beachcombing.."
+    description: "Stunning island with long sandy beach and crystal waters, ideal for swimming, snorkeling, and beachcombing."
   },
   {
     title: "Paniman Beach",
@@ -42,7 +42,7 @@ export const itemsOfInterest = [
     title: "Tugawe Cove Resort",
     image: "images/snowy.png",
     address: "Eastern part of Caramoan, Philippines Gotha",
-    description: "A highly rated resort where you can relax in style, kayak, hike, or use as another hub for water activities and boat tours around the islands."."
+    description: "A highly rated resort where you can relax in style, kayak, hike, or use as another hub for water activities and boat tours around the islands."
   },
   {
     title: "Gotha Mountain",

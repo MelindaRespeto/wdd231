@@ -6,14 +6,32 @@
     border-radius: 12px;
 }
 
-
-
 .discover-gotha .title,
 .discover-gotha .intro {
     text-align: center;
     font-size: larger;
     color: rgb(239, 85, 8);
 }
+
+.cards-grid,
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    /* uniform spacing between rows and columns */
+    padding: 1rem;
+    /* optional: spacing around the grid */
+}
+
+.card {
+    height: 250px;
+    /* all cards same height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* distributes content evenly */
+}
+
 
 /* Highlights grid */
 .highlights {
@@ -22,7 +40,7 @@
     gap: 1rem;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {addadd
     .highlights {
         grid-template-columns: repeat(2, 1fr);
     }

@@ -96,3 +96,15 @@
 .card-d {
     grid-area: d;
 }
+
+.cards-grid img,
+.highlights img {
+    width: 100%;
+    /* Image fills the card/container width */
+    height: 150px;
+    /* Fixed height for uniform cards */
+    object-fit: cover;
+    /* Crop/scale image without stretching */
+    border-radius: 6px;
+    /* Rounded corners to match design */
+}

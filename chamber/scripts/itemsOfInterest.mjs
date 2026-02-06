@@ -1,5 +1,5 @@
 // Example data array for cards
-const cardsData = [
+export const itemsOfInterest = cardsData = [
   {
     id: 'a',
     title: 'Explore Gotha A',

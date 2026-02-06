@@ -1,29 +1,24 @@
-// scripts/discover.mjs
-import { itemsOfInterest } from "./itemsOfInterest.mjs";
+import { itemsOfInterest } from "../data/itemsOfInterest.mjs";
 
 document.addEventListener("DOMContentLoaded", () => {
-    const pageTitle = document.getElementById("pageTitle");
-    const pageIntro = document.getElementById("pageIntro");
-    const grid = document.getElementById("highlightsGrid");
-    const dateSpan = document.getElementById("date");
+  const grid = document.querySelector(".cards-grid");
 
-    pageTitle.textContent = "Gotha Beach Caramoan Philippines";
-    pageIntro.textContent = "Explore some of the most interesting places around Gotha Beach!";
-    dateSpan.textContent = document.lastModified;
+  grid.innerHTML = "";
 
-    grid.innerHTML = "";
+  itemsOfInterest.forEach(item => {
+    const card = document.createElement("article");
+    card.classList.add("card", `card-${item.id}`);
 
-    itemsOfInterest.forEach(item => {
-        const card = document.createElement("div");
-        card.classList.add("item");
+    card.innerHTML = `
+      <h2>${item.name}</h2>
+      <figure>
+        <img src="${item.image}" alt="${item.name}">
+      </figure>
+      <address>${item.address}</address>
+      <p>${item.description}</p>
+      <button>Learn More</button>
+    `;
 
-        card.innerHTML = `
-          <img src="${item.image}" alt="${item.title}">
-          <h3>${item.title}</h3>
-          <p><strong>Address:</strong> ${item.address}</p>
-          <p>${item.description}</p>
-        `;
-
-        grid.appendChild(card);
-    });
+    grid.appendChild(card);
+  });
 });

@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join MELINDS Chamber of Commerce</title>
+    <title>Discover Gotha | MELINDS Chamber of Commerce</title>
     <meta name="description"
-        content="Join MELINDS Chamber of Commerce to support local businesses and build our community.">
+        content="Discover destinations and attractions in Gotha, Caramoan with MELINDS Chamber of Commerce.">
     <meta name="author" content="Melinda Paghanapa">
 
     <!-- Preconnect for Google Fonts -->
@@ -16,15 +16,16 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="../styles/join.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/discover.css">
 
     <!-- Open Graph for social sharing -->
-    <meta property="og:title" content="MELINDS Chamber of Commerce | Home">
-    <meta property="og:description" content="Supporting local businesses and building our community.">
+    <meta property="og:title" content="MELINDS Chamber of Commerce | Discover">
+    <meta property="og:description" content="Discover destinations and attractions in Gotha, Caramoan.">
     <meta property="og:image" content="https://melindarespeto.github.io/wdd231/images/parrot.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://melindarespeto.github.io/wdd231/chamber/join.html">
+    <meta property="og:url" content="https://melindarespeto.github.io/wdd231/chamber/discover.html">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
@@ -35,8 +36,6 @@
     <link rel="icon" href="images/tuna.jpg">
 
     <!-- JS -->
-    <script src="scripts/directory.js" defer></script>
-    <script src="scripts/spotlight.js" type="module"></script>
     <script src="scripts/timestamp.js" defer></script>
 </head>
 
@@ -45,124 +44,83 @@
     <header>
         <div class="header-content">
             <img src="images/tuna.jpg" alt="Melinds Chamber Logo">
-            <h1>Discover members of MELINDS CHAMBER OF COMMERCE</h1>
+            <h1>Discover MELINDS Chamber of Commerce</h1>
         </div>
 
         <nav class="navbar">
             <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
-
             <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Business Directory</a></li>
                 <li><a href="join.html">Join</a></li>
-                <li><a href="#" class="active">Discover</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
             </ul>
         </nav>
     </header>
 
-    <body>
-        <!-- HEADER -->
-        <header>
-            <div class="header-content">
-                <img src="images/tuna.jpg" alt="Melinds Chamber Logo">
-                <h1>MELINDS CHAMBER OF COMMERCE</h1>
-            </div>
-            <nav class="navbar">
-                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
-                <ul id="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="join.html">Join</a></li>
-                    <li><a href="discover.html" class="active">Discover</a></li>
-                </ul>
-            </nav>
-        </header>
+    <!-- HERO SECTION -->
+    <section class="hero-image">
+        <div class="hero-text">
+            <h2>Welcome to Our Chamber</h2>
+            <p>Great things start in the City of Paradise</p>
+        </div>
+    </section>
 
-        <!-- HERO SECTION -->
-        <section class="hero-image">
-            <div class="hero-text">
-                <h2>Welcome to Our Chamber</h2>
-                <p>Great things start in the City of Paradise</p>
-            </div>
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- DISCOVER SECTION -->
+        <section class="discover-gotha">
+            <h2 id="pageTitle">Discover Gotha, Caramoan</h2>
+            <p id="pageIntro">Explore eight must-see destinations around Gotha and Caramoan.</p>
+
+            <!-- Cards Grid (populated by JS) -->
+            <div class="cards-grid"></div>
         </section>
 
-        <!-- MAIN CONTENT -->
-        <main>
+        <!-- HIGHLIGHTS SECTION -->
+        <section class="discover-gotha">
+            <h2 class="title">Discover Gotha Beach</h2>
+            <p class="intro">Get to know the best highlights below.</p>
 
-            <!-- CARDS GRID -->
-            <section class="cards-grid">
-                <article class="card card-a">
-                    <h3>Beaches & Islands</h3>
-                    <p>Fine white sandy beach<br> and island hopping jump-off point</p>
-                </article>
-                <article class="card card-b">
+            <div class="highlights" id="highlightsGrid">
+                <article class="item">
+                    <img src="images/resort.webp" alt="Tugawe Cove Resort">
                     <h3>Tugawe Cove Resort</h3>
-                    <p>A serene escape with scenic landscapes and refreshing hillside breezes</p>
+                    <p>
+                        A scenic hillside resort overlooking Lauing Bay and nearby islands.
+                        Offers panoramic ocean views, serene surroundings, modern rooms,
+                        a swimming pool, restaurant, and easy access to island hopping tours.
+                    </p>
                 </article>
-                <article class="card card-c">
-                    <h3>Adventure & Nature</h3>
-                    <p>Discover the wild side of Gotha and Caramoan, where hidden caves,<br> pristine beaches, and lush
-                        trails invite you to explore, snorkel, hike, and connect with nature like never before</p>
+                <article class="item">
+                    <img src="images/sample2.jpg" alt="Coral Reef Point">
+                    <h3>Coral Reef Point</h3>
+                    <p>Dive and explore the colorful coral reef.</p>
                 </article>
-                <article class="card card-d">
-                    <h3>Unique Experiences</h3>
-                    <p>From breathtaking sunsets to hidden sandbars and eco-adventures<br>
-                        Gotha offers one-of-a-kind experiences that will leave you with unforgettable memories</p>
+                <article class="item">
+                    <img src="images/sample3.jpg" alt="Gotha Pier">
+                    <h3>Gotha Pier</h3>
+                    <p>Relax and watch the boats go by.</p>
                 </article>
-            </section>
+                <article class="item">
+                    <img src="images/sample4.jpg" alt="Cliffside Trails">
+                    <h3>Cliffside Trails</h3>
+                    <p>Hike scenic trails with ocean views.</p>
+                </article>
+            </div>
+        </section>
+    </main>
 
-            <!-- DISCOVER SECTION -->
-            <section class="discover-gotha">
-                <h2 class="title" id="pageTitle">Discover Gotha Beach</h2>
-                <p class="intro" id="pageIntro">Get to know the best highlights below.</p>
+    <!-- FOOTER -->
+    <footer>
+        <span>WDD231 Class Project</span>
+        <p>Melinda Competente</p>
+        <p>© 2026 | Melinds Chamber of Commerce</p>
+        <p>Last Modified: <span id="date"></span></p>
+    </footer>
 
-                <div class="highlights" id="highlightsGrid">
-                    <article class="item">
-                        <img src="images/resort.webp" alt="Highlight image 1">
-                        <h3>Hillside Resort</h3>
-                        <p>
-
-                            🌴 Tugawe Cove Resort
-
-                            Tugawe Cove Resort is a scenic hillside resort overlooking Lauing Bay and nearby islands.
-                            <br>It
-                            offers panoramic ocean views, serene natural surroundings, and a relaxing atmosphere ideal
-                            for
-                            couples and families. <br>Guests enjoy modern rooms, beachfront access, and amenities such
-                            as a
-                            swimming pool, restaurant, and easy access to island hopping tours
-                        </p>
-                    </article>
-                    <article class="item">
-                        <img src="images/sample2.jpg" alt="Highlight image 2">
-                        <h3>Coral Reef Point</h3>
-                        <p>Dive and explore the colorful coral reef.</p>
-                    </article>
-                    <article class="item">
-                        <img src="images/sample3.jpg" alt="Highlight image 3">
-                        <h3>Gotha Pier</h3>
-                        <p>Relax and watch the boats go by.</p>
-                    </article>
-                    <article class="item">
-                        <img src="images/sample4.jpg" alt="Highlight image 4">
-                        <h3>Cliffside Trails</h3>
-                        <p>Hike scenic trails with ocean views.</p>
-                    </article>
-                </div>
-            </section>
-
-        </main>
-
-        <!-- FOOTER -->
-        <footer>
-            <span>WDD231 Class Project</span>
-            <p>Melinda Competente</p>
-            <p>© 2026 | Melinds Chamber of Commerce</p>
-            <p>Last Modified: <span id="date"></span></p>
-        </footer>
-
-        <!-- Load JS Module -->
-        <script type="module" src="scripts/discover.mjs"></script>
-    </body>
+    <!-- Load JS Module -->
+    <script type="module" src="scripts/discover.mjs"></script>
+</body>
 
 </html>

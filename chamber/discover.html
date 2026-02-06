@@ -20,7 +20,7 @@
             <h1>MELINDS CHAMBER OF COMMERCE</h1>
         </div>
         <nav class="navbar">
-            <div class="hamburger" id="hamburger">☰</div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
             <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
@@ -30,13 +30,66 @@
         </nav>
     </header>
 
+    <!-- HERO SECTION -->
+    <section class="hero-image">
+        <div class="hero-text">
+            <h2>Welcome to Our Chamber</h2>
+            <p>Great things start in the City of Paradise</p>
+        </div>
+    </section>
+
     <!-- MAIN CONTENT -->
     <main>
-        <section class="discover-gotha">
-            <h2 id="pageTitle"></h2>
-            <p id="pageIntro"></p>
-            <div class="highlights" id="highlightsGrid"></div>
+
+        <!-- CARDS GRID -->
+        <section class="cards-grid">
+            <article class="card card-a">
+                <h3>Explore Gotha Resort</h3>
+                <p>Fine white sandy beach and island hopping jump-off point</p>
+            </article>
+            <article class="card card-b">
+                <h3>Explore Gotha B</h3>
+                <p>Some introductory text about card B</p>
+            </article>
+            <article class="card card-c">
+                <h3>Explore Gotha C</h3>
+                <p>Some introductory text about card C</p>
+            </article>
+            <article class="card card-d">
+                <h3>Explore Gotha D</h3>
+                <p>Some introductory text about card D</p>
+            </article>
         </section>
+
+        <!-- DISCOVER SECTION -->
+        <section class="discover-gotha">
+            <h2 class="title" id="pageTitle">Discover Gotha Beach</h2>
+            <p class="intro" id="pageIntro">Get to know the best highlights below.</p>
+
+            <div class="highlights" id="highlightsGrid">
+                <article class="item">
+                    <img src="images/resort.webp" alt="Highlight image 1">
+                    <h3>Sunset Beach</h3>
+                    <p>Beautiful golden hour view over the sea.</p>
+                </article>
+                <article class="item">
+                    <img src="images/sample2.jpg" alt="Highlight image 2">
+                    <h3>Coral Reef Point</h3>
+                    <p>Dive and explore the colorful coral reef.</p>
+                </article>
+                <article class="item">
+                    <img src="images/sample3.jpg" alt="Highlight image 3">
+                    <h3>Gotha Pier</h3>
+                    <p>Relax and watch the boats go by.</p>
+                </article>
+                <article class="item">
+                    <img src="images/sample4.jpg" alt="Highlight image 4">
+                    <h3>Cliffside Trails</h3>
+                    <p>Hike scenic trails with ocean views.</p>
+                </article>
+            </div>
+        </section>
+
     </main>
 
     <!-- FOOTER -->

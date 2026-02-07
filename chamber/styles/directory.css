@@ -10,7 +10,6 @@ body {
     color: #333;
 }
 
-
 h1,
 h2,
 h3 {
@@ -83,9 +82,7 @@ header .header-content img {
     justify-content: center;
     color: #fff;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-
 }
-
 
 .hero-content {
     text-align: center;

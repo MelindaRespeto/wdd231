@@ -89,12 +89,25 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer>
         <span>WDD231 Class Project</span>
         <p>Melinda Competente</p>
         <p>© 2026 | Melinds Chamber of Commerce</p>
-        <p>Last Modified: <span id="date"></span></p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+        <script>
+            const modified = new Date(document.lastModified);
+            const options = {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+            };
+
+            document.getElementById("lastModified").textContent =
+                modified.toLocaleDateString("en-US", options);
+        </script>
+
     </footer>
 
     <!-- DISCOVER JS MODULE -->

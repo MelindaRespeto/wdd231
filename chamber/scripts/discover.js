@@ -20,3 +20,10 @@ itemsOfInterest.forEach(item => {
 
   grid.appendChild(card);
 });
+
+const lastModified = document.lastModified;
+console.log("Last Modified:", lastModified);
+
+// Example: display it on the page
+document.getElementById("lastModified").textContent = lastModified;
+

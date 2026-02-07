@@ -28,13 +28,13 @@ console.log("Last Modified:", lastModified);
 document.getElementById("lastModified").textContent = lastModified;
 
 const modified = new Date(document.lastModified);
-            const options = {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-                hour: "2-digit",
-                minute: "2-digit",
-            };
+const options = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+};
 
-            document.getElementById("lastModified").textContent =
-                modified.toLocaleDateString("en-US", options);
+document.getElementById("lastModified").textContent =
+  modified.toLocaleDateString("en-US", options);

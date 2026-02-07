@@ -94,7 +94,19 @@
         <p>Melinda Competente</p>
         <p>© 2026 | Melinds Chamber of Commerce</p>
         <p>Last Modified: <span id="lastModified"></span></p>
+        <script>
+            const modified = new Date(document.lastModified);
+            const options = {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+            };
 
+            document.getElementById("lastModified").textContent =
+                modified.toLocaleDateString("en-US", options);
+        </script>
 
     </footer>
 

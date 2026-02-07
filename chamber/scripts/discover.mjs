@@ -44,3 +44,14 @@ if (!lastVisit) {
 // Store the current visit time in milliseconds
 localStorage.setItem("lastVisit", now);
 
+const modified = new Date(document.lastModified);
+const options = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+};
+
+document.getElementById("lastModified").textContent =
+  modified.toLocaleDateString("en-US", options);

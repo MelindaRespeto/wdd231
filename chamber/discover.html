@@ -9,7 +9,7 @@
         content="Discover destinations and attractions in Gotha, Caramoan with MELINDS Chamber of Commerce.">
     <meta name="author" content="Melinda Paghanapa">
 
-    <!-- Preconnect for Google Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -19,24 +19,23 @@
     <link rel="stylesheet" href="styles/discover.css">
     <link rel="stylesheet" href="styles/directory.css">
 
-    <!-- Open Graph for social sharing -->
+    <!-- Open Graph -->
     <meta property="og:title" content="MELINDS Chamber of Commerce | Discover">
     <meta property="og:description" content="Discover destinations and attractions in Gotha, Caramoan.">
-    <meta property="og:image" content="https://melindarespeto.github.io/wdd231/images/parrot.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="../images/parrot.jpg">
     <meta property="og:url" content="https://melindarespeto.github.io/wdd231/chamber/discover.html">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://melindarespeto.github.io/wdd231/images/student.jpg">
+    <meta name="twitter:image" content="../images/student.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" href="images/tuna.jpg">
+    <link rel="icon" href="../images/tuna.jpg">
 
     <!-- JS -->
     <script src="scripts/timestamp.js" defer></script>
+    <script src="scripts/exploreBtn.js" defer></script>
 </head>
 
 <body>
@@ -68,12 +67,17 @@
 
     <!-- MAIN CONTENT -->
     <main>
-        <!-- DISCOVER SECTION -->
-        <section class="discover-gotha">
-            <h2 id="pageTitle">Discover Gotha, Caramoan</h2>
-            <p id="pageIntro">Explore eight must-see destinations around Gotha and Caramoan.</p>
+        <!-- HERO CONTENT -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2 id="pageTitle">Discover Gotha, Caramoan</h2>
+                <p id="pageIntro">Explore eight must-see destinations around Gotha and Caramoan.</p>
+                <a href="#" id="exploreBtn" class="hero-btn">Explore Now</a>
+            </div>
+        </section>
 
-            <!-- Cards Grid (populated by JS) -->
+        <!-- DISCOVER CARDS GRID (hidden initially) -->
+        <section id="discover">
             <div class="cards-grid"></div>
         </section>
 
@@ -119,8 +123,8 @@
         <p>Last Modified: <span id="date"></span></p>
     </footer>
 
-    <!-- Load JS Module -->
-    <script type="module" src="scripts/discover.mjs"></script>
+    <!-- DISCOVER JS MODULE -->
+    <script type="module" src="../scripts/discover.mjs"></script>
 </body>
 
 </html>

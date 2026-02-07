@@ -1,58 +1,51 @@
+// Export an array of 8 items of interest
 export const itemsOfInterest = [
   {
-    id: "a",
-    name: "Gota Beach",
-    address: "Gotha, Caramoan, Camarines Sur, Philippines",
-    description: "A peaceful white-sand beach and gateway to island hopping adventures.",
-    image: "images/gota-beach.jpg"
+    name: "Tugawe Cove Resort",
+    address: "Lauing Bay, Gotha, Caramoan",
+    description: "A scenic hillside resort overlooking Lauing Bay and nearby islands. Offers panoramic ocean views, serene surroundings, modern rooms, a swimming pool, restaurant, and easy access to island hopping tours.",
+    image: "images/resort.webp"
   },
   {
-    id: "b",
-    name: "Matukad Island",
-    address: "Caramoan National Park, Camarines Sur",
-    description: "Known for its hidden lagoon, towering cliffs, and crystal-clear waters.",
-    image: "images/matukad-island.jpg"
+    name: "Coral Reef Point",
+    address: "Poblacion, Gotha, Caramoan",
+    description: "Dive and explore the colorful coral reef teeming with marine life.",
+    image: "images/coralreef.webp"
   },
   {
-    id: "c",
-    name: "Lahos Island",
-    address: "Caramoan Islands, Camarines Sur",
-    description: "A unique island that disappears during high tide, perfect for photos.",
-    image: "images/lahos-island.jpg"
+    name: "Gotha Pier",
+    address: "Barangay Gotha, Caramoan",
+    description: "Relax and watch the boats go by while enjoying the ocean breeze.",
+    image: "images/pier.webp"
   },
   {
-    id: "d",
-    name: "Manlawi Sandbar",
-    address: "Caramoan National Park, Camarines Sur",
-    description: "A pristine sandbar ideal for swimming, picnics, and sunset views.",
-    image: "images/manlawi-sandbar.jpg"
+    name: "Cliffside Trails",
+    address: "Lauing Hills, Gotha, Caramoan",
+    description: "Hike scenic trails with panoramic ocean views.",
+    image: "images/cliffside.webp"
   },
   {
-    id: "e",
-    name: "Omang Cave",
-    address: "Caramoan National Park, Camarines Sur",
-    description: "A limestone cave offering adventurous exploration and natural formations.",
-    image: "images/omang-cave.jpg"
+    name: "Sunset Beach",
+    address: "West Coast, Gotha, Caramoan",
+    description: "Perfect spot to watch breathtaking sunsets and enjoy a calm beach.",
+    image: "images/sunset.webp"
   },
   {
-    id: "f",
-    name: "Hillside Resort",
-    address: "Gotha, Caramoan, Camarines Sur",
-    description: "A serene hillside retreat with sweeping ocean views and cozy accommodations.",
-    image: "images/hillside-resort.jpg"
+    name: "Mangrove Walk",
+    address: "Eastern Bay, Gotha, Caramoan",
+    description: "A guided walk through lush mangroves with abundant birdlife.",
+    image: "images/mangrove.webp"
   },
   {
-    id: "g",
-    name: "Snorkeling Reef Spot",
-    address: "Caramoan National Park, Camarines Sur",
-    description: "A vibrant marine sanctuary filled with colorful corals and fish.",
-    image: "images/snorkeling-reef.jpg"
+    name: "Gotha Lighthouse",
+    address: "Northern Tip, Gotha, Caramoan",
+    description: "Historic lighthouse offering 360-degree views of the coastline.",
+    image: "images/lighthouse.webp"
   },
   {
-    id: "h",
-    name: "Local Fishing Village",
-    address: "Gotha, Caramoan, Camarines Sur",
-    description: "A cultural site where visitors can experience traditional coastal life.",
-    image: "images/fishing-village.jpg"
+    name: "Island Hopping Tours",
+    address: "Main Wharf, Gotha, Caramoan",
+    description: "Explore nearby islands, hidden lagoons, and pristine beaches on a guided boat tour.",
+    image: "images/islands.webp"
   }
 ];

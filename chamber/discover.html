@@ -22,16 +22,16 @@
     <!-- Open Graph -->
     <meta property="og:title" content="MELINDS Chamber of Commerce | Discover">
     <meta property="og:description" content="Discover destinations and attractions in Gotha, Caramoan.">
-    <meta property="og:image" content="../images/parrot.jpg">
+    <meta property="og:image" content="images/parrot.jpg">
     <meta property="og:url" content="https://melindarespeto.github.io/wdd231/chamber/discover.html">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="../images/student.jpg">
+    <meta name="twitter:image" content="images/student.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" href="../images/tuna.jpg">
+    <link rel="icon" href="images/tuna.jpg">
 
     <!-- JS -->
     <script src="scripts/timestamp.js" defer></script>
@@ -76,42 +76,9 @@
             </div>
         </section>
 
-        <!-- DISCOVER CARDS GRID (hidden initially) -->
+        <!-- DISCOVER CARDS GRID -->
         <section id="discover">
-            <div class="cards-grid"></div>
-        </section>
-
-        <!-- HIGHLIGHTS SECTION -->
-        <section class="discover-gotha">
-            <h2 class="title">Discover Gotha Beach</h2>
-            <p class="intro">Get to know the best highlights below.</p>
-
-            <div class="highlights" id="highlightsGrid">
-                <article class="item">
-                    <img src="images/resort.webp" alt="Tugawe Cove Resort">
-                    <h3>Tugawe Cove Resort</h3>
-                    <p>
-                        A scenic hillside resort overlooking Lauing Bay and nearby islands.
-                        Offers panoramic ocean views, serene surroundings, modern rooms,
-                        a swimming pool, restaurant, and easy access to island hopping tours.
-                    </p>
-                </article>
-                <article class="item">
-                    <img src="images/sample2.jpg" alt="Coral Reef Point">
-                    <h3>Coral Reef Point</h3>
-                    <p>Dive and explore the colorful coral reef.</p>
-                </article>
-                <article class="item">
-                    <img src="images/sample3.jpg" alt="Gotha Pier">
-                    <h3>Gotha Pier</h3>
-                    <p>Relax and watch the boats go by.</p>
-                </article>
-                <article class="item">
-                    <img src="images/sample4.jpg" alt="Cliffside Trails">
-                    <h3>Cliffside Trails</h3>
-                    <p>Hike scenic trails with ocean views.</p>
-                </article>
-            </div>
+            <div class="cards-grid" id="cardsGrid"></div>
         </section>
     </main>
 
@@ -124,7 +91,7 @@
     </footer>
 
     <!-- DISCOVER JS MODULE -->
-    <script type="module" src="../scripts/discover.mjs"></script>
+    <script type="module" src="scripts/discover.mjs"></script>
 </body>
 
 </html>

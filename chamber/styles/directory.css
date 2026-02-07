@@ -1,406 +1,246 @@
-/* =====================
-   GLOBAL STYLES
-===================== */
+/* =========================
+   BASE STYLES
+========================= */
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333;
-    background-color: #bfbaba;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 h1,
-h2 {
+h2,
+h3 {
     margin: 0.5rem 0;
-    text-align: center;
-}
-
-p {
-    line-height: 1.6;
 }
 
 a {
     text-decoration: none;
-    color: #004080;
+    color: inherit;
 }
 
-label {
+img {
+    max-width: 100%;
+    height: auto;
     display: block;
-    margin-top: 1rem;
 }
 
-button {
-    display: block;
-    margin-top: 10px;
-    background-color: blue;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-}
+/* =========================
+   HEADER & NAV
+========================= */
 
-/* =====================
-   HEADER & NAVIGATION
-===================== */
 header {
-    background-color: #004080;
+    background-color: #007acc;
     color: #fff;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
     padding: 1rem;
 }
 
-.header-content img {
-    width: 60px;
-    height: auto;
+header .header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-nav ul {
+header .header-content img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.navbar {
+    margin-top: 0.5rem;
+}
+
+.navbar ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    gap: 1rem;
     padding: 0;
-    margin: 0;
-    background-color: #003366;
 }
 
-nav li {
-    margin: 0;
-}
-
-nav a,
-nav a.active,
-nav a:hover {
-    display: block;
-    padding: 0.75rem 1.25rem;
-    color: #fff;
-}
-
-nav a.active,
-nav a:hover {
-    background-color: #0059b3;
+.navbar ul li a.active {
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .hamburger {
-    cursor: pointer;
+    display: none;
 }
 
-/* =====================
+/* =========================
    HERO SECTION
-===================== */
+========================= */
+
 .hero-image {
-    background-image: url("../images/noa.webp");
-    background-size: cover;
-    background-position: center;
-    height: 30vh;
-    min-height: 180px;
-    max-height: 300px;
+    background: url("../images/resort.webp") center/cover no-repeat;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.hero-text {
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-}
-
-/* =====================
-   VIEW TOGGLE BUTTONS
-===================== */
-.view-toggle {
-    text-align: center;
-    margin: 1rem 0;
-}
-
-.view-toggle button {
-    padding: 0.5rem 1rem;
-    margin: 0 0.25rem;
-    background-color: #004080;
     color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
-.view-toggle button.active {
-    background-color: #0059b3;
+.hero-content {
+    text-align: center;
+    padding: 2rem;
 }
 
-/* =====================
-   MEMBERS GRID & LIST
-===================== */
-.members-grid {
+.hero-btn {
+    background-color: #007acc;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+/* =========================
+   CARDS GRID
+========================= */
+
+.cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
+    padding: 2rem;
 }
 
-.members-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    margin: 0 auto;
+/* Small screens: 320px–640px */
+@media (max-width: 640px) {
+    .cards-grid {
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
+    }
 }
 
-.members-list .member-card {
-    width: 100%;
+/* Medium screens: 641px–1024px */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
 }
 
-/* =====================
-   MEMBERS DIRECTORY
-===================== */
-.member-card {
+/* Large screens: 1025px+ */
+@media (min-width: 1025px) {
+    .cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+    }
+}
+
+/* Assign cards to grid areas */
+#card-1 {
+    grid-area: card1;
+}
+
+#card-2 {
+    grid-area: card2;
+}
+
+#card-3 {
+    grid-area: card3;
+}
+
+#card-4 {
+    grid-area: card4;
+}
+
+#card-5 {
+    grid-area: card5;
+}
+
+#card-6 {
+    grid-area: card6;
+}
+
+#card-7 {
+    grid-area: card7;
+}
+
+#card-8 {
+    grid-area: card8;
+}
+
+/* =========================
+   CARD STYLES
+========================= */
+
+.card {
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 1.5rem;
-    text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.member-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.member-card img {
-    display: block;
-    margin: 0 auto 0.5rem;
-    width: 100%;
-    max-width: 300px;
-    height: 200px;
-    object-fit: cover;
-}
-
-.member-card h2 {
-    font-size: 1.25rem;
-    color: #004080;
-}
-
-.member-card p {
-    font-size: 0.9rem;
-    margin: 0.25rem 0;
-}
-
-.member-card a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #004080;
-    color: #fff;
-    border-radius: 4px;
-}
-
-.member-card a:hover {
-    background-color: #0059b3;
-}
-
-/* Zebra striping */
-.member-card:nth-child(even) {
-    background-color: #f5f7ff;
-}
-
-.member-card:nth-child(odd) {
-    background-color: #ffffff;
-}
-
-/* =====================
-   MAIN CONTENT
-===================== */
-main {
-    padding: 1rem;
-}
-
-/* =====================
-   CURRENT EVENTS SECTION
-===================== */
-.events {
-    padding: 2rem 1rem;
-    background-color: #bdbdbd;
-    color: #222;
-}
-
-.events h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    color: #2c3e50;
-}
-
-.events-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.event-card {
-    background-color: #ffffff;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.event-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.event-card img {
+.card figure {
+    margin: 0 0 1rem 0;
+}
+
+.card img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
-.event-content {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.event-content h3 {
-    margin-top: 0;
+.card h2 {
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: #34495e;
 }
 
-.event-date,
-.event-location {
-    font-size: 0.9rem;
-    color: #666;
-    margin: 0.25rem 0;
+.card address {
+    font-style: normal;
+    color: #555;
+    margin-bottom: 0.5rem;
 }
 
-.event-content p {
-    margin: 0.75rem 0;
-    line-height: 1.5;
-    flex-grow: 1;
+.card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
 }
 
-.event-btn {
-    align-self: flex-start;
-    margin-top: 1rem;
+.card button {
+    background-color: #007acc;
+    color: #fff;
     padding: 0.5rem 1rem;
-    background-color: #0077cc;
-    color: #ffffff;
+    border: none;
     border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.event-btn:hover,
-.event-btn:focus {
+.card button:hover {
     background-color: #005fa3;
 }
 
-/* =====================
-   COMPANY SPOTLIGHT
-===================== */
-#spotlight {
-    padding: 3rem 1.5rem;
-    background-color: #9accfd;
-    text-align: center;
-}
-
-#spotlight h2 {
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-    color: #2c3e50;
-}
-
-.spotlight-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 350px;
-}
-
-.spotlight-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    display: block;
-}
-
-.spotlight-description {
-    flex-grow: 1;
-    margin-bottom: 0.5rem;
-}
-
-.spotlight-btn {
-    margin-top: auto;
-}
-
-/* =====================
+/* =========================
    FOOTER
-===================== */
+========================= */
+
 footer {
-    background-color: #003366;
+    background-color: #007acc;
     color: #fff;
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
-}
-
-footer p,
-footer span {
-    margin: 0.25rem 0;
-}
-
-/* =====================
-   RESPONSIVE
-===================== */
-@media (max-width: 900px) {
-    .spotlight-card img {
-        height: 130px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-    }
-
-    nav ul.open {
-        display: flex;
-    }
-}
-
-@media (max-width: 600px) {
-    .header-content {
-        flex-direction: column;
-    }
-
-    .hero-text {
-        font-size: 0.9rem;
-    }
-
-    .spotlight-card img {
-        height: 110px;
-    }
-}
-
-/* =====================
-   LAST MODIFIED DATE
-===================== */
-#date {
-    font-weight: bold;
-    color: #ffffff;
 }

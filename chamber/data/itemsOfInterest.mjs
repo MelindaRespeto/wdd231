@@ -9,7 +9,7 @@ export const itemsOfInterest = [
   {
     name: "Coral Reef Point",
     address: "Poblacion, Gotha, Caramoan",
-    description: "Dive and explore the colorful coral reef teeming with marine life.",
+    description: "Coral Reef Point in the Caramoan area refers to one of the many marine spots around the Caramoan Peninsula where coral reef formations thrive in shallow tropical waters. ",
     image: "images/coral.jpg"
   },
   {
@@ -40,7 +40,7 @@ export const itemsOfInterest = [
     name: "Gotha Lighthouse",
     address: "Northern Tip, Gotha, Caramoan",
     description: "Historic lighthouse offering 360-degree views of the coastline.",
-    image: "images/coral.jpg"
+    image: "images/lighthouse.webp"
   },
   {
     name: "Island Hopping Tours",

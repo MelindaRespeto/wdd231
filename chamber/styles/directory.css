@@ -1,6 +1,10 @@
 /* =========================
    BASE STYLES
 ========================= */
+header {
+    margin-bottom: 2rem;
+    /* Adjust the value as needed */
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -9,6 +13,7 @@ body {
     background-color: #f9f9f9;
     color: #333;
 }
+
 
 h1,
 h2,
@@ -35,6 +40,7 @@ header {
     background-color: #007acc;
     color: #fff;
     padding: 1rem;
+    margin-bottom: 2rem;
 }
 
 header .header-content {
@@ -81,7 +87,9 @@ header .header-content img {
     justify-content: center;
     color: #fff;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+
 }
+
 
 .hero-content {
     text-align: center;

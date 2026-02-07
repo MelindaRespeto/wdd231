@@ -1,3 +1,8 @@
+header {
+    margin-bottom: 2rem;
+    /* Adjust the value as needed */
+}
+
 .cards-grid {
     display: grid;
     gap: 1rem;
@@ -40,7 +45,7 @@
     }
 }
 
-/* Assign each card to its area dynamically */
+/* Assign each card to its area */
 #card-1 {
     grid-area: card1;
 }
@@ -107,12 +112,11 @@
     background-color: #005fa3;
 }
 
-/* Default gallery image style */
+/* Gallery image hover effect (desktop/tablet only) */
 .gallery img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect for desktop/tablet only */
 @media (min-width: 769px) {
     .gallery img:hover {
         transform: scale(1.05);

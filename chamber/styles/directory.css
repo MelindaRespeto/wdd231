@@ -1,10 +1,6 @@
 /* =========================
    BASE STYLES
 ========================= */
-header {
-    margin-bottom: 2rem;
-    /* Adjust the value as needed */
-}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -39,7 +35,7 @@ img {
 header {
     background-color: #007acc;
     color: #fff;
-    padding: 1rem;
+    padding: 2rem;
     margin-bottom: 2rem;
 }
 

@@ -1,156 +1,247 @@
-/* Base styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-/* Header */
+/* =========================
+   HEADER
+========================= */
 header {
-    background-color: #064E3B;
-    color: #FFFFFF;
-    padding: 1rem;
-    text-align: center;
-}
-
-/* Layout */
-main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 1rem;
-    background-color: #F8FAFC;
-    color: #0F172A;
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 3rem 1rem;
-    background-color: #e6f3f8;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    background-image: url("../images/sunrises.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 60vh;
+    background-color: #7575de;
+    color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-
 }
 
-.hero h1 {
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
-}
-
-.hero-buttons {
+/* Header content: logo + title */
+.header-content {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* logo left, title center */
+    width: 100%;
+    max-width: 1100px;
+    /* content stays centered */
+    padding: 1rem;
 }
 
-.hero-buttons a {
-    text-decoration: none;
-    padding: 0.75rem 1.5rem;
-    background-color: #004b6b;
-    color: #fff;
-    border-radius: 5px;
-    font-weight: bold;
+.header-content img {
+    width: 70px;
+    height: auto;
+    border-radius: 8px;
 }
 
-/* Section Titles */
-.section-title {
+.header-content h1 {
+    flex: 1;
+    /* takes available space to center */
     text-align: center;
     font-size: 1.8rem;
-    margin: 2rem 0 1rem;
 }
 
-/* Featured Attractions */
-.featured-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
+.header-content p {
+    display: none;
+    /* hide tagline on large header to maximize nav area */
 }
 
-.card {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 1rem;
+/* =========================
+   NAVIGATION
+========================= */
+nav.navbar {
+    background-color: #003366;
+    width: 100%;
+    /* nav spans full viewport */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    /* spread links evenly */
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #fff;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+nav a.active,
+nav a:hover {
+    background-color: #0059b3;
+    border-radius: 4px;
+}
+
+/* =========================
+   HAMBURGER MENU (Mobile)
+========================= */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    padding: 0.5rem 1rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .header-content {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+        /* hide menu initially */
+        width: 100%;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+        /* show hamburger */
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+main h2 {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #073b4c;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+/* =========================
+   CARD STYLES
+========================= */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #ffd166;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    margin: 0;
+    padding: 0.8rem 0.8rem 0.4rem;
+    font-size: 1.25rem;
+    color: #073b4c;
 }
 
 .card img {
     width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 0.75rem;
-}
-
-.card h3 {
-    margin: 0.5rem 0;
+    height: auto;
+    border-bottom: 1px solid #ffd166;
 }
 
 .card p {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    padding: 0 0.8rem 0.8rem;
+    margin: 0;
+    flex-grow: 1;
+    font-size: 0.95rem;
+    color: #555555;
 }
 
-.card a {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #004b6b;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.9rem;
-}
-
-/* Upcoming Events */
-.events-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.event {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: 90px 120px 1fr;
-    gap: 1rem;
-    align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-}
-
-.event-date {
-    background-color: #004b6b;
-    color: #fff;
+/* Card link / button */
+.card a,
+.button {
+    display: block;
+    margin: 0.8rem;
+    padding: 0.65rem 1.2rem;
+    background-color: #06d6a0;
+    /* tropical green */
+    color: #ffffff;
     text-align: center;
-    padding: 0.5rem;
     border-radius: 6px;
-    font-weight: bold;
+    font-weight: 700;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.event img {
-    width: 100%;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 6px;
+.card a:hover,
+.card a:focus,
+.button:hover,
+.button:focus {
+    background-color: #05b383;
+    transform: translateY(-2px);
 }
 
-/* Footer */
+/* =========================
+   FOOTER (Same Style as Header)
+========================= */
 footer {
-    background-color: #064E3B;
-    color: #FFFFFF;
+    background-color: #ffffff;
+    border: 2px solid #ffd166;
+    border-radius: 10px;
     text-align: center;
-    padding: 1rem;
-    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #555555;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.4rem 0;
+}
+
+/* =========================
+   RESPONSIVE ADJUSTMENTS
+========================= */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header .logo {
+        width: 100px;
+    }
+
+    main h2 {
+        font-size: 2rem;
+    }
+
+    .cards-grid {
+        gap: 2rem;
+    }
 }

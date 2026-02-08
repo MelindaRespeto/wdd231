@@ -8,15 +8,16 @@
     <meta name="description" content="Discover top attractions and upcoming events in our destination." />
     <meta name="author" content="Melinda Competente" />
 
-    <!-- Preconnect for Google Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/final.css" />
+    <link rel="stylesheet" href="./styles/final.css" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
 
-    <!-- Open Graph for social sharing -->
+    <!-- Open Graph -->
     <meta property="og:title" content="MELINDS Final Tourism Project | Home">
     <meta property="og:description" content="Supporting local businesses and building our community.">
     <meta property="og:image" content="https://melindarespeto.github.io/wdd231/images/parrot.jpg">
@@ -33,106 +34,107 @@
     <link rel="icon" href="images/tuna.jpg">
 
     <!-- JS -->
-    <script src="scripts/directory.js" defer></script>
-
+    <script src="scripts/final.js" defer></script>
 </head>
 
 <body>
-
+    <!-- HEADER -->
     <header>
-        <h1>Discover Paradise</h1>
-        <p>Your guide to unforgettable travel experiences</p>
+        <div class="header-content">
+            <img src="../images/tuna.jpg" alt="Melinds Chamber Logo">
+            <h1>Discover Paradise</h1>
+            <p>Your guide to unforgettable travel experiences</p>
+        </div>
+
+        <nav class="navbar">
+            <div class="hamburger" id="hamburger">☰</div>
+            <ul id="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="attraction.html">Tourist Attractions</a></li>
+                <li><a href="plan.html">Plan</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>Explore Destination</h1>
-            <div class="hero-buttons">
-                <a href="plan.html">Plan Your Trip</a>
-                <a href="attraction.html">View Attractions</a>
-            </div>
-        </section>
+    <!-- Featured Attractions -->
+    <section>
+        <h2 class="section-title">Featured Attractions</h2>
+        <div class="featured-grid">
 
-        <!-- Featured Attractions -->
-        <section>
-            <h2 class="section-title">Featured Attractions</h2>
-            <div class="featured-grid">
+            <article class="card">
+                <img src="images/all.jpg" alt="Gotha Beach">
+                <h3>Patitinan beach resort</h3>
+                <p>Relax on pristine shores with crystal-clear waters and golden sand.</p>
+                <a href="#">View More</a>
+            </article>
 
-                <article class="card">
-                    <img src="images/all.jpg" alt="Gotha Beach">
-                    <h3>Patitinan beach resort</h3>
-                    <p>Relax on pristine shores with crystal-clear waters and golden sand.</p>
-                    <a href="#">View More</a>
-                </article>
+            <article class="card">
+                <img src="images/mayonf.jpg" alt="Mayon Volcano">
+                <h3>Mayon Volcano</h3>
+                <p>Witness the perfect cone volcano and enjoy scenic hiking trails.</p>
+                <a href="#">View More</a>
+            </article>
 
-                <article class="card">
-                    <img src="images/mayonf.jpg" alt="Mayon Volcano">
-                    <h3>Mayon Volcano</h3>
-                    <p>Witness the perfect cone volcano and enjoy scenic hiking trails.</p>
-                    <a href="#">View More</a>
-                </article>
+            <article class="card">
+                <img src="images/island.jpg" alt="Atulayan Island">
+                <h3>Atulayan Island</h3>
+                <p>Escape to a peaceful island paradise with turquoise waters.</p>
+                <a href="#">View More</a>
+            </article>
 
-                <article class="card">
-                    <img src="images/island.jpg" alt="Atulayan Island">
-                    <h3>Atulayan Island</h3>
-                    <p>Escape to a peaceful island paradise with turquoise waters.</p>
-                    <a href="#">View More</a>
-                </article>
+            <article class="card">
+                <img src="images/treehouse.jpg" alt="Tree house">
+                <h3>Tree House</h3>
+                <p>Discover hidden waterfalls surrounded by lush tropical forest.</p>
+                <a href="#">View More</a>
+            </article>
 
-                <article class="card">
-                    <img src="images/treehouse.jpg" alt="Tree house">
-                    <h3>Tree House</h3>
-                    <p>Discover hidden waterfalls surrounded by lush tropical forest.</p>
-                    <a href="#">View More</a>
-                </article>
+        </div>
+    </section>
 
-            </div>
-        </section>
+    <!-- Upcoming Events -->
+    <section>
+        <h2 class="section-title">Upcoming Events</h2>
+        <div class="events-list">
 
-        <!-- Upcoming Events -->
-        <section>
-            <h2 class="section-title">Upcoming Events</h2>
-            <div class="events-list">
-
-                <div class="event">
-                    <div class="event-date">
-                        <div>OCT</div>
-                        <div>24</div>
-                    </div>
-                    <img src="images/fiesta.jpg" alt="Town Fiesta">
-                    <div>
-                        <h3>Annual Town Fiesta</h3>
-                        <p>Celebrate local culture with food, music, and street performances.</p>
-                    </div>
+            <div class="event">
+                <div class="event-date">
+                    <div>OCT</div>
+                    <div>24</div>
                 </div>
-
-                <div class="event">
-                    <div class="event-date">
-                        <div>APR</div>
-                        <div>02</div>
-                    </div>
-                    <img src="images/baybayon.jpg" alt="Baybayon Festival">
-                    <div>
-                        <h3>Baybayon Festival</h3>
-                        <p>Enjoy beach games, live bands, and sunset parties by the shore.</p>
-                    </div>
+                <img src="images/fiesta.jpg" alt="Town Fiesta">
+                <div>
+                    <h3>Annual Town Fiesta</h3>
+                    <p>Celebrate local culture with food, music, and street performances.</p>
                 </div>
-
-                <div class="event">
-                    <div class="event-date">
-                        <div>MAY</div>
-                        <div>10</div>
-                    </div>
-                    <img src="images/hiking.jpg" alt="Hiking Event">
-                    <div>
-                        <h3>Mountain Hiking Day</h3>
-                        <p>Join guided hikes and explore breathtaking mountain views.</p>
-                    </div>
-                </div>
-
             </div>
-        </section>
+
+            <div class="event">
+                <div class="event-date">
+                    <div>APR</div>
+                    <div>02</div>
+                </div>
+                <img src="images/baybayon.jpg" alt="Baybayon Festival">
+                <div>
+                    <h3>Baybayon Festival</h3>
+                    <p>Enjoy beach games, live bands, and sunset parties by the shore.</p>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event-date">
+                    <div>MAY</div>
+                    <div>10</div>
+                </div>
+                <img src="images/hiking.jpg" alt="Hiking Event">
+                <div>
+                    <h3>Mountain Hiking Day</h3>
+                    <p>Join guided hikes and explore breathtaking mountain views.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
     </main>
 
 

@@ -30,6 +30,16 @@ main {
     background-color: #e6f3f8;
     border-radius: 8px;
     margin-bottom: 2rem;
+    background-image: url("../images/sunrises.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .hero h1 {

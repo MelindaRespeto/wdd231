@@ -8,8 +8,8 @@ body {
 
 /* Header */
 header {
-    background-color: #004b6b;
-    color: #fff;
+    background-color: #064E3B;
+    color: #FFFFFF;
     padding: 1rem;
     text-align: center;
 }
@@ -19,6 +19,8 @@ main {
     max-width: 1100px;
     margin: auto;
     padding: 1rem;
+    background-color: #F8FAFC;
+    color: #0F172A;
 }
 
 /* Hero Section */
@@ -70,7 +72,7 @@ main {
     border-radius: 8px;
     padding: 1rem;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .card img {
@@ -115,7 +117,7 @@ main {
     grid-template-columns: 90px 120px 1fr;
     gap: 1rem;
     align-items: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .event-date {
@@ -136,8 +138,8 @@ main {
 
 /* Footer */
 footer {
-    background-color: #004b6b;
-    color: #fff;
+    background-color: #064E3B;
+    color: #FFFFFF;
     text-align: center;
     padding: 1rem;
     margin-top: 3rem;

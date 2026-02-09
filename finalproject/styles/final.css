@@ -20,7 +20,7 @@ body {
 ========================= */
 header,
 footer {
-    background: linear-gradient(135deg, #006d5b, #00a896);
+    background: #0f3d3e;
     color: #ffffff;
     padding: 1.5rem 1rem;
 }
@@ -76,7 +76,8 @@ header img {
 
 #nav-menu a:hover,
 #nav-menu a.active {
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: #0f3d3e;
+    color: #ffffff;
 }
 
 .hamburger {

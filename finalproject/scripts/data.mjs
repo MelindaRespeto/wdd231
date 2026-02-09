@@ -5,7 +5,7 @@ export const attractions = [
     {
         name: "Mayon Volcano",
         description: "Witness the perfect cone volcano in Albay. Enjoy scenic hikes and the historic Cagsawa Ruins nearby.",
-        image: "images/mayonf.jpg",
+        image: "images/mayonf.webp",
         link: "mayon-volcano.html",
         credit: "Photo by Jomel at Legaspi City"
     },
@@ -19,7 +19,7 @@ export const attractions = [
     {
         name: "Treehouse",
         description: "Escape into a serene tropical retreat high in a lush forest.",
-        image: "images/treehouse.jpg",
+        image: "images/treehouse.webp",
         link: "treehouse.html",
         credit: "Photo by Jessie FYP"
     }
@@ -32,7 +32,7 @@ export const events = [
         day: "24",
         title: "Annual Town Fiesta",
         description: "Celebrate local culture with food, music, and street performances.",
-        image: "images/fiesta.jpg",
+        image: "images/fiesta.webp",
         credit: "Photo by Jezel Mae of Senior High Humss"
     },
     {

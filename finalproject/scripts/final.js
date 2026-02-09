@@ -33,7 +33,7 @@ function generateCards(data, containerSelector, type) {
         if (type === "event") {
             card.innerHTML = `
                 <figure>
-                    <img src="${item.image}" alt="${item.title}">
+                    <img src="${item.image}" alt="${item.title}" loading="lazy" width="400" height="300">
                     ${item.credit ? `<figcaption>${item.credit}</figcaption>` : ""}
                 </figure>
                 <div class="event-info">
@@ -49,7 +49,7 @@ function generateCards(data, containerSelector, type) {
             // Attraction card
             card.innerHTML = `
                 <figure>
-                    <img src="${item.image}" alt="${item.name}">
+                    <img src="${item.image}" alt="${item.name}" loading="lazy" width="400" height="300">
                     ${item.credit ? `<figcaption>${item.credit}</figcaption>` : ""}
                 </figure>
                 <h3>${item.name}</h3>

@@ -19,6 +19,24 @@ if (hamburger && navMenu) {
     });
 }
 
+// Function to create image HTML with smart lazy loading
+function createImageHTML(item, index, isEvent = false) {
+    const isAboveTheFold = index < 2; // first 2 images load normally
+    const altText = isEvent ? item.title : item.name;
+    const width = 400;
+    const height = 300;
+    const loadingAttr = isAboveTheFold ? "" : "loading='lazy'";
+
+    return `
+        <img src="${item.image}" 
+             alt="${altText}" 
+             ${loadingAttr} 
+             width="${width}" 
+             height="${height}">
+        ${item.credit ? `<figcaption>${item.credit}</figcaption>` : ""}
+    `;
+}
+
 // Reusable function to generate cards
 function generateCards(data, containerSelector, type) {
     const container = document.querySelector(containerSelector);
@@ -26,15 +44,14 @@ function generateCards(data, containerSelector, type) {
 
     container.innerHTML = "";
 
-    data.forEach(item => {
+    data.forEach((item, index) => {
         const card = document.createElement(type === "event" ? "div" : "article");
         card.className = type === "event" ? "event" : "card";
 
         if (type === "event") {
             card.innerHTML = `
                 <figure>
-                    <img src="${item.image}" alt="${item.title}" loading="lazy" width="400" height="300">
-                    ${item.credit ? `<figcaption>${item.credit}</figcaption>` : ""}
+                    ${createImageHTML(item, index, true)}
                 </figure>
                 <div class="event-info">
                     <div class="event-date">
@@ -46,11 +63,9 @@ function generateCards(data, containerSelector, type) {
                 </div>
             `;
         } else {
-            // Attraction card
             card.innerHTML = `
                 <figure>
-                    <img src="${item.image}" alt="${item.name}" loading="lazy" width="400" height="300">
-                    ${item.credit ? `<figcaption>${item.credit}</figcaption>` : ""}
+                    ${createImageHTML(item, index)}
                 </figure>
                 <h3>${item.name}</h3>
                 <p>${item.description}</p>

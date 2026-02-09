@@ -10,49 +10,6 @@ if (yearEl) {
 }
 
 // =========================
-// Hamburger menu toggle
-// =========================
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
-
-if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("show");
-    });
-}
-
-// =========================
-// Generate Cards
-// =========================
-const cardsGrid = document.querySelector(".cards-grid");
-
-if (cardsGrid) {
-    attractions.forEach(attraction => {
-        const card = document.createElement("div");
-        card.className = "card";
-
-        card.innerHTML = `
-            <img src="${attraction.image}" alt="${attraction.name}">
-            <h3>${attraction.name}</h3>
-            <p>${attraction.description}</p>
-            <a href="${attraction.link}">Learn More</a>
-        `;
-
-        cardsGrid.appendChild(card);
-    });
-}
-// scripts/final.js
-import { attractions } from "./data.mjs";
-
-// =========================
-// Update footer year
-// =========================
-const yearEl = document.getElementById("year");
-if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-}
-
-// =========================
 // Last modified date
 // =========================
 const dateEl = document.getElementById("date");
@@ -78,8 +35,7 @@ if (hamburger && navMenu) {
 const featuredGrid = document.querySelector(".featured-grid");
 
 if (featuredGrid) {
-    featuredGrid.innerHTML = ""; // clear hardcoded cards
-
+    featuredGrid.innerHTML = ""; // ensures no leftovers
     attractions.forEach(attraction => {
         const card = document.createElement("article");
         card.className = "card";
@@ -94,4 +50,3 @@ if (featuredGrid) {
         featuredGrid.appendChild(card);
     });
 }
-

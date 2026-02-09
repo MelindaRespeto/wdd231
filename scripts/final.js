@@ -1,6 +1,6 @@
 // scripts/final.js
 
-import { attractions } from "./data.mjs";
+import { attractions } from "../finalproject/scripts/data.mjs";
 
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".cards-grid");

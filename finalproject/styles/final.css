@@ -1,247 +1,268 @@
 /* =========================
-   HEADER
+   RESET & BASE
 ========================= */
-header {
-    background-color: #7575de;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-/* Header content: logo + title */
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* logo left, title center */
-    width: 100%;
-    max-width: 1100px;
-    /* content stays centered */
-    padding: 1rem;
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    background-color: #f7fdfb;
+    color: #1a1a1a;
+    line-height: 1.6;
 }
 
-.header-content img {
-    width: 70px;
-    height: auto;
-    border-radius: 8px;
+/* =========================
+   HEADER & FOOTER (MATCHING STYLE)
+========================= */
+header,
+footer {
+    background: linear-gradient(135deg, #006d5b, #00a896);
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+}
+
+.header-content,
+footer {
+    text-align: center;
 }
 
 .header-content h1 {
-    flex: 1;
-    /* takes available space to center */
-    text-align: center;
-    font-size: 1.8rem;
+    margin: 0.5rem 0 0.25rem;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
 .header-content p {
-    display: none;
-    /* hide tagline on large header to maximize nav area */
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+header img {
+    max-width: 80px;
+    height: auto;
 }
 
 /* =========================
    NAVIGATION
 ========================= */
-nav.navbar {
-    background-color: #003366;
-    width: 100%;
-    /* nav spans full viewport */
+.navbar {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
-nav ul {
+#nav-menu {
     list-style: none;
-    display: flex;
-    justify-content: space-around;
-    /* spread links evenly */
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 1.25rem;
 }
 
-nav li {
-    margin: 0;
+#nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.4rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav a {
-    display: block;
-    padding: 0.75rem 1rem;
-    color: #fff;
-    text-align: center;
-    font-weight: 500;
-    transition: background-color 0.2s ease;
+#nav-menu a:hover,
+#nav-menu a.active {
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
-nav a.active,
-nav a:hover {
-    background-color: #0059b3;
-    border-radius: 4px;
-}
-
-/* =========================
-   HAMBURGER MENU (Mobile)
-========================= */
 .hamburger {
     display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #fff;
-    padding: 0.5rem 1rem;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-    .header-content {
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        display: none;
-        /* hide menu initially */
-        width: 100%;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    nav li {
-        width: 100%;
-    }
-
-    .hamburger {
-        display: block;
-        /* show hamburger */
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
-    }
-}
-
-/* =========================
-   MAIN CONTENT
-========================= */
-main h2 {
-    text-align: center;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
     font-size: 1.8rem;
-    color: #073b4c;
-}
-
-/* Cards Grid */
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2.5rem;
+    cursor: pointer;
 }
 
 /* =========================
-   CARD STYLES
+   SECTIONS
 ========================= */
+section {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #006d5b;
+}
+
+/* =========================
+   FEATURED GRID / CARDS
+========================= */
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
 .card {
     background-color: #ffffff;
-    border-radius: 10px;
-    border: 1px solid #ffd166;
+    border-radius: 1rem;
     overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.card h3 {
-    margin: 0;
-    padding: 0.8rem 0.8rem 0.4rem;
-    font-size: 1.25rem;
-    color: #073b4c;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
 }
 
 .card img {
     width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ffd166;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 1rem 1rem 0.5rem;
+    color: #006d5b;
+    font-size: 1.25rem;
 }
 
 .card p {
-    padding: 0 0.8rem 0.8rem;
-    margin: 0;
+    margin: 0 1rem 1rem;
     flex-grow: 1;
-    font-size: 0.95rem;
-    color: #555555;
 }
 
-/* Card link / button */
-.card a,
-.button {
-    display: block;
-    margin: 0.8rem;
-    padding: 0.65rem 1.2rem;
-    background-color: #06d6a0;
-    /* tropical green */
-    color: #ffffff;
+.card a {
+    margin: 0 1rem 1.25rem;
     text-align: center;
-    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    background-color: #00a896;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 0.5rem;
     font-weight: 700;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.card a:hover,
-.card a:focus,
-.button:hover,
-.button:focus {
-    background-color: #05b383;
+.card a:hover {
+    background-color: #007f6a;
     transform: translateY(-2px);
 }
 
 /* =========================
-   FOOTER (Same Style as Header)
+   EVENTS
 ========================= */
-footer {
-    background-color: #ffffff;
-    border: 2px solid #ffd166;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #555555;
-    padding: 1rem 1.5rem;
-    margin-top: 2rem;
+/* =========================
+   Upcoming Events Cards
+========================= */
+.events-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
 }
 
-footer p {
-    margin: 0.4rem 0;
+/* Each event card */
+.event {
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    /* Stack image + content */
+    transition: transform 0.3s ease;
+}
+
+.event:hover {
+    transform: translateY(-5px);
+}
+
+/* Event image on top */
+.event img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Container for date, title, description */
+.event-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Event date styling inside card */
+.event-date {
+    display: flex;
+    gap: 0.5rem;
+    font-weight: bold;
+    color: #00a896;
+    font-size: 0.9rem;
+}
+
+/* Event title */
+.event-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #006d5b;
+}
+
+/* Event description */
+.event-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.4;
 }
 
 /* =========================
-   RESPONSIVE ADJUSTMENTS
+   FOOTER TEXT
 ========================= */
-@media (min-width: 768px) {
-    header {
-        flex-direction: row;
-        justify-content: center;
-        gap: 1.5rem;
+footer p,
+footer span {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* =========================
+   RESPONSIVE NAV
+========================= */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
     }
 
-    header h1 {
-        font-size: 2rem;
+    #nav-menu {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.25);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        padding: 1rem 0;
     }
 
-    header .logo {
-        width: 100px;
+    #nav-menu.show {
+        display: flex;
     }
 
-    main h2 {
-        font-size: 2rem;
-    }
-
-    .cards-grid {
-        gap: 2rem;
+    .navbar {
+        position: relative;
     }
 }

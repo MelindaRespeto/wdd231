@@ -1,6 +1,6 @@
 // bikolAttractions.mjs
 
-export const bikolAttractions = [
+export const bikolAttraction = [
     {
         id: "mayon-volcano",
         name: "Mayon Volcano",

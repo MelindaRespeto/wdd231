@@ -30,7 +30,7 @@ export const events = [
     {
         month: "OCT",
         day: "24",
-        title: "Annual Town Fiesta",
+        title: "Annual Town Fiesta, People and Its Culture",
         description: "Celebrate local culture with food, music, and street performances.",
         image: "images/fiesta.webp",
         credit: "Photo by Jezel Mae of Senior High Humss"

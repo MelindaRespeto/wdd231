@@ -10,14 +10,14 @@ export const attractions = [
         credit: "Photo by Jomel at Legaspi City"
     },
     {
-        name: "Mabalodbalod Resort",
+        name: "Gotha Caramoan ",
         description: "Explore the scenic Resort and take a boat ride to the iconic volcano.",
         image: "images/resort2.jpg",
         link: "taal-lake.html",
         credit: "Photo by Jessie FYP"
     },
     {
-        name: "Treehouse",
+        name: "Siruma",
         description: "Escape into a serene tropical retreat high in a lush forest.",
         image: "images/treehouse.webp",
         link: "treehouse.html",

@@ -6,17 +6,21 @@ const main = document.getElementById("attractions-content");
 
 // If container is missing, log a warning
 if (!main) {
-    console.warn("No #attractions-content element found in the HTML.");
+  console.warn("No #attractions-content element found in the HTML.");
 }
 
 // Loop through the array of attractions
 bikolattraction.forEach(place => {
-    // Create a section for each place
-    const section = document.createElement("section");
-    section.classList.add("attraction");
+  // Create a section for each place
+  const section = document.createElement("section");
+  section.classList.add("attraction");
 
-    // Use innerHTML to build display content
-    section.innerHTML = `
+  // Use innerHTML to build display content
+  section.innerHTML = `
+  ${place.imageUrl.map(img =>
+    `<img src="${img}" alt="${place.name}" loading="lazy">`
+  ).join("")}
+
     <div class="attraction-card">
       ${place.imageUrl ? `<img src="${place.imageUrl}" alt="${place.name} Image" class="attraction-image">` : ""}
       <h2 class="attraction-title">${place.name}</h2>
@@ -68,6 +72,6 @@ bikolattraction.forEach(place => {
     </div>
   `;
 
-    // Append section to main
-    main.appendChild(section);
+  // Append section to main
+  main.appendChild(section);
 });

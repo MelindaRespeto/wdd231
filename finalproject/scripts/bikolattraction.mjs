@@ -5,12 +5,14 @@ export const bikolattraction = [
         id: "mayon-volcano",
         name: "Mayon Volcano",
         location: "Albay, Bicol Region",
-        imageUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/9/9e/Mayon_Volcano_as_seen_from_Camarines_Sur.jpg",
+        imageUrl: [
+            "./images/maywe.webp",
+            "./images/treehouse.webp"
+        ],
         description:
-            "Mayon Volcano is famous for its near-perfect cone shape and is one of the most active volcanoes in the Philippines, dominating the landscape of Albay and serving as a beloved regional symbol. It is surrounded by other scenic spots like Cagsawa Ruins and Ligñon Hill Nature Park. :contentReference[oaicite:0]{index=0}",
+            "Mayon Volcano is famous for its near-perfect cone shape and is one of the most active volcanoes in the Philippines, dominating the landscape of Albay and serving as a beloved regional symbol. It is surrounded by other scenic spots like Cagsawa Ruins and Ligñon Hill Nature Park.",
         howToGetThere:
-            "From Manila, take a flight to Bicol International Airport in Daraga, Albay. From there, ride a jeepney, tricycle, or van to Legazpi City — the major gateway for viewing areas like Cagsawa Ruins and Ligñon Hill. :contentReference[oaicite:1]{index=1}",
+            "From Manila, take a flight to Bicol International Airport in Daraga, Albay. From there, ride a jeepney, tricycle, or van to Legazpi City — the major gateway for viewing areas like Cagsawa Ruins and Ligñon Hill.",
         nearbyAccommodations: [
             "Hotel St. Ellis – Legazpi City",
             "The Oriental Legazpi",
@@ -36,7 +38,7 @@ export const bikolattraction = [
             "Exploring Cagsawa and Ligñon Hill"
         ],
         bestTimeToVisit:
-            "Dry season from March to May offers clearer views of the volcano. :contentReference[oaicite:2]{index=2}",
+            "Dry season from March to May offers clearer views of the volcano.",
         travelTipsAndSafety: [
             "Always check volcanic alert levels before planning your visit.",
             "Follow guidance from local guides and government agencies.",
@@ -49,12 +51,14 @@ export const bikolattraction = [
         id: "caramoan-islands",
         name: "Caramoan Islands",
         location: "Caramoan, Camarines Sur, Bicol Region",
-        imageUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/8/89/Philippines_City_of_Naga_Camarines_Sur.jpg",
+        imageUrl: [
+            "./images/view.webp",
+            "./images/fiesta.webp"
+        ],
         description:
-            "The Caramoan Islands are a group of pristine, white-sand isles known for limestone cliffs, hidden lagoons, and stunning beaches. They’ve gained fame as filming locations for international reality shows. :contentReference[oaicite:3]{index=3}",
+            "The Caramoan Islands are a group of pristine, white-sand isles known for limestone cliffs, hidden lagoons, and stunning beaches. They’ve gained fame as filming locations for international reality shows.",
         howToGetThere:
-            "Take a bus or van from Manila to Naga City, then transfer to another bus or van bound for Caramoan. From Sabang Port, island-hopping boats depart to beaches and coves. :contentReference[oaicite:4]{index=4}",
+            "Take a bus or van from Manila to Naga City, then transfer to another bus or van bound for Caramoan. From Sabang Port, island-hopping boats depart to beaches and coves.",
         nearbyAccommodations: [
             "West Peninsula Villas",
             "Caramoan Backpackers Hostel",
@@ -80,7 +84,7 @@ export const bikolattraction = [
             "Beach camping and cliff viewing"
         ],
         bestTimeToVisit:
-            "February to May for calm seas and clearer skies. :contentReference[oaicite:5]{index=5}",
+            "February to May for calm seas and clearer skies.",
         travelTipsAndSafety: [
             "Wear life vests for boat trips and snorkeling.",
             "Respect marine life and local guidelines.",
@@ -93,12 +97,14 @@ export const bikolattraction = [
         id: "donsol-whale-sharks",
         name: "Donsol Whale Shark Interaction",
         location: "Donsol, Sorsogon, Bicol Region",
-        imageUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/3/3a/Whale_shark_Donsol.jpg",
+        imageUrl: [
+            "./images/donsol.webp",
+            "./images/gothabeach.jpg"
+        ],
         description:
-            "Donsol is world-famous for its whale shark (butanding) interactions, where visitors can swim alongside these gentle giants in their natural habitat during peak season. :contentReference[oaicite:6]{index=6}",
+            "Donsol is world-famous for its whale shark (butanding) interactions, where visitors can swim alongside these gentle giants in their natural habitat during peak season.",
         howToGetThere:
-            "From Manila, fly or take a bus to Legazpi City, then travel by van or bus to Donsol, Sorsogon. Book whale shark tours in advance. :contentReference[oaicite:7]{index=7}",
+            "From Manila, fly or take a bus to Legazpi City, then travel by van or bus to Donsol, Sorsogon. Book whale shark tours in advance.",
         nearbyAccommodations: [
             "Elysia Beach Resort",
             "Vitton Beach Resort",
@@ -123,7 +129,7 @@ export const bikolattraction = [
             "Beach relaxation and bird watching"
         ],
         bestTimeToVisit:
-            "November to May, with peak whale shark activity from February to April. :contentReference[oaicite:8]{index=8}",
+            "November to May, with peak whale shark activity from February to April.",
         travelTipsAndSafety: [
             "Follow strict whale shark interaction guidelines — no touching or feeding.",
             "Use eco‑friendly sunscreen.",

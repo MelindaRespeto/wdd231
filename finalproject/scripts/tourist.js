@@ -1,5 +1,5 @@
 // main.js
-import { places } from "./tourist.mjs";
+import { bikolAttraction } from "./bikolattraction.mjs";
 
 const content = document.getElementById("content");
 

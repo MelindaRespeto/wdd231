@@ -1,143 +1,73 @@
-// bikolatraction.js
-import { bikolAttraction } from "./bikolattraction.mjs";
+// bikolattraction.js
+import { bikolattraction } from "./bikolattraction.mjs";
+
+// Get reference to <main> container
 const main = document.getElementById("attractions-content");
 
+// If container is missing, log a warning
 if (!main) {
-    console.error("No #attractions-content container found in HTML");
+    console.warn("No #attractions-content element found in the HTML.");
 }
 
-// Loop through all attractions
-bikolAttraction.forEach(place => {
-    // Create section container
+// Loop through the array of attractions
+bikolattraction.forEach(place => {
+    // Create a section for each place
     const section = document.createElement("section");
-    section.id = place.id;
     section.classList.add("attraction");
 
-    // Image (if available)
-    if (place.imageUrl) {
-        const img = document.createElement("img");
-        img.src = place.imageUrl;
-        img.alt = place.name;
-        img.classList.add("attraction-image");
-        section.appendChild(img);
-    }
+    // Use innerHTML to build display content
+    section.innerHTML = `
+    <div class="attraction-card">
+      ${place.imageUrl ? `<img src="${place.imageUrl}" alt="${place.name} Image" class="attraction-image">` : ""}
+      <h2 class="attraction-title">${place.name}</h2>
+      <p><strong>Location:</strong> ${place.location}</p>
+      <p class="description">${place.description}</p>
 
-    // Title
-    const title = document.createElement("h2");
-    title.textContent = place.name;
-    section.appendChild(title);
+      <h3>How to Get There</h3>
+      <p class="how-to-get">${place.howToGetThere}</p>
 
-    // Location
-    const loc = document.createElement("p");
-    loc.innerHTML = `<strong>Location:</strong> ${place.location}`;
-    section.appendChild(loc);
+      ${place.nearbyAccommodations?.length ? `
+        <h3>Nearby Accommodations</h3>
+        <ul class="accommodations">
+          ${place.nearbyAccommodations.map(acc => `<li>${acc}</li>`).join("")}
+        </ul>
+      ` : ""}
 
-    // Description
-    const desc = document.createElement("p");
-    desc.textContent = place.description;
-    section.appendChild(desc);
+      ${place.localFoodToTry?.length ? `
+        <h3>Local Food to Try</h3>
+        <ul class="local-food">
+          ${place.localFoodToTry.map(food => `<li>${food}</li>`).join("")}
+        </ul>
+      ` : ""}
 
-    // How to Get There
-    const howTo = document.createElement("p");
-    howTo.innerHTML = `<strong>How to Get There:</strong> ${place.howToGetThere}`;
-    section.appendChild(howTo);
+      ${place.notableNearbyAttractions?.length ? `
+        <h3>Notable Nearby Attractions</h3>
+        <ul class="nearby-attractions">
+          ${place.notableNearbyAttractions.map(item => `<li>${item}</li>`).join("")}
+        </ul>
+      ` : ""}
 
-    // Nearby Accommodations
-    if (place.nearbyAccommodations && place.nearbyAccommodations.length > 0) {
-        const accomTitle = document.createElement("h3");
-        accomTitle.textContent = "Nearby Accommodations";
-        section.appendChild(accomTitle);
+      ${place.activities?.length ? `
+        <h3>Activities</h3>
+        <ul class="activities">
+          ${place.activities.map(act => `<li>${act}</li>`).join("")}
+        </ul>
+      ` : ""}
 
-        const accomList = document.createElement("ul");
-        place.nearbyAccommodations.forEach(item => {
-            const li = document.createElement("li");
-            li.textContent = item;
-            accomList.appendChild(li);
-        });
-        section.appendChild(accomList);
-    }
+      <p><strong>Best Time to Visit:</strong> ${place.bestTimeToVisit}</p>
 
-    // Local Food to Try
-    if (place.localFoodToTry && place.localFoodToTry.length > 0) {
-        const foodTitle = document.createElement("h3");
-        foodTitle.textContent = "Local Food to Try";
-        section.appendChild(foodTitle);
+      ${place.travelTipsAndSafety?.length ? `
+        <h3>Travel Tips & Safety</h3>
+        <ul class="tips-safety">
+          ${place.travelTipsAndSafety.map(tip => `<li>${tip}</li>`).join("")}
+        </ul>
+      ` : ""}
 
-        const foodList = document.createElement("ul");
-        place.localFoodToTry.forEach(food => {
-            const li = document.createElement("li");
-            li.textContent = food;
-            foodList.appendChild(li);
-        });
-        section.appendChild(foodList);
-    }
+      <p><strong>Entrance Fee:</strong> ${place.entranceFee}</p>
+      <p><strong>Opening Hours:</strong> ${place.openingHours}</p>
+    </div>
+  `;
 
-    // Notable Nearby Attractions
-    if (place.notableNearbyAttractions && place.notableNearbyAttractions.length > 0) {
-        const nearbyTitle = document.createElement("h3");
-        nearbyTitle.textContent = "Notable Nearby Attractions";
-        section.appendChild(nearbyTitle);
-
-        const nearbyList = document.createElement("ul");
-        place.notableNearbyAttractions.forEach(item => {
-            const li = document.createElement("li");
-            li.textContent = item;
-            nearbyList.appendChild(li);
-        });
-        section.appendChild(nearbyList);
-    }
-
-    // Activities
-    if (place.activities && place.activities.length > 0) {
-        const actTitle = document.createElement("h3");
-        actTitle.textContent = "Activities";
-        section.appendChild(actTitle);
-
-        const actList = document.createElement("ul");
-        place.activities.forEach(activity => {
-            const li = document.createElement("li");
-            li.textContent = activity;
-            actList.appendChild(li);
-        });
-        section.appendChild(actList);
-    }
-
-    // Best time to visit
-    if (place.bestTimeToVisit) {
-        const time = document.createElement("p");
-        time.innerHTML = `<strong>Best Time to Visit:</strong> ${place.bestTimeToVisit}`;
-        section.appendChild(time);
-    }
-
-    // Travel Tips and Safety
-    if (place.travelTipsAndSafety && place.travelTipsAndSafety.length > 0) {
-        const tipsTitle = document.createElement("h3");
-        tipsTitle.textContent = "Travel Tips & Safety";
-        section.appendChild(tipsTitle);
-
-        const tipsList = document.createElement("ul");
-        place.travelTipsAndSafety.forEach(tip => {
-            const li = document.createElement("li");
-            li.textContent = tip;
-            tipsList.appendChild(li);
-        });
-        section.appendChild(tipsList);
-    }
-
-    // Entrance fee
-    if (place.entranceFee) {
-        const fee = document.createElement("p");
-        fee.innerHTML = `<strong>Entrance Fee:</strong> ${place.entranceFee}`;
-        section.appendChild(fee);
-    }
-
-    // Opening hours
-    if (place.openingHours) {
-        const hours = document.createElement("p");
-        hours.innerHTML = `<strong>Opening Hours:</strong> ${place.openingHours}`;
-        section.appendChild(hours);
-    }
-
-    // Append the whole section to main
+    // Append section to main
     main.appendChild(section);
 });

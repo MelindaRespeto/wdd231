@@ -1,6 +1,5 @@
-// bikolAttraction.js
-import { bikolAttraction } from "./bikolAttractions.mjs";
-
+// bikolatraction.js
+import { bikolAttraction } from "./bikolattraction.mjs";
 const main = document.getElementById("attractions-content");
 
 if (!main) {

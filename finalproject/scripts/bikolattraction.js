@@ -1,28 +1,23 @@
-// bikolattraction.js
 import { bikolattraction } from "./bikolattraction.mjs";
 
 // Get reference to <main> container
 const main = document.getElementById("attractions-content");
 
-// If container is missing, log a warning
 if (!main) {
   console.warn("No #attractions-content element found in the HTML.");
 }
 
 // Loop through the array of attractions
 bikolattraction.forEach(place => {
-  // Create a section for each place
   const section = document.createElement("section");
   section.classList.add("attraction");
 
-  // Use innerHTML to build display content
+  // Build the HTML for each place
   section.innerHTML = `
-  ${place.imageUrl.map(img =>
-    `<img src="${img}" alt="${place.name}" loading="lazy">`
-  ).join("")}
+    <!-- First image floats left for text wrapping -->
+    ${place.imageUrl?.length ? `<img src="${place.imageUrl[0]}" alt="${place.name}" class="wrap-left" loading="lazy">` : ""}
 
     <div class="attraction-card">
-      ${place.imageUrl ? `<img src="${place.imageUrl}" alt="${place.name} Image" class="attraction-image">` : ""}
       <h2 class="attraction-title">${place.name}</h2>
       <p><strong>Location:</strong> ${place.location}</p>
       <p class="description">${place.description}</p>
@@ -69,9 +64,42 @@ bikolattraction.forEach(place => {
 
       <p><strong>Entrance Fee:</strong> ${place.entranceFee}</p>
       <p><strong>Opening Hours:</strong> ${place.openingHours}</p>
+
+      <!-- Additional images -->
+      ${place.imageUrl?.length > 1 ? place.imageUrl.slice(1).map(img => `<img src="${img}" alt="${place.name} Image" loading="lazy">`).join("") : ""}
     </div>
   `;
 
-  // Append section to main
   main.appendChild(section);
 });
+
+// Update footer year
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// Last modified date
+const dateEl = document.getElementById("date");
+if (dateEl) dateEl.textContent = document.lastModified;
+
+// After main card content
+if (place.imageUrl?.length > 1) {
+    const gallery = document.createElement("div");
+    gallery.classList.add("image-gallery");
+
+    place.imageUrl.slice(1).forEach(img => {
+        const thumb = document.createElement("img");
+        thumb.src = img;
+        thumb.alt = place.name;
+        thumb.loading = "lazy";
+
+        // Optional: click to replace main image
+        thumb.onclick = () => {
+            const mainImg = section.querySelector(".wrap-left");
+            if(mainImg) mainImg.src = img;
+        };
+
+        gallery.appendChild(thumb);
+    });
+
+    section.querySelector(".attraction-card").appendChild(gallery);
+}

@@ -139,4 +139,7 @@ export const bikolattraction = [
         openingHours:
             "Whale shark tours typically operate in the morning depending on conditions"
     }
+
+    
 ];
+

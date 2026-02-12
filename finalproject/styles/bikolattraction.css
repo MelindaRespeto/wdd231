@@ -1,23 +1,91 @@
-/* Attraction Image Styling */
-.attraction img {
+/* General page */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f8;
+    color: #2c3e50;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+}
+
+/* Attraction card */
+.attraction {
+    background-color: #d7e5e7;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 1000px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.attraction:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Main image */
+.wrap-left {
     width: 100%;
-    /* Fill the container width */
-    max-width: 100%;
-    /* Prevents overflow on large screens */
-    height: auto;
-    /* Maintain correct aspect ratio */
-    max-height: 350px;
-    /* Optional cap on height */
+    border-radius: 12px;
     object-fit: cover;
-    /* Crop image to fill box without distortion */
-    display: block;
-    /* Removes inline spacing below images */
-    margin: 0 auto 1rem;
-    /* Center the image and add spacing below */
+    margin-bottom: 20px;
+}
+
+/* Image gallery below main image */
+.image-gallery {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-gallery img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
     border-radius: 8px;
-    /* Rounded corners */
-    border: 1px solid #ddd;
-    /* Light subtle border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle depth effect */
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+.attraction h2 {
+    margin-top: 0;
+    color: #1f3a60;
+}
+
+.attraction h3 {
+    margin-top: 20px;
+    color: #34495e;
+}
+
+/* Lists */
+.attraction ul {
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* Paragraphs */
+.attraction p {
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .image-gallery {
+        justify-content: center;
+    }
+
+    .image-gallery img {
+        width: 100px;
+        height: 70px;
+    }
 }

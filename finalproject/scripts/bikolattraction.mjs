@@ -5,55 +5,71 @@ export const bikolAttraction = [
         id: "mayon-volcano",
         name: "Mayon Volcano",
         location: "Albay, Bicol Region",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Mayon_Volcano_as_seen_from_Camarines_Sur.jpg",
         description:
-            "Mayon Volcano is famous for its near-perfect cone shape and is one of the most active volcanoes in the Philippines. It is a major natural landmark and symbol of the Bicol Region.",
+            "Mayon Volcano is famous for its near-perfect cone shape and is one of the most active volcanoes in the Philippines, dominating the landscape of Albay and serving as a beloved regional symbol. :contentReference[oaicite:1]{index=1}",
         howToGetThere:
-            "From Manila, take a flight to Bicol International Airport (Daraga, Albay). From the airport, ride a jeepney, tricycle, or van to Legazpi City and then proceed to Mayon viewing areas such as Cagsawa Ruins or Ligñon Hill.",
+            "From Manila, take a flight to Bicol International Airport in Daraga, Albay. From there, ride a jeepney, tricycle, or van to Legazpi City — the major gateway for viewing areas like Cagsawa Ruins and Ligñon Hill. :contentReference[oaicite:2]{index=2}",
         nearbyAccommodations: [
             "Hotel St. Ellis – Legazpi City",
             "The Oriental Legazpi",
-            "Casa Bicolandia Suites"
+            "Casa Bicolandia Suites",
+            "Legazpi Downtown Inn"
         ],
         localFoodToTry: [
             "Bicol Express",
             "Laing",
             "Pinangat",
-            "Pili nuts and pili candies"
+            "Pili nuts and pili candies",
+            "Sili (chili) ice cream"
+        ],
+        notableNearbyAttractions: [
+            "Cagsawa Ruins — remains of an 1814 church with volcano views",
+            "Ligñon Hill Nature Park — views and zipline activities",
+            "Mayon Skyline View Deck — panoramic lookout"
         ],
         activities: [
             "Sightseeing and photography",
-            "ATV rides around the volcano",
-            "Hiking and trekking (with guides)",
-            "Visiting Cagsawa Ruins and Ligñon Hill"
+            "ATV rides around Mayon’s foothills",
+            "Hiking and guided trekking (when allowed)",
+            "Exploring Cagsawa and Ligñon Hill"
         ],
         bestTimeToVisit:
-            "March to May during the dry season offers the clearest views. Avoid visiting during heavy rains or periods of volcanic activity.",
+            "Dry season from March to May offers clearer views of the volcano. :contentReference[oaicite:3]{index=3}",
         travelTipsAndSafety: [
-            "Check volcanic alert levels before visiting.",
-            "Follow local government and tour guide instructions.",
+            "Always check volcanic alert levels before planning your visit.",
+            "Follow guidance from local guides and government agencies.",
             "Bring sun protection, water, and comfortable footwear."
         ],
-        entranceFee: "Varies by viewing site and activity",
-        openingHours: "Most viewing areas are open daily, usually from morning until sunset."
+        entranceFee: "Varies by viewpoint or tour provider",
+        openingHours: "Viewing areas are generally open daily from morning to sunset"
     },
     {
         id: "caramoan-islands",
         name: "Caramoan Islands",
         location: "Caramoan, Camarines Sur, Bicol Region",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/89/Philippines_City_of_Naga_Camarines_Sur.jpg",
         description:
-            "The Caramoan Islands are known for their white sand beaches, limestone cliffs, crystal-clear waters, and were featured as filming locations for international reality shows.",
+            "The Caramoan Islands are a group of pristine, white-sand isles known for limestone cliffs, hidden lagoons, and stunning beaches. They’ve gained fame as filming locations for international reality shows. :contentReference[oaicite:4]{index=4}",
         howToGetThere:
-            "From Manila, travel by bus or van to Naga City or directly to Caramoan. From Sabang Port, take a boat ride to the islands.",
+            "Take a bus or van from Manila to Naga City, then transfer to another bus or van bound for Caramoan. From Sabang Port, island-hopping boats depart to beaches and coves. :contentReference[oaicite:5]{index=5}",
         nearbyAccommodations: [
             "West Peninsula Villas",
             "Caramoan Backpackers Hostel",
-            "Tugawe Cove Resort"
+            "Tugawe Cove Resort",
+            "Gota Village Resort"
         ],
         localFoodToTry: [
             "Fresh seafood",
             "Bicol Express",
             "Laing",
-            "Kinunot na pagi (stingray dish)"
+            "Kinunot na pagi (stingray dish)",
+            "Grilled fish specialties"
+        ],
+        notableNearbyAttractions: [
+            "Omang Cave",
+            "Manipis Cave",
+            "Hidden lagoons and cliff overlooks"
         ],
         activities: [
             "Island hopping",
@@ -62,48 +78,55 @@ export const bikolAttraction = [
             "Beach camping and cliff viewing"
         ],
         bestTimeToVisit:
-            "February to May for calm seas and clear skies. Avoid peak rainy months for safer boat travel.",
+            "February to May for calm seas and clearer skies. :contentReference[oaicite:6]{index=6}",
         travelTipsAndSafety: [
-            "Wear life vests during boat trips.",
-            "Follow island rules and respect marine life.",
-            "Bring enough cash, as ATMs are limited."
+            "Wear life vests for boat trips and snorkeling.",
+            "Respect marine life and local guidelines.",
+            "Carry cash — ATMs may be limited in remote areas."
         ],
-        entranceFee: "Environmental and island fees may apply",
-        openingHours: "Islands are accessible during daytime hours depending on sea conditions."
+        entranceFee: "Boat and environmental fees may vary",
+        openingHours: "Islands are accessible during daylight hours"
     },
     {
         id: "donsol-whale-sharks",
         name: "Donsol Whale Shark Interaction",
         location: "Donsol, Sorsogon, Bicol Region",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Whale_shark_Donsol.jpg",
         description:
-            "Donsol is world-famous for its whale shark (butanding) interactions, offering visitors a chance to swim alongside these gentle giants in their natural habitat.",
+            "Donsol is world-famous for its whale shark (butanding) interactions, where visitors can swim alongside these gentle giants in their natural habitat during peak season. :contentReference[oaicite:7]{index=7}",
         howToGetThere:
-            "From Manila, take a flight or bus to Legazpi City, then travel by van or bus to Donsol, Sorsogon.",
+            "From Manila, fly or take a bus to Legazpi City, then travel by van or bus to Donsol, Sorsogon. Book whale shark tours in advance. :contentReference[oaicite:8]{index=8}",
         nearbyAccommodations: [
             "Elysia Beach Resort",
             "Vitton Beach Resort",
-            "Donsol Aguluz Homestay"
+            "Donsol Aguluz Homestay",
+            "Shawaya Experience Hotel"
         ],
         localFoodToTry: [
+            "Fresh seafood",
             "Bicol Express",
             "Laing",
-            "Fresh seafood",
-            "Local coconut-based dishes"
+            "Local coconut dishes"
+        ],
+        notableNearbyAttractions: [
+            "Donsol Firefly Watching Tours",
+            "Quitinday Falls and Underground River",
+            "Mangrove tours"
         ],
         activities: [
-            "Whale shark interaction",
-            "Firefly watching",
+            "Whale shark interaction (snorkeling with guides)",
+            "Firefly watching by river at night",
             "Mangrove tours",
-            "Beach relaxation"
+            "Beach relaxation and bird watching"
         ],
         bestTimeToVisit:
-            "November to May, with peak sightings from February to April.",
+            "November to May (with peak whale shark activity from February to April). :contentReference[oaicite:9]{index=9}",
         travelTipsAndSafety: [
-            "Follow whale shark interaction guidelines strictly.",
-            "Do not touch or chase the whale sharks.",
-            "Use eco-friendly sunscreen."
+            "Follow strict whale shark interaction guidelines — no touching or feeding.",
+            "Use eco‑friendly sunscreen.",
+            "Boat schedules depend on weather and sea conditions."
         ],
-        entranceFee: "Registration and interaction fees apply",
-        openingHours: "Whale shark activities usually start early morning and depend on weather conditions."
+        entranceFee: "Registration and interaction fees (may apply)",
+        openingHours: "Whale shark tours typically operate in the morning depending on conditions"
     }
 ];

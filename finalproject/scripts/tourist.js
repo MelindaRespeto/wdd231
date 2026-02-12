@@ -1,5 +1,5 @@
 // main.js
-import { places } from "./module.js";
+import { places } from "./tourist.mjs";
 
 const content = document.getElementById("content");
 

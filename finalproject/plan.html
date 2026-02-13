@@ -33,11 +33,6 @@
 
     <!-- Favicon -->
     <link rel="icon" href="images/tuna.jpg">
-
-    <!-- JS -->
-    <script type="module" src="scripts/plan.js"></script>
-
-
 </head>
 
 <body>
@@ -58,6 +53,8 @@
             </ul>
         </nav>
     </header>
+
+    <!-- MAIN CONTENT -->
     <main id="plan-content">
         <!-- Weather Section -->
         <section id="weather">
@@ -68,13 +65,6 @@
         <!-- Plan content will be injected by JS -->
     </main>
 
-
-
-
-
-
-
-
     <!-- FOOTER -->
     <footer>
         <span>WDD231 Class Project</span>
@@ -83,6 +73,9 @@
         <p>&copy; 2026 Discover Paradise | All Rights Reserved</p>
         <p>Last Modified: <span id="date"></span></p>
     </footer>
+
+    <!-- JS MODULE – Move here so DOM exists before script runs -->
+    <script type="module" src="./scripts/plan.js"></script>
 </body>
 
 </html>

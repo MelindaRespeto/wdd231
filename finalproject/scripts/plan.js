@@ -7,31 +7,39 @@ if (!main) {
     console.warn("No #plan-content element found.");
 }
 
-// ================= WEATHER =================
+// WEATHER SETUP
 const weatherContainer = document.getElementById("weather");
-const apiKey = "cc3edb3357b21d196ded7d792fb6aa70"; // <-- Replace with your OpenWeatherMap API key
+const apiKey = "cc3edb3357b21d196ded7d792fb6aa70"; // Your API key
 const city = "Legazpi,PH";
 
 async function getWeather() {
     try {
-        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`);
+        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${cc3edb3357b21d196ded7d792fb6aa70}`);
         const data = await res.json();
+
+        // Check if API returned an error
+        if (data.cod !== 200) {
+            weatherContainer.innerHTML = `<p>Weather info unavailable: ${data.message}</p>`;
+            return;
+        }
 
         // Display weather info
         weatherContainer.innerHTML = `
-            <h2>Current Weather in ${data.name}</h2>
-            <p>Temperature: ${data.main.temp}°C</p>
-            <p>Condition: ${data.weather[0].description}</p>
-            <p>Humidity: ${data.main.humidity}%</p>
-            <p>Wind: ${data.wind.speed} m/s</p>
-        `;
+      <h2>Current Weather in ${data.name}</h2>
+      <p>Temperature: ${data.main.temp}°C</p>
+      <p>Condition: ${data.weather[0].description}</p>
+      <p>Humidity: ${data.main.humidity}%</p>
+      <p>Wind: ${data.wind.speed} m/s</p>
+    `;
     } catch (err) {
         weatherContainer.innerHTML = "<p>Weather info unavailable.</p>";
         console.error(err);
     }
 }
 
+// Call the function
 getWeather();
+
 
 // ================= PLAN CONTENT =================
 main.innerHTML += `

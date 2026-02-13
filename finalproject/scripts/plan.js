@@ -9,7 +9,7 @@ if (!main) {
 
 // WEATHER SETUP
 const weatherContainer = document.getElementById("weather");
-const apiKey = "cc3edb3357b21d196ded7d792fb6aa70"; // Your API key
+const apiKey = "1c85c09e62b014919a186b11a63f2951"; // Your API key
 const city = "Legazpi,PH";
 
 async function getWeather() {

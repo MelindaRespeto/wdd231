@@ -70,6 +70,29 @@ bikolattraction.forEach(place => {
     </div>
   `;
 
+  // ✅ JUST MOVED HERE (nothing changed)
+  if (place.imageUrl && place.imageUrl.length > 1) {
+
+    const gallery = document.createElement("div");
+    gallery.classList.add("image-gallery");
+
+    place.imageUrl.slice(1).forEach(img => {
+      const thumb = document.createElement("img");
+      thumb.src = img;
+      thumb.alt = place.name;
+      thumb.loading = "lazy";
+
+      thumb.onclick = () => {
+        const mainImg = section.querySelector(".wrap-left");
+        if (mainImg) mainImg.src = img;
+      };
+
+      gallery.appendChild(thumb);
+    });
+
+    section.querySelector(".attraction-card").appendChild(gallery);
+  }
+
   main.appendChild(section);
 });
 
@@ -80,26 +103,3 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 // Last modified date
 const dateEl = document.getElementById("date");
 if (dateEl) dateEl.textContent = document.lastModified;
-
-// After main card content
-if (place.imageUrl?.length > 1) {
-    const gallery = document.createElement("div");
-    gallery.classList.add("image-gallery");
-
-    place.imageUrl.slice(1).forEach(img => {
-        const thumb = document.createElement("img");
-        thumb.src = img;
-        thumb.alt = place.name;
-        thumb.loading = "lazy";
-
-        // Optional: click to replace main image
-        thumb.onclick = () => {
-            const mainImg = section.querySelector(".wrap-left");
-            if(mainImg) mainImg.src = img;
-        };
-
-        gallery.appendChild(thumb);
-    });
-
-    section.querySelector(".attraction-card").appendChild(gallery);
-}

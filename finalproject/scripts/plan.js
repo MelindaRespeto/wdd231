@@ -50,7 +50,7 @@ main.innerHTML = `
 
 // ================= WEATHER SETUP =================
 const weatherContainer = document.getElementById("weather");
-const apiKey = "YOUR_API_KEY"; // <-- replace with your OpenWeatherMap key
+const apiKey = "0bc6cd884ed3ae03e4ade361a21c5e92"; // <-- replace with your OpenWeatherMap key
 const city = "Legazpi,PH";
 
 async function getWeather() {

@@ -140,6 +140,6 @@ export const bikolattraction = [
             "Whale shark tours typically operate in the morning depending on conditions"
     }
 
-    
+
 ];
 

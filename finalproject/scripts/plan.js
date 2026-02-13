@@ -4,84 +4,88 @@ import { travelPlan } from "./plan.mjs";
 const main = document.getElementById("plan-content");
 
 if (!main) {
-    console.warn("No #plan-content element found.");
+  console.warn("No #plan-content element found.");
+} else {
+
+  // ================= PLAN CONTENT =================
+  main.innerHTML += `
+    <section>
+      <h2>Transportation Guide</h2>
+      <ul>
+        ${travelPlan.transportation.map(item => `<li>${item}</li>`).join("")}
+      </ul>
+    </section>
+
+    <section>
+      <h2>Where to Stay</h2>
+      <ul>
+        ${travelPlan.accommodations.map(item => `<li>${item}</li>`).join("")}
+      </ul>
+    </section>
+
+    <section>
+      <h2>Suggested Itinerary</h2>
+      ${travelPlan.itinerary.map(day => `
+        <h3>${day.day}</h3>
+        <ul>
+          ${day.activities.map(act => `<li>${act}</li>`).join("")}
+        </ul>
+      `).join("")}
+    </section>
+
+    <section>
+      <h2>Estimated Budget</h2>
+      <ul>
+        ${travelPlan.budgetEstimate.map(item => `<li>${item}</li>`).join("")}
+      </ul>
+    </section>
+
+    <section>
+      <h2>Travel Tips & Safety</h2>
+      <ul>
+        ${travelPlan.travelTips.map(item => `<li>${item}</li>`).join("")}
+      </ul>
+    </section>
+    `;
 }
 
-// WEATHER SETUP
+
+// ================= WEATHER SETUP =================
 const weatherContainer = document.getElementById("weather");
-const apiKey = "1c85c09e62b014919a186b11a63f2951"; // Your API key
+const apiKey = "cc3edb3357b21d196ded7d792fb6aa70"; // Put your real API key here
 const city = "Legazpi,PH";
 
 async function getWeather() {
-    try {
-        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${cc3edb3357b21d196ded7d792fb6aa70}`);
-        const data = await res.json();
+  if (!weatherContainer) return;
 
-        // Check if API returned an error
-        if (data.cod !== 200) {
-            weatherContainer.innerHTML = `<p>Weather info unavailable: ${data.message}</p>`;
-            return;
-        }
+  try {
+    const res = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
+    );
 
-        // Display weather info
-        weatherContainer.innerHTML = `
-      <h2>Current Weather in ${data.name}</h2>
-      <p>Temperature: ${data.main.temp}°C</p>
-      <p>Condition: ${data.weather[0].description}</p>
-      <p>Humidity: ${data.main.humidity}%</p>
-      <p>Wind: ${data.wind.speed} m/s</p>
-    `;
-    } catch (err) {
-        weatherContainer.innerHTML = "<p>Weather info unavailable.</p>";
-        console.error(err);
+    const data = await res.json();
+
+    if (data.cod !== 200) {
+      weatherContainer.innerHTML = `<p>Weather info unavailable: ${data.message}</p>`;
+      return;
     }
+
+    weatherContainer.innerHTML = `
+          <h2>Current Weather in ${data.name}</h2>
+          <p>Temperature: ${data.main.temp}°C</p>
+          <p>Condition: ${data.weather[0].description}</p>
+          <p>Humidity: ${data.main.humidity}%</p>
+          <p>Wind: ${data.wind.speed} m/s</p>
+        `;
+  } catch (err) {
+    weatherContainer.innerHTML = "<p>Weather info unavailable.</p>";
+    console.error(err);
+  }
 }
 
-// Call the function
+// Call weather function
 getWeather();
 
-
-// ================= PLAN CONTENT =================
-main.innerHTML += `
-
-<section>
-  <h2>Transportation Guide</h2>
-  <ul>
-    ${travelPlan.transportation.map(item => `<li>${item}</li>`).join("")}
-  </ul>
-</section>
-
-<section>
-  <h2>Where to Stay</h2>
-  <ul>
-    ${travelPlan.accommodations.map(item => `<li>${item}</li>`).join("")}
-  </ul>
-</section>
-
-<section>
-  <h2>Suggested Itinerary</h2>
-  ${travelPlan.itinerary.map(day => `
-    <h3>${day.day}</h3>
-    <ul>
-      ${day.activities.map(act => `<li>${act}</li>`).join("")}
-    </ul>
-  `).join("")}
-</section>
-
-<section>
-  <h2>Estimated Budget</h2>
-  <ul>
-    ${travelPlan.budgetEstimate.map(item => `<li>${item}</li>`).join("")}
-  </ul>
-</section>
-
-<section>
-  <h2>Travel Tips & Safety</h2>
-  <ul>
-    ${travelPlan.travelTips.map(item => `<li>${item}</li>`).join("")}
-  </ul>
-</section>
-`;
 
 // ================= FOOTER INFO =================
 const yearEl = document.getElementById("year");

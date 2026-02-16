@@ -5,7 +5,10 @@ export const bikolattraction = [
         id: "mayon-volcano",
         name: "Mayon Volcano",
         location: "Albay, Bicol Region",
-        imageUrl: ["./images/treehouse.webp"
+        imageUrl: ["./images/treehouse.webp",
+            "./images/mayon.webp",
+            "./images/maywe.webp"
+
         ],
         description:
             "Mayon Volcano is famous for its near-perfect cone shape and is one of the most active volcanoes in the Philippines, dominating the landscape of Albay and serving as a beloved regional symbol. It is surrounded by other scenic spots like Cagsawa Ruins and Ligñon Hill Nature Park.",

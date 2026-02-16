@@ -1,7 +1,6 @@
 /* =================================
    GENERAL PAGE STYLING
 ================================= */
-
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f6f8;
@@ -11,49 +10,83 @@ body {
     padding: 0;
 }
 
+h1,
+h2,
+h3 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 0 10px 0;
+    color: #1f3a60;
+}
+
+h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+p {
+    margin-bottom: 15px;
+}
 
 /* =================================
    ATTRACTION CARD LAYOUT
 ================================= */
-
 .attraction {
-    display: flex;
-    gap: 25px;
-    align-items: flex-start;
     background-color: #d7e5e7;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-    padding: 30px;
-    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin: 30px auto;
     max-width: 1000px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .attraction:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
 }
 
-
 /* =================================
-   MAIN IMAGE (LEFT SIDE)
+   IMAGE GRID / LOOP
 ================================= */
-
-.wrap-left {
-    width: 350px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 12px;
-    flex-shrink: 0;
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    margin-top: 20px;
 }
 
+.image-grid img {
+    width: 100%;
+    /* fills grid column */
+    max-width: 180px;
+    /* never too big */
+    height: auto;
+    /* proportional height */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
 
 /* =================================
-   TEXT CONTENT (RIGHT SIDE)
+   TEXT CONTENT
 ================================= */
-
 .attraction-text {
-    flex: 1;
+    margin-top: 20px;
 }
 
 .attraction h2 {
@@ -62,12 +95,14 @@ body {
 }
 
 .attraction h3 {
-    margin-top: 20px;
+    margin-top: 15px;
     color: #34495e;
 }
 
 .attraction p {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    color: #34495e;
+    line-height: 1.5;
 }
 
 .attraction ul {
@@ -75,54 +110,59 @@ body {
     margin: 10px 0 15px;
 }
 
+.attraction li {
+    margin-bottom: 6px;
+}
 
 /* =================================
-   IMAGE GALLERY
+   BUTTONS & LINKS
 ================================= */
-
-.image-gallery {
-    margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+.attraction a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 0.45rem 0.9rem;
+    background-color: #00a896;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.image-gallery img {
-    width: 120px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.attraction a:hover {
+    background-color: #007f6a;
+    transform: translateY(-2px);
 }
-
-.image-gallery img:hover {
-    transform: scale(1.08);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
 
 /* =================================
    RESPONSIVE DESIGN
 ================================= */
+@media screen and (max-width: 1024px) {
+    .image-grid img {
+        max-width: 150px;
+    }
+}
 
 @media screen and (max-width: 768px) {
-
     .attraction {
-        flex-direction: column;
+        padding: 20px;
+        margin: 25px auto;
     }
 
-    .wrap-left {
-        width: 100%;
-        height: 220px;
+    .image-grid img {
+        max-width: 120px;
     }
+}
 
-    .image-gallery {
-        justify-content: center;
+@media screen and (max-width: 480px) {
+    .image-grid img {
+        max-width: 100px;
     }
+}
 
-    .image-gallery img {
-        width: 100px;
-        height: 70px;
-    }
+/* =================================
+   OPTIONAL PAGE SECTIONS
+================================= */
+section {
+    margin: 20px 0;
 }

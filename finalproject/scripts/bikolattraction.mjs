@@ -5,9 +5,7 @@ export const bikolattraction = [
         id: "mayon-volcano",
         name: "Mayon Volcano",
         location: "Albay, Bicol Region",
-        imageUrl: [
-            "./images/maywe.webp",
-            "./images/treehouse.webp"
+        imageUrl: [  "./images/treehouse.webp"
         ],
         description:
             "Mayon Volcano is famous for its near-perfect cone shape and is one of the most active volcanoes in the Philippines, dominating the landscape of Albay and serving as a beloved regional symbol. It is surrounded by other scenic spots like Cagsawa Ruins and Ligñon Hill Nature Park.",
@@ -53,7 +51,7 @@ export const bikolattraction = [
         location: "Caramoan, Camarines Sur, Bicol Region",
         imageUrl: [
             "./images/view.webp",
-            "./images/fiesta.webp"
+
         ],
         description:
             "The Caramoan Islands are a group of pristine, white-sand isles known for limestone cliffs, hidden lagoons, and stunning beaches. They’ve gained fame as filming locations for international reality shows.",
@@ -99,7 +97,7 @@ export const bikolattraction = [
         location: "Donsol, Sorsogon, Bicol Region",
         imageUrl: [
             "./images/donsol.webp",
-            "./images/gothabeach.jpg"
+
         ],
         description:
             "Donsol is world-famous for its whale shark (butanding) interactions, where visitors can swim alongside these gentle giants in their natural habitat during peak season.",

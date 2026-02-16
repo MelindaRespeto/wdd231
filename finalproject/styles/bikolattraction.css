@@ -1,4 +1,7 @@
-/* General page */
+/* =================================
+   GENERAL PAGE STYLING
+================================= */
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f6f8;
@@ -8,19 +11,15 @@ body {
     padding: 0;
 }
 
-/* Make ALL images same size */
-.attraction img {
-    width: 100%;
-    height: 300px;
-    /* same height for all */
-    object-fit: cover;
-    /* prevents distortion */
-    border-radius: 10px;
-}
 
+/* =================================
+   ATTRACTION CARD LAYOUT
+================================= */
 
-/* Attraction card */
 .attraction {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
     background-color: #d7e5e7;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
@@ -35,26 +34,59 @@ body {
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Main image */
+
+/* =================================
+   MAIN IMAGE (LEFT SIDE)
+================================= */
+
 .wrap-left {
-    width: 100%;
-    height: 400px;
-    /* keeps main image consistent */
+    width: 350px;
+    height: 250px;
     object-fit: cover;
     border-radius: 12px;
-    margin-bottom: 20px;
+    flex-shrink: 0;
 }
 
-/* Image gallery below main image */
+
+/* =================================
+   TEXT CONTENT (RIGHT SIDE)
+================================= */
+
+.attraction-text {
+    flex: 1;
+}
+
+.attraction h2 {
+    margin-top: 0;
+    color: #1f3a60;
+}
+
+.attraction h3 {
+    margin-top: 20px;
+    color: #34495e;
+}
+
+.attraction p {
+    margin-bottom: 15px;
+}
+
+.attraction ul {
+    padding-left: 20px;
+    margin: 10px 0 15px;
+}
+
+
+/* =================================
+   IMAGE GALLERY
+================================= */
+
 .image-gallery {
     margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-
 }
 
-/* Gallery images */
 .image-gallery img {
     width: 120px;
     height: 80px;
@@ -69,30 +101,22 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Headings */
-.attraction h2 {
-    margin-top: 0;
-    color: #1f3a60;
-}
 
-.attraction h3 {
-    margin-top: 20px;
-    color: #34495e;
-}
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
 
-/* Lists */
-.attraction ul {
-    padding-left: 20px;
-    margin: 10px 0 15px;
-}
-
-/* Paragraphs */
-.attraction p {
-    margin-bottom: 15px;
-}
-
-/* Responsive */
 @media screen and (max-width: 768px) {
+
+    .attraction {
+        flex-direction: column;
+    }
+
+    .wrap-left {
+        width: 100%;
+        height: 220px;
+    }
+
     .image-gallery {
         justify-content: center;
     }
@@ -100,9 +124,5 @@ body {
     .image-gallery img {
         width: 100px;
         height: 70px;
-    }
-
-    .wrap-left {
-        height: 250px;
     }
 }

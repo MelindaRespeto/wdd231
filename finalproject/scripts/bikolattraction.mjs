@@ -6,8 +6,7 @@ export const bikolattraction = [
         name: "Mayon Volcano",
         location: "Albay, Bicol Region",
         imageUrl: ["./images/treehouse.webp",
-            "./images/mayon.webp",
-            "./images/maywe.webp"
+
 
         ],
         description:

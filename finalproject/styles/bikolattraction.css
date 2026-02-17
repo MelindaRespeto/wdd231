@@ -7,14 +7,12 @@ body {
     color: #2c3e50;
     line-height: 1.65;
     margin: 0;
-    padding: 0;
 }
 
 h1,
 h2,
 h3 {
-    font-family: 'Roboto', sans-serif;
-    margin: 0 0 10px 0;
+    margin-bottom: 10px;
     color: #1f3a60;
 }
 
@@ -22,6 +20,7 @@ h1 {
     font-size: 2.2rem;
     text-align: center;
     margin-top: 30px;
+    color: rgb(246, 241, 241);
 }
 
 h2 {
@@ -55,7 +54,7 @@ p {
 }
 
 /* =================================
-   IMAGE GRID / LOOP
+   IMAGE GRID
 ================================= */
 .image-grid {
     display: grid;
@@ -67,11 +66,8 @@ p {
 
 .image-grid img {
     width: 100%;
-    /* fills grid column */
-    max-width: 180px;
-    /* never too big */
+    max-width: 100px;
     height: auto;
-    /* proportional height */
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -89,20 +85,16 @@ p {
     margin-top: 20px;
 }
 
-.attraction h2 {
-    margin-top: 0;
-    color: #1f3a60;
-}
-
-.attraction h3 {
-    margin-top: 15px;
+.attraction h3,
+.attraction p {
     color: #34495e;
 }
 
 .attraction p {
-    margin-bottom: 10px;
-    color: #34495e;
     line-height: 1.5;
+    column-count: 2;
+    column-rule: none;
+    background-color: beige;
 }
 
 .attraction ul {
@@ -137,13 +129,13 @@ p {
 /* =================================
    RESPONSIVE DESIGN
 ================================= */
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
     .image-grid img {
         max-width: 150px;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .attraction {
         padding: 20px;
         margin: 25px auto;
@@ -154,7 +146,7 @@ p {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
     .image-grid img {
         max-width: 100px;
     }

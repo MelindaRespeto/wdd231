@@ -1,7 +1,6 @@
 // plan.js
 import { travelPlan } from "./plan.mjs";
 
-// Get main container
 const main = document.getElementById("plan-content");
 
 if (!main) console.warn("No #plan-content element found.");
@@ -45,6 +44,32 @@ else {
         ${travelPlan.travelTips.map(item => `<li>${item}</li>`).join("")}
       </ul>
     </section>
+
+    <!-- Travel Form Section -->
+    <section class="plan-card">
+      <h2>Plan Your Trip</h2>
+      <div id="selected-attraction-msg" style="margin-bottom:10px; font-weight:bold;"></div>
+      <form id="travelForm" action="formresult.html" method="GET">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+          <label for="destination">Preferred Destination:</label>
+          <select id="destination" name="destination" required>
+              <option value="">Select a destination</option>
+              <option value="Bicol">Siruma</option>
+              <option value="Caramoan">Caramoan</option>
+              <option value="Legazpi">Legazpi</option>
+          </select>
+
+          <label for="days">Number of Travel Days:</label>
+          <input type="number" id="days" name="days" min="1" max="14" placeholder="e.g., 3" required>
+
+          <button type="submit">Submit Plan</button>
+      </form>
+    </section>
   `;
   main.innerHTML += planSections;
 }
@@ -79,10 +104,14 @@ async function getWeather() {
 }
 getWeather();
 
-// ================= PRE-FILL DESTINATION FROM LOCAL STORAGE =================
+// ================= DISPLAY SELECTED ATTRACTION =================
 const savedAttraction = localStorage.getItem("selectedAttraction");
 if (savedAttraction) {
+  const msgEl = document.getElementById("selected-attraction-msg");
   const destinationSelect = document.getElementById("destination");
+
+  if (msgEl) msgEl.textContent = `You selected: ${savedAttraction}`;
+
   if (destinationSelect) {
     for (let option of destinationSelect.options) {
       if (option.text.toLowerCase() === savedAttraction.toLowerCase()) {
@@ -91,7 +120,8 @@ if (savedAttraction) {
       }
     }
   }
-  // Optional: clear storage after pre-filling
+
+  // Optional: clear after displaying
   localStorage.removeItem("selectedAttraction");
 }
 

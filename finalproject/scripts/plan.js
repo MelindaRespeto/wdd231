@@ -94,11 +94,32 @@ getWeather();
 // ================= FOOTER INFO =================
 const dateEl = document.getElementById("date");
 if (dateEl) dateEl.textContent = document.lastModified;
+
+// ================= HAMBURGER MENU =================
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
 
 if (hamburger && navMenu) {
   hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("show");
+  });
+}
+
+// ================= FORM HANDLING =================
+// Optional JS enhancements (form uses GET, actual submission goes to form-result.html)
+const travelForm = document.getElementById("travelForm");
+if (travelForm) {
+  travelForm.addEventListener("submit", (e) => {
+    // No need to prevent default — GET submits via URL
+    const name = travelForm.name.value.trim();
+    const email = travelForm.email.value.trim();
+    const destination = travelForm.destination.value;
+    const days = travelForm.days.value;
+
+    if (!name || !email || !destination || !days) {
+      e.preventDefault();
+      alert("Please fill out all fields before submitting your plan.");
+    }
+    // Additional optional validation could be added here
   });
 }

@@ -14,8 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./styles/final.css" />
     <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/final.css" />
     <link rel="stylesheet" href="./styles/plan.css" />
 
     <!-- Open Graph -->
@@ -24,7 +24,7 @@
     <meta property="og:image" content="https://melindarespeto.github.io/wdd231/images/parrot.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://melindarespeto.github.io/wdd231/finalproject/index.html">
+    <meta property="og:url" content="https://melindarespeto.github.io/wdd231/finalproject/plan.html">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
@@ -32,16 +32,18 @@
     <meta name="twitter:image" content="https://melindarespeto.github.io/wdd231/images/student.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" href="images/tuna.jpg">
+    <link rel="icon" href="./images/tuna.jpg">
 </head>
 
 <body>
     <!-- HEADER -->
     <header>
         <div class="header-content">
-            <img src="../images/tuna.jpg" alt="Melinds Chamber Logo">
-            <h1>Discover Paradise in Bikol Region</h1>
-            <p>Your guide to unforgettable travel experiences</p>
+            <img src="./images/tuna.jpg" alt="Discover Paradise Logo" class="logo">
+            <div class="header-text">
+                <h1>Discover Paradise in Bikol Region</h1>
+                <p>Your guide to unforgettable travel experiences</p>
+            </div>
         </div>
 
         <nav class="navbar">
@@ -62,19 +64,16 @@
             <p>Loading current weather...</p>
         </section>
 
-        <!-- Plan content will be injected by JS -->
+        <!-- JS will inject Plan content here -->
     </main>
 
     <!-- FOOTER -->
     <footer>
-        <span>WDD231 Class Project</span>
-        <p>Melinda Competente</p>
-        <p>© 2026 | Final Project</p>
-        <p>&copy; 2026 Discover Paradise | All Rights Reserved</p>
+        <p>© 2026 Discover Paradise | WDD231 Class Project | Melinda Competente</p>
         <p>Last Modified: <span id="date"></span></p>
     </footer>
 
-    <!-- JS MODULE – Move here so DOM exists before script runs -->
+    <!-- JS MODULE -->
     <script type="module" src="./scripts/plan.js"></script>
 </body>
 

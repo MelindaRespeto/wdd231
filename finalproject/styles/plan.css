@@ -1,49 +1,74 @@
-/* ================= General ================= */
+/* =========================
+   RESET & BASE
+========================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f6f8;
     color: #2c3e50;
-    margin: 0;
     line-height: 1.6;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
 }
 
-
+/* =========================
+   HEADINGS
+========================= */
+h1,
 h2,
 h3 {
     font-family: 'Roboto', sans-serif;
-    margin: 0 0 10px 0;
-    color: #1f3a60;
 }
 
 h1 {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
     text-align: center;
-    margin-top: 30px;
-    color: white;
+    margin: 20px 0 15px;
+    color: #ffffff;
 }
 
 h2 {
-    font-size: 1.6rem;
+    font-size: clamp(1.4rem, 3vw, 1.6rem);
+    color: #1f3a60;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 h3 {
-    font-size: 1.3rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    color: #1f3a60;
+    margin-bottom: 10px;
 }
 
-/* ================= Main Sections ================= */
+/* =========================
+   MAIN CONTENT
+========================= */
 main {
     max-width: 1000px;
     margin: 30px auto;
     padding: 0 15px;
 }
 
+/* =========================
+   SECTIONS
+========================= */
 section {
     background-color: #d7e5e7;
     border-radius: 12px;
     padding: 25px;
     margin-bottom: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
 }
 
 section:hover {
@@ -51,7 +76,57 @@ section:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* ================= Lists ================= */
+/* =========================
+   WEATHER CARD
+========================= */
+#weather {
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #00a89610;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards 0.2s;
+    /* delay for smoother effect */
+}
+
+#weather h2 {
+    margin-bottom: 10px;
+}
+
+#weather p {
+    font-size: 1rem;
+    color: #006d5b;
+}
+
+/* =========================
+   PLAN CARDS (for future JS content)
+========================= */
+.plan-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   LISTS
+========================= */
 ul {
     padding-left: 20px;
     margin: 10px 0;
@@ -61,17 +136,41 @@ li {
     margin-bottom: 8px;
 }
 
-/* ================= Footer ================= */
+/* =========================
+   FOOTER
+========================= */
 footer {
     background-color: #1f3a60;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     padding: 20px 10px;
     font-size: 0.9rem;
     margin-top: 40px;
 }
 
-/* ================= Responsive ================= */
+footer p {
+    margin: 4px 0;
+    opacity: 0.9;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 @media screen and (max-width: 768px) {
     main {
         padding: 0 10px;
@@ -87,5 +186,32 @@ footer {
 
     h3 {
         font-size: 1.1rem;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    #weather {
+        min-height: 100px;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 15px;
     }
 }

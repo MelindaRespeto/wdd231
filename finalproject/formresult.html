@@ -45,7 +45,18 @@
         <h2>Submitted Travel Information</h2>
         <div id="plan-details">
             <!-- JS will inject submitted data here -->
+
         </div>
+        <!-- SUBMISSION CONFIRMATION MODAL -->
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <h3>🎉 Submission Successful!</h3>
+                <p>Your travel plan has been submitted successfully.</p>
+
+                <button id="closeModal" class="plan-btn">OK</button>
+            </div>
+        </div>
+
         <a href="plan.html" class="plan-btn">Go Back & Edit</a>
     </main>
 
@@ -58,15 +69,6 @@
     <!-- JS MODULE -->
     <script type="module" src="./scripts/formresult.js"></script>
 
-    <!-- ✅ ADD THIS SCRIPT FOR MOBILE MENU -->
-    <script>
-        const hamburger = document.getElementById("hamburger");
-        const navMenu = document.getElementById("nav-menu");
-
-        hamburger.addEventListener("click", () => {
-            navMenu.classList.toggle("show");
-        });
-    </script>
 
 </body>
 

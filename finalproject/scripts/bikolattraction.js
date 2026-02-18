@@ -1,6 +1,6 @@
 // bikolattraction.js
 
-// Array of 15+ attractions with 4 properties each + image
+// Array of 15+ attractions with 5 properties each (including image)
 export const bikolattraction = [
   { name: "Mayon Volcano", location: "Albay", type: "Natural", rating: "5⭐", image: "./images/mayon.jpg" },
   { name: "Cagsawa Ruins", location: "Albay", type: "Historical", rating: "4.5⭐", image: "./images/cagsawa.jpg" },
@@ -45,10 +45,9 @@ bikolattraction.forEach(attraction => {
 document.querySelectorAll(".plan-btn").forEach(link => {
   link.addEventListener("click", e => {
     e.preventDefault();
-    const attractionName = link.parentElement.querySelector("h3").textContent;
-    // Save selected attraction to local storage
+    const card = link.closest(".card");
+    const attractionName = card.querySelector("h3").textContent;
     localStorage.setItem("selectedAttraction", attractionName);
-    // Redirect to plan page
     window.location.href = link.href;
   });
 });

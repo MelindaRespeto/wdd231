@@ -1,24 +1,39 @@
-// Display URL Search Params
-const resultDiv = document.getElementById('result');
+// formresult.js
+
+// Get container for submitted data
+const resultDiv = document.getElementById('plan-details');
 const params = new URLSearchParams(window.location.search);
 
-if ([...params].length === 0) {
-    resultDiv.innerHTML += "<p>No data submitted.</p>";
+// Check if there is any submitted data
+if ([...params].length === 0 && !localStorage.getItem("selectedAttraction")) {
+    resultDiv.innerHTML = "<p>No data submitted.</p>";
 } else {
+    // Display URL search params
     [...params].forEach(([key, value]) => {
         const fieldName = key.charAt(0).toUpperCase() + key.slice(1);
-        resultDiv.innerHTML += `<p><strong>${fieldName}:</strong> ${value}</p>`;
+        const p = document.createElement("p");
+        p.innerHTML = `<strong>${fieldName}:</strong> ${value}`;
+        resultDiv.appendChild(p);
     });
+
+    // Display selected attraction from localStorage
+    const selectedAttraction = localStorage.getItem("selectedAttraction");
+    if (selectedAttraction) {
+        const p = document.createElement("p");
+        p.innerHTML = `<strong>Selected Attraction:</strong> ${selectedAttraction}`;
+        resultDiv.appendChild(p);
+    }
 }
 
-// Back button functionality
-const backBtn = document.getElementById("backBtn");
-if (backBtn) {
-    backBtn.addEventListener("click", () => {
-        window.location.href = "plan.html"; // Goes back to Plan page
-    });
-}
-
-// Set footer last modified date
+// Footer last modified date
 const dateEl = document.getElementById("date");
 if (dateEl) dateEl.textContent = document.lastModified;
+
+// Hamburger menu toggle (optional, consistent with site)
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+if (hamburger && navMenu) {
+    hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
+}

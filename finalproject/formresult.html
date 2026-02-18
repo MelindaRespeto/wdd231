@@ -20,6 +20,7 @@
 </head>
 
 <body>
+
     <!-- HEADER -->
     <header>
         <div class="header-content">
@@ -31,7 +32,7 @@
         </div>
 
         <nav class="navbar">
-            <div class="hamburger" id="hamburger">☰</div>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
             <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="bikolattraction.html">Tourist Attractions</a></li>
@@ -43,22 +44,22 @@
     <!-- MAIN CONTENT -->
     <main id="submitted-content" class="plan-card">
         <h2>Submitted Travel Information</h2>
+
         <div id="plan-details">
-            <!-- JS will inject submitted data here -->
-
-        </div>
-        <!-- SUBMISSION CONFIRMATION MODAL -->
-        <div id="successModal" class="modal">
-            <div class="modal-content">
-                <h3>🎉 Submission Successful!</h3>
-                <p>Your travel plan has been submitted successfully.</p>
-
-                <button id="closeModal" class="plan-btn">OK</button>
-            </div>
+            <!-- JS injects submitted data -->
         </div>
 
         <a href="plan.html" class="plan-btn">Go Back & Edit</a>
     </main>
+
+    <!-- MODAL (moved outside main for proper overlay behavior) -->
+    <div id="successModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <h3>🎉 Submission Successful!</h3>
+            <p>Your travel plan has been submitted successfully.</p>
+            <button id="closeModal" class="plan-btn">OK</button>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <footer>
@@ -69,6 +70,19 @@
     <!-- JS MODULE -->
     <script type="module" src="./scripts/formresult.js"></script>
 
+    <!-- MOBILE MENU SCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.getElementById("hamburger");
+            const navMenu = document.getElementById("nav-menu");
+
+            if (hamburger && navMenu) {
+                hamburger.addEventListener("click", () => {
+                    navMenu.classList.toggle("show");
+                });
+            }
+        });
+    </script>
 
 </body>
 

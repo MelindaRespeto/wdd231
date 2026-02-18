@@ -2,11 +2,11 @@
 <html lang="en-US">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tourist Attractions | Discover Paradise Tourism Site</title>
-    <meta name="description" content="Discover top attractions and upcoming events in our destination." />
-    <meta name="author" content="Melinda Competente" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Attractions | Discover Paradise</title>
+    <meta name="description" content="Discover top attractions in Bikol Region.">
+    <meta name="author" content="Melinda Competente">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,38 +14,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./styles/final.css" />
-    <link rel="stylesheet" href="./styles/normalize.css" />
-    <link rel="stylesheet" href="./styles/bikolattraction.css" />
-    <link rel="stylesheet" href="../chamber/styles/weather.css" />
-
-    <script src="../chamber/scripts/weather.js" defer></script>
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="MELINDS Final Tourism Project | Tourist Attractions">
-    <meta property="og:description" content="Supporting local businesses and building our community.">
-    <meta property="og:image" content="https://melindarespeto.github.io/wdd231/images/parrot.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://melindarespeto.github.io/wdd231/finalproject/index.html">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://melindarespeto.github.io/wdd231/images/student.jpg">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/final.css">
+    <link rel="stylesheet" href="./styles/bikolattraction.css">
 
     <!-- Favicon -->
     <link rel="icon" href="images/tuna.jpg">
-
 </head>
 
 <body>
     <!-- HEADER -->
     <header>
         <div class="header-content">
-            <img src="../images/tuna.jpg" alt="Melinds Chamber Logo">
-            <h1>Discover Paradise in Bikol Region</h1>
-            <p>Your guide to unforgettable travel experiences</p>
+            <img src="../images/tuna.jpg" alt="Discover Paradise Logo" class="logo">
+            <div class="header-text">
+                <h1>Discover Paradise in Bikol Region</h1>
+                <p>Your guide to unforgettable travel experiences</p>
+            </div>
         </div>
 
         <nav class="navbar">
@@ -60,53 +45,18 @@
 
     <!-- MAIN CONTENT -->
     <main id="attractions-content">
-        <!-- bikolattraction.js will populate this -->
-
-        <section id="weather" class="weather">
-            <h2>Local Weather - Manila-Philippines </h2>
-
-            <div class="weather-card">
-                <div class="weather-main">
-                    <img id="weather-icon" src="./images/snowy.png" alt="" class="weather-icon">
-                    <div>
-                        <p id="current-temp" class="temperature"></p>
-                        <p id="weather-desc" class="condition"></p>
-                    </div>
-                </div>
-
-                <div class="forecast">
-                    <h3>3-Day Forecast</h3>
-                    <div class="forecast-grid">
-                        <div class="forecast-day">
-                            <p id="day1-name"></p>
-                            <p id="day1-temp"></p>
-                        </div>
-                        <div class="forecast-day">
-                            <p id="day2-name"></p>
-                            <p id="day2-temp"></p>
-                        </div>
-                        <div class="forecast-day">
-                            <p id="day3-name"></p>
-                            <p id="day3-temp"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- JS will dynamically populate 15+ attraction cards here -->
     </main>
-
-    <!-- Import the JavaScript module -->
-    <script type="module" src="./scripts/bikolattraction.js"></script>
 
     <!-- FOOTER -->
     <footer>
         <span>WDD231 Class Project</span>
         <p>Melinda Competente</p>
-        <p>© 2026 | Final Project</p>
-        <p>&copy; 2026 Discover Paradise | All Rights Reserved</p>
+        <p>© 2026 | Discover Paradise</p>
         <p>Last Modified: <span id="date"></span></p>
     </footer>
-</body>
 
+    <!-- JS -->
+    <script type="module" src="./scripts/bikolattraction.js"></script>
+</body>
 </html>

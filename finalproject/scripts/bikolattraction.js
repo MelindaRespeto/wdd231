@@ -1,8 +1,49 @@
-import { bikolattraction } from "./bikolattraction.mjs";
+// bikolattraction.js
 
-// ==========================
-// MOBILE MENU TOGGLE
-// ==========================
+// Array of 15+ attractions with 4 properties each
+export const bikolattraction = [
+  { name: "Mayon Volcano", location: "Albay", type: "Natural", rating: "5⭐" },
+  { name: "Cagsawa Ruins", location: "Albay", type: "Historical", rating: "4.5⭐" },
+  { name: "Donsol Whale Sharks", location: "Sorsogon", type: "Wildlife", rating: "5⭐" },
+  { name: "Caramoan Islands", location: "Camarines Sur", type: "Island", rating: "5⭐" },
+  { name: "Lignon Hill", location: "Legazpi", type: "Scenic View", rating: "4⭐" },
+  { name: "Embarcadero de Legazpi", location: "Legazpi", type: "Shopping & Dining", rating: "4⭐" },
+  { name: "Misibis Bay Resort", location: "Cagraray Island", type: "Resort", rating: "5⭐" },
+  { name: "Hoyop-Hoyopan Cave", location: "Legazpi", type: "Cave", rating: "4⭐" },
+  { name: "Bicol Natural Park", location: "Naga", type: "Nature Park", rating: "4.5⭐" },
+  { name: "Virac Port", location: "Catanduanes", type: "Transport Hub", rating: "3.5⭐" },
+  { name: "Magayon Festival", location: "Albay", type: "Festival", rating: "5⭐" },
+  { name: "Bulusan Lake", location: "Sorsogon", type: "Lake", rating: "4.5⭐" },
+  { name: "Sumlang Lake", location: "Legazpi", type: "Adventure", rating: "4⭐" },
+  { name: "Quitinday Hills", location: "Sorsogon", type: "Hiking", rating: "4.5⭐" },
+  { name: "Bacacay Beach", location: "Albay", type: "Beach", rating: "4⭐" }
+];
+
+// Get main container
+const main = document.getElementById("attractions-content");
+
+if (!main) console.warn("No #attractions-content element found.");
+
+// Generate cards dynamically
+bikolattraction.forEach(attraction => {
+  const card = document.createElement("section");
+  card.classList.add("card");
+
+  card.innerHTML = `
+        <h3>${attraction.name}</h3>
+        <p><strong>Location:</strong> ${attraction.location}</p>
+        <p><strong>Type:</strong> ${attraction.type}</p>
+        <p><strong>Rating:</strong> ${attraction.rating}</p>
+        <a href="plan.html">Plan Your Visit</a>
+    `;
+  main.appendChild(card);
+});
+
+// ================= FOOTER DATE =================
+const dateEl = document.getElementById("date");
+if (dateEl) dateEl.textContent = document.lastModified;
+
+// ================= HAMBURGER NAV =================
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
 
@@ -11,118 +52,3 @@ if (hamburger && navMenu) {
     navMenu.classList.toggle("show");
   });
 }
-
-// Optional: Close menu when a link is clicked (mobile)
-navMenu?.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    if (navMenu.classList.contains("show")) {
-      navMenu.classList.remove("show");
-    }
-  });
-});
-
-// ==========================
-// ATTRACTION CARDS
-// ==========================
-const main = document.getElementById("attractions-content");
-
-if (!main) {
-  console.warn("No #attractions-content element found in the HTML.");
-}
-
-// Loop through the array of attractions
-bikolattraction.forEach(place => {
-  const section = document.createElement("section");
-  section.classList.add("attraction");
-
-  // Build the HTML for each place
-  section.innerHTML = `
-    <!-- First image floats left for text wrapping -->
-    ${place.imageUrl?.length ? `<img src="${place.imageUrl[0]}" alt="${place.name}" class="wrap-left" loading="lazy">` : ""}
-
-    <div class="attraction-card">
-      <h2 class="attraction-title">${place.name}</h2>
-      <p><strong>Location:</strong> ${place.location}</p>
-      <p class="description">${place.description}</p>
-
-      <h3>How to Get There</h3>
-      <p class="how-to-get">${place.howToGetThere}</p>
-
-      ${place.nearbyAccommodations?.length ? `
-        <h3>Nearby Accommodations</h3>
-        <ul class="accommodations">
-          ${place.nearbyAccommodations.map(acc => `<li>${acc}</li>`).join("")}
-        </ul>
-      ` : ""}
-
-      ${place.localFoodToTry?.length ? `
-        <h3>Local Food to Try</h3>
-        <ul class="local-food">
-          ${place.localFoodToTry.map(food => `<li>${food}</li>`).join("")}
-        </ul>
-      ` : ""}
-
-      ${place.notableNearbyAttractions?.length ? `
-        <h3>Notable Nearby Attractions</h3>
-        <ul class="nearby-attractions">
-          ${place.notableNearbyAttractions.map(item => `<li>${item}</li>`).join("")}
-        </ul>
-      ` : ""}
-
-      ${place.activities?.length ? `
-        <h3>Activities</h3>
-        <ul class="activities">
-          ${place.activities.map(act => `<li>${act}</li>`).join("")}
-        </ul>
-      ` : ""}
-
-      <p><strong>Best Time to Visit:</strong> ${place.bestTimeToVisit}</p>
-
-      ${place.travelTipsAndSafety?.length ? `
-        <h3>Travel Tips & Safety</h3>
-        <ul class="tips-safety">
-          ${place.travelTipsAndSafety.map(tip => `<li>${tip}</li>`).join("")}
-        </ul>
-      ` : ""}
-
-      <p><strong>Entrance Fee:</strong> ${place.entranceFee}</p>
-      <p><strong>Opening Hours:</strong> ${place.openingHours}</p>
-
-      <!-- Additional images -->
-      ${place.imageUrl?.length > 1 ? place.imageUrl.slice(1).map(img => `<img src="${img}" alt="${place.name} Image" loading="lazy">`).join("") : ""}
-    </div>
-  `;
-
-  // Image gallery for additional images
-  if (place.imageUrl && place.imageUrl.length > 1) {
-    const gallery = document.createElement("div");
-    gallery.classList.add("image-gallery");
-
-    place.imageUrl.slice(1).forEach(img => {
-      const thumb = document.createElement("img");
-      thumb.src = img;
-      thumb.alt = place.name;
-      thumb.loading = "lazy";
-
-      thumb.onclick = () => {
-        const mainImg = section.querySelector(".wrap-left");
-        if (mainImg) mainImg.src = img;
-      };
-
-      gallery.appendChild(thumb);
-    });
-
-    section.querySelector(".attraction-card").appendChild(gallery);
-  }
-
-  main.appendChild(section);
-});
-
-// ==========================
-// FOOTER DATES
-// ==========================
-const yearEl = document.getElementById("year");
-if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-const dateEl = document.getElementById("date");
-if (dateEl) dateEl.textContent = document.lastModified;

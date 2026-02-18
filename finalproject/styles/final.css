@@ -5,65 +5,71 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: "Roboto", sans-serif;
-    margin: 0;
     background-color: #f7fdfb;
     color: #1a1a1a;
     line-height: 1.6;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
 }
 
 /* =========================
-   HEADER & FOOTER
+   HEADER
 ========================= */
-header,
-footer {
+header {
     background: #0f3d3e;
     color: #ffffff;
     padding: 1.5rem 1rem;
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-content img.logo {
+    max-width: 80px;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.header-text h1 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 0.25rem;
+    color: #ffffff;
     text-align: center;
 }
 
-footer p,
-footer span {
-    margin: 0.25rem 0;
-    font-size: 0.95rem;
-    opacity: 0.9;
-}
-
-header img {
-    max-width: 80px;
-    height: auto;
-}
-
-.header-content h1 {
-    margin: 0.5rem 0 0.25rem;
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
-}
-
-.header-content p {
-    margin: 0;
+.header-text p {
     font-size: 1rem;
     opacity: 0.9;
+    text-align: center;
 }
 
 /* =========================
    NAVIGATION
 ========================= */
 .navbar {
-    margin-top: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    margin-top: 1rem;
+    position: relative;
 }
 
 #nav-menu {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     gap: 1.25rem;
 }
@@ -105,7 +111,7 @@ section {
 }
 
 /* =========================
-   CARDS
+   CARDS - Featured Attractions
 ========================= */
 .featured-grid {
     display: grid;
@@ -135,7 +141,7 @@ section {
 }
 
 .card h3 {
-    margin: 1rem 1rem 0.5rem;
+    margin: 1rem;
     color: #006d5b;
 }
 
@@ -206,7 +212,23 @@ section {
 }
 
 /* =========================
-   RESPONSIVE NAV
+   FOOTER
+========================= */
+footer {
+    background: #0f3d3e;
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* =========================
+   RESPONSIVE NAVIGATION
 ========================= */
 @media (max-width: 768px) {
     .hamburger {
@@ -222,6 +244,7 @@ section {
         right: 0;
         display: none;
         padding: 1rem 0;
+        gap: 1rem;
     }
 
     #nav-menu.show {
@@ -230,5 +253,23 @@ section {
 
     .navbar {
         position: relative;
+    }
+}
+
+/* =========================
+   RESPONSIVE HEADER & CARDS
+========================= */
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .event img {
+        height: 150px;
     }
 }

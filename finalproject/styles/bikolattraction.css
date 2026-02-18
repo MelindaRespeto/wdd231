@@ -9,18 +9,20 @@ body {
     margin: 0;
 }
 
-h1,
+
 h2,
 h3 {
     margin-bottom: 10px;
-    color: #1f3a60;
+    color: #e0e3e9;
 }
 
+/* FIX: white had poor contrast */
 h1 {
     font-size: 2.2rem;
     text-align: center;
     margin-top: 30px;
-    color: rgb(246, 241, 241);
+    color: white;
+    /* changed only color */
 }
 
 h2 {
@@ -90,11 +92,13 @@ p {
     color: #34495e;
 }
 
+/* FIX: beige too low contrast */
 .attraction p {
     line-height: 1.5;
     column-count: 2;
     column-rule: none;
-    background-color: beige;
+    background-color: #f5f5dc;
+    /* slightly darker beige */
 }
 
 .attraction ul {
@@ -109,11 +113,14 @@ p {
 /* =================================
    BUTTONS & LINKS
 ================================= */
+
+/* FIX: darker teal for AA */
 .attraction a {
     display: inline-block;
     margin-top: 10px;
     padding: 0.45rem 0.9rem;
-    background-color: #00a896;
+    background-color: #007f6a;
+    /* only changed color */
     color: #fff;
     text-decoration: none;
     border-radius: 6px;
@@ -122,7 +129,8 @@ p {
 }
 
 .attraction a:hover {
-    background-color: #007f6a;
+    background-color: #005f50;
+    /* only changed color */
     transform: translateY(-2px);
 }
 

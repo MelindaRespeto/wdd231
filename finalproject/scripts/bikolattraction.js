@@ -1,6 +1,29 @@
 import { bikolattraction } from "./bikolattraction.mjs";
 
-// Get reference to <main> container
+// ==========================
+// MOBILE MENU TOGGLE
+// ==========================
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+if (hamburger && navMenu) {
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+}
+
+// Optional: Close menu when a link is clicked (mobile)
+navMenu?.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    if (navMenu.classList.contains("show")) {
+      navMenu.classList.remove("show");
+    }
+  });
+});
+
+// ==========================
+// ATTRACTION CARDS
+// ==========================
 const main = document.getElementById("attractions-content");
 
 if (!main) {
@@ -70,9 +93,8 @@ bikolattraction.forEach(place => {
     </div>
   `;
 
-  // ✅ JUST MOVED HERE (nothing changed)
+  // Image gallery for additional images
   if (place.imageUrl && place.imageUrl.length > 1) {
-
     const gallery = document.createElement("div");
     gallery.classList.add("image-gallery");
 
@@ -96,11 +118,11 @@ bikolattraction.forEach(place => {
   main.appendChild(section);
 });
 
-
-// Update footer year
+// ==========================
+// FOOTER DATES
+// ==========================
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Last modified date
 const dateEl = document.getElementById("date");
 if (dateEl) dateEl.textContent = document.lastModified;

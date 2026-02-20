@@ -8,6 +8,7 @@
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: rgb(84, 83, 83);
 }
 
 .card {
@@ -30,7 +31,7 @@
 
 .card h3 {
     margin-bottom: 8px;
-    color: black;
+    color: rgb(130, 230, 226);
 }
 
 .card p {
@@ -96,6 +97,7 @@ header {
     font-size: 1.8rem;
     cursor: pointer;
 }
+
 
 /* =========================
    RESPONSIVE NAV

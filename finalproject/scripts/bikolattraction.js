@@ -2,24 +2,24 @@
 
 // Array of 15+ attractions with 5 properties each (including image)
 export const bikolattraction = [
-  { name: "Mayon Volcano", location: "Albay", type: "Natural", rating: "5⭐", image: "./images/mayon.jpg" },
-  { name: "Cagsawa Ruins", location: "Albay", type: "Historical", rating: "4.5⭐", image: "./images/cagsawa.jpg" },
-  { name: "Donsol Whale Sharks", location: "Sorsogon", type: "Wildlife", rating: "5⭐", image: "./images/donsol.jpg" },
-  { name: "Caramoan Islands", location: "Camarines Sur", type: "Island", rating: "5⭐", image: "./images/caramoan.jpg" },
-  { name: "Lignon Hill", location: "Legazpi", type: "Scenic View", rating: "4⭐", image: "./images/lignon.jpg" },
-  { name: "Embarcadero de Legazpi", location: "Legazpi", type: "Shopping & Dining", rating: "4⭐", image: "./images/embar.jpg" },
-  { name: "Misibis Bay Resort", location: "Cagraray Island", type: "Resort", rating: "5⭐", image: "./images/misibis.jpg" },
-  { name: "Hoyop-Hoyopan Cave", location: "Legazpi", type: "Cave", rating: "4⭐", image: "./images/cave.jpg" },
-  { name: "Bicol Natural Park", location: "Naga", type: "Nature Park", rating: "4.5⭐", image: "./images/naturalpark.jpg" },
-  { name: "Virac Port", location: "Catanduanes", type: "Transport Hub", rating: "3.5⭐", image: "./images/virac.jpg" },
-  { name: "Magayon Festival", location: "Albay", type: "Festival", rating: "5⭐", image: "./images/festival.jpg" },
-  { name: "Bulusan Lake", location: "Sorsogon", type: "Lake", rating: "4.5⭐", image: "./images/bulusan.jpg" },
-  { name: "Sumlang Lake", location: "Legazpi", type: "Adventure", rating: "4⭐", image: "./images/sumlang.jpg" },
-  { name: "Quitinday Hills", location: "Sorsogon", type: "Hiking", rating: "4.5⭐", image: "./images/quitinday.jpg" },
-  { name: "Bacacay Beach", location: "Albay", type: "Beach", rating: "4⭐", image: "./images/bacacay.jpg" }
+  { name: "Mayon Volcano", location: "Albay", type: "Natural", rating: "5⭐", image: "./images/maywe.webp" },
+  { name: "Cagsawa Ruins", location: "Albay", type: "Historical", rating: "4.5⭐", image: "./images/mayonf.webp" },
+  { name: "Donsol Whale Sharks", location: "Sorsogon", type: "Wildlife", rating: "5⭐", image: "./images/island.jpg" },
+  { name: "Caramoan Islands", location: "Camarines Sur", type: "Island", rating: "5⭐", image: "./images/enchanted.webp" },
+  { name: "Lignon Hill", location: "Legazpi", type: "Scenic View", rating: "4⭐", image: "./images/gothabeach.jpg" },
+  { name: "Embarcadero de Legazpi", location: "Legazpi", type: "Shopping & Dining", rating: "4⭐", image: "./images/tuna.jpg" },
+  { name: "Misibis Bay Resort", location: "Cagraray Island", type: "Resort", rating: "5⭐", image: "./images/sea.jpg" },
+  { name: "Hoyop-Hoyopan Cave", location: "Legazpi", type: "Cave", rating: "4⭐", image: "./images/lahos.jpg" },
+  { name: "Bicol Natural Park", location: "Naga", type: "Nature Park", rating: "4.5⭐", image: "./images/paro.jpg" },
+  { name: "Virac Port", location: "Catanduanes", type: "Transport Hub", rating: "3.5⭐", image: "./images/fiesta.webp" },
+  { name: "Magayon Festival", location: "Albay", type: "Festival", rating: "5⭐", image: "./images/fiesta.webp" },
+  { name: "Bulusan Lake", location: "Sorsogon", type: "Lake", rating: "4.5⭐", image: "./images/view.webp" },
+  { name: "Sumlang Lake", location: "Legazpi", type: "Adventure", rating: "4⭐", image: "./images/lahos.jpg" },
+  { name: "Quitinday Hills", location: "Sorsogon", type: "Hiking", rating: "4.5⭐", image: "./images/mayonf.jpg" },
+  { name: "Bacacay Beach", location: "Albay", type: "Beach", rating: "4⭐", image: "./images/sunrise.webp" }
 ];
 
-// Get main container
+// Get main container9
 const main = document.getElementById("attractions-content");
 if (!main) console.warn("No #attractions-content element found.");
 

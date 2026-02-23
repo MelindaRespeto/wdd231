@@ -61,6 +61,7 @@ else {
               <option value="">Select a destination</option>
               <option value="Bicol">Siruma</option>
               <option value="Caramoan">Caramoan</option>
+              <option value="Gotha">Gotha</option>
               <option value="Legazpi">Legazpi</option>
           </select>
 

@@ -1,7 +1,7 @@
 export const travelPlan = {
     transportation: [
         "Fly to Bicol International Airport (Daraga, Albay).",
-        "Take a bus from Manila (8–10 hours travel time).",
+        "Take a bus from Manila (8 to 10 hours travel time).",
         "Vans and jeepneys are available for local transport.",
         "Boat transfers are required for island destinations like Caramoan."
     ],

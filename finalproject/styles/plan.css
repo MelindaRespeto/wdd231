@@ -11,7 +11,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f6f8;
+    background-color: #91e0b5;
     color: #2c3e50;
     line-height: 1.6;
     overflow-x: hidden;
@@ -60,7 +60,7 @@ main {
    SECTIONS
 ========================= */
 section {
-    background-color: #d7e5e7;
+    background-color: #b3d6db;
     border-radius: 12px;
     padding: 25px;
     margin-bottom: 25px;

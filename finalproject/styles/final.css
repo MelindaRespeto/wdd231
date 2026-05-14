@@ -24,7 +24,7 @@ body {
 header {
     background: #0f3d3e;
     color: #ffffff;
-    padding: 1.5rem 1rem;
+    padding: 2.0rem 1.5rem;
 }
 
 .header-content {
@@ -32,7 +32,7 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2.0rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -52,7 +52,7 @@ header {
 
 .header-text p {
     font-size: 1rem;
-    opacity: 0.9;
+    opacity: 2;
     text-align: center;
 }
 
@@ -63,7 +63,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-top: 1rem;
     position: relative;
 }
@@ -207,7 +207,7 @@ section {
     display: flex;
     gap: 0.5rem;
     font-weight: bold;
-    color: #f1e9e9;
+    color: #0e0d0d;
     font-size: 0.9rem;
 }
 

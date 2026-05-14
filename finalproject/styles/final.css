@@ -12,8 +12,8 @@
 body {
     font-family: "Roboto", sans-serif;
     background-color: #f7fdfb;
-    color: #1a1a1a;
-    line-height: 1.6;
+    color: #0e0d0d;
+    line-height: 1.0;
     overflow-x: hidden;
     /* Prevent horizontal scroll */
 }
@@ -116,12 +116,12 @@ section {
 .featured-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    gap: 1.2rem;
 }
 
 .card {
-    background-color: #ffffff;
-    border-radius: 1rem;
+    background-color: #7a7474;
+    border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     display: flex;
@@ -136,13 +136,13 @@ section {
 
 .card img {
     width: 100%;
-    height: 180px;
+    height: 300px;
     object-fit: cover;
 }
 
 .card h3 {
     margin: 1rem;
-    color: #006d5b;
+    color: #0e100f;
 }
 
 .card p {
@@ -177,7 +177,7 @@ section {
 }
 
 .event {
-    background-color: #fff;
+    background-color: #7b7474;
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
@@ -192,7 +192,7 @@ section {
 
 .event img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -207,7 +207,7 @@ section {
     display: flex;
     gap: 0.5rem;
     font-weight: bold;
-    color: #00a896;
+    color: #f1e9e9;
     font-size: 0.9rem;
 }
 
